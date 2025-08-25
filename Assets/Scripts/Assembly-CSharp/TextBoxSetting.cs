@@ -1,56 +1,125 @@
 using TMPro;
 using UnityEngine;
 
-[CreateAssetMenu]
-[SerializeField]
+[CreateAssetMenu(fileName = "New TextBox Setting", menuName = "Localization/TextBox Setting")]
 public class TextBoxSetting : ScriptableObject
 {
-	[SerializeField]
-	private string lanKey;
+    [Header("Language Information")]
+    [SerializeField]
+    private string lanKey;
+    
+    [SerializeField]
+    private string lanName;
+    
+    [SerializeField]
+    private SystemLanguage[] applySystemLanguages;
 
-	[SerializeField]
-	private string lanName;
+    [Header("Font Settings")]
+    [SerializeField]
+    private TMP_FontAsset font;
+    
+    [SerializeField]
+    private float maxFontSize = 36f;
+    
+    [SerializeField]
+    private float minFontSize = 8f;
 
-	[SerializeField]
-	private SystemLanguage[] applySystemLanguages;
+    [Header("Text Spacing")]
+    [SerializeField]
+    private float lineSpacing = 0f;
+    
+    [SerializeField]
+    private float wordSpacing = 0f;
+    
+    [SerializeField]
+    private float characterSpacing = 0f;
 
-	[SerializeField]
-	private TMP_FontAsset font;
+    // Properties with proper getters
+    public string LanKey => lanKey;
+    public string LanName => lanName;
+    public SystemLanguage[] ApplySystemLanguages => applySystemLanguages;
+    public TMP_FontAsset Font => font;
+    public float MaxFontSize => maxFontSize;
+    public float MinFontSize => minFontSize;
+    public float LineSpacing => lineSpacing;
+    public float WordSpacing => wordSpacing;
+    public float CharacterSpacing => characterSpacing;
 
-	[SerializeField]
-	private float maxFontSize;
+    // For backward compatibility (used by other scripts)
+    public string languageKey => lanKey;
+    public string languageName => lanName;
 
-	[SerializeField]
-	private float minFontSize;
+    public void InitTextMeshProUGUI(TextMeshProUGUI textComponent, bool updateFontSize = true)
+    {
+        if (textComponent == null)
+            return;
 
-	[SerializeField]
-	private float lineSpacing;
+        // Apply font if available
+        if (font != null)
+        {
+            textComponent.font = font;
+        }
 
-	[SerializeField]
-	private float wordSpacing;
+        // Apply font size constraints if requested
+        if (updateFontSize)
+        {
+            if (textComponent.fontSize > maxFontSize)
+            {
+                textComponent.fontSize = maxFontSize;
+            }
+            else if (textComponent.fontSize < minFontSize)
+            {
+                textComponent.fontSize = minFontSize;
+            }
+        }
 
-	[SerializeField]
-	private float characterSpacing;
+        // Apply spacing settings
+        textComponent.lineSpacing = lineSpacing;
+        textComponent.wordSpacing = wordSpacing;
+        textComponent.characterSpacing = characterSpacing;
 
-	public string LanKey => null;
+        // Enable auto-sizing if min and max font sizes are different
+        if (maxFontSize > minFontSize)
+        {
+            textComponent.enableAutoSizing = true;
+            textComponent.fontSizeMin = minFontSize;
+            textComponent.fontSizeMax = maxFontSize;
+        }
+        else
+        {
+            textComponent.enableAutoSizing = false;
+        }
+    }
 
-	public string LanName => null;
+    // Helper method to check if this setting applies to the current system language
+    public bool AppliesTo(SystemLanguage systemLanguage)
+    {
+        if (applySystemLanguages == null || applySystemLanguages.Length == 0)
+            return false;
 
-	public SystemLanguage[] ApplySystemLanguages => null;
+        foreach (var lang in applySystemLanguages)
+        {
+            if (lang == systemLanguage)
+                return true;
+        }
+        
+        return false;
+    }
 
-	public TMP_FontAsset Font => null;
+    // Method to get appropriate font size within constraints
+    public float GetClampedFontSize(float desiredSize)
+    {
+        return Mathf.Clamp(desiredSize, minFontSize, maxFontSize);
+    }
 
-	public float MaxFontSize => 0f;
-
-	public float MinFontSize => 0f;
-
-	public float LineSpacing => 0f;
-
-	public float WordSpacing => 0f;
-
-	public float CharacterSpacing => 0f;
-
-	public void InitTextMeshProUGUI(TextMeshProUGUI textComponent, bool updateFontSize = true)
-	{
-	}
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        // Ensure max font size is always greater than min font size
+        if (maxFontSize < minFontSize)
+        {
+            maxFontSize = minFontSize;
+        }
+    }
+#endif
 }

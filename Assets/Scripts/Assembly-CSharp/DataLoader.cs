@@ -7,91 +7,145 @@ public class DataLoader : MonoBehaviour
 
     public static string usingFileLan;
 
-    public TextBoxSetting[] textBoxObjSettings;       // Localized text box styles
-    public AchievementData[] achievementDatas;        // Achievements metadata
+    public TextBoxSetting[] textBoxObjSettings;
+    public AchievementData[] achievementDatas;
     public LanguagePanelController languagePanel;
 
     private static Dictionary<string, TextBoxSetting> textBoxSettings;
     private static Dictionary<string, AchievementData> achievementDataDictionary;
 
-    public static IReadOnlyList<TextBoxSetting> TextBoxSettings => new List<TextBoxSetting>(textBoxSettings.Values);
+    public static IReadOnlyList<TextBoxSetting> TextBoxSettings => instance?.textBoxObjSettings;
     public static Dictionary<string, AchievementData> AchievementDataDictionary => achievementDataDictionary;
+
+    private static DataLoader instance;
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-
-        if (string.IsNullOrEmpty(usingFileLan))
-            usingFileLan = PlayerPrefs.GetString("Language", DEFAULT_LANGUAGE_KEY);
-
-        textBoxSetup();
-        achievementDataSetup();
-
-        ChangeLangauge(usingFileLan);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            
+            // Initialize language from PlayerPrefs or use default
+            usingFileLan = PlayerPrefs.GetString("SelectedLanguage", DEFAULT_LANGUAGE_KEY);
+            
+            // Setup data structures
+            textBoxSetup();
+            achievementDataSetup();
+            
+            // Setup language panel callback
+            if (languagePanel != null)
+            {
+                languagePanel.OnButtonClick = ChangeLangauge;
+            }
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnDestroy()
     {
-        // cleanup if needed
-        textBoxSettings?.Clear();
-        achievementDataDictionary?.Clear();
+        if (instance == this)
+        {
+            instance = null;
+        }
     }
 
     public string LanFile()
     {
-        return usingFileLan;
+        return $"Localization/{usingFileLan}";
     }
 
     private void ChangeLangauge(string targetLan)
     {
-        usingFileLan = targetLan;
-        PlayerPrefs.SetString("Language", targetLan);
-        PlayerPrefs.Save();
-
-        if (languagePanel != null)
-            languagePanel.UpdateTexts(targetLan); // refresh UI text
+        if (targetLan != usingFileLan)
+        {
+            changeLan(targetLan, true);
+        }
     }
 
     public static void changeLan(string lan)
     {
-        changeLan(lan, true);
+        changeLan(lan, false);
     }
 
     public static void changeLan(string lan, bool updateText)
     {
         usingFileLan = lan;
-        PlayerPrefs.SetString("Language", lan);
+        PlayerPrefs.SetString("SelectedLanguage", lan);
         PlayerPrefs.Save();
 
-        if (updateText && _instance()?.languagePanel != null)
-            _instance().languagePanel.UpdateTexts(lan);
+        if (updateText)
+        {
+            // Reload text data for new language
+            TextLoader.ReloadText();
+            
+            // Update all localized text components
+            LocalizationText[] allTexts = FindObjectsOfType<LocalizationText>();
+            foreach (var text in allTexts)
+            {
+                text.RefreshLocalization();
+            }
+
+            // Update all text boxes
+            TextBox[] allTextBoxes = FindObjectsOfType<TextBox>();
+            foreach (var textBox in allTextBoxes)
+            {
+                textBox.RefreshSettings();
+            }
+
+            // Update achievement localizations
+            updateAchievementLocalization();
+        }
     }
 
     private void textBoxSetup()
     {
         textBoxSettings = new Dictionary<string, TextBoxSetting>();
-        foreach (var s in textBoxObjSettings)
+        
+        if (textBoxObjSettings != null)
         {
-            if (!textBoxSettings.ContainsKey(s.id))
-                textBoxSettings.Add(s.id, s);
+            foreach (var setting in textBoxObjSettings)
+            {
+                if (setting != null && !string.IsNullOrEmpty(setting.LanKey))
+                {
+                    textBoxSettings[setting.LanKey] = setting;
+                }
+            }
         }
     }
 
     public static TextBoxSetting getCurrentTextBoxSetting()
     {
-        if (textBoxSettings == null || string.IsNullOrEmpty(usingFileLan))
-            return null;
-
-        return textBoxSettings.ContainsKey(usingFileLan) ? textBoxSettings[usingFileLan] : null;
+        if (textBoxSettings != null && textBoxSettings.ContainsKey(usingFileLan))
+        {
+            return textBoxSettings[usingFileLan];
+        }
+        
+        // Fallback to default language
+        if (textBoxSettings != null && textBoxSettings.ContainsKey(DEFAULT_LANGUAGE_KEY))
+        {
+            return textBoxSettings[DEFAULT_LANGUAGE_KEY];
+        }
+        
+        return null;
     }
 
     private void achievementDataSetup()
     {
         achievementDataDictionary = new Dictionary<string, AchievementData>();
-        foreach (var a in achievementDatas)
+        
+        if (achievementDatas != null)
         {
-            if (!achievementDataDictionary.ContainsKey(a.id))
-                achievementDataDictionary.Add(a.id, a);
+            foreach (var achievement in achievementDatas)
+            {
+                if (achievement != null && !string.IsNullOrEmpty(achievement.Id))
+                {
+                    achievementDataDictionary[achievement.Id] = achievement;
+                }
+            }
         }
     }
 
@@ -101,18 +155,19 @@ public class DataLoader : MonoBehaviour
         return achievementDataDictionary.ContainsKey(id) ? achievementDataDictionary[id] : null;
     }
 
-    public static void updateAchievemenLocaliztion()
-    {
-        // refresh achievement descriptions after language change
-        foreach (var kv in achievementDataDictionary)
-        {
-            kv.Value.UpdateLocalization(usingFileLan);
-        }
-    }
-
-    // Helper to access singleton instance (not originally shown but useful)
-    private static DataLoader _instance()
-    {
-        return FindObjectOfType<DataLoader>();
-    }
+	public static void updateAchievementLocalization()
+	{
+		// Update all achievement UI elements with current language
+		// This would typically notify achievement UI components to refresh their text
+		if (achievementDataDictionary != null)
+		{
+			foreach (var achievement in achievementDataDictionary.Values)
+			{
+				if (achievement != null)
+				{
+					achievement.UpdateLocaliztion();
+				}
+			}
+		}
+	}
 }
