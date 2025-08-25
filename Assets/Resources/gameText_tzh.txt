@@ -1,0 +1,132 @@
+//Text
+clear_data_confirm:確定要清除遊戲記錄?\n(會清除所有金幣以及遊戲貨幣購入的皮膚)\n*這行動不能復原
+clear_data_timer:等待 {0} 秒
+ad_confirm:你要看一小段廣告來解鎖記錄點嗎?
+ad_load_fail:載入失敗
+ad_loading_video:影片載入中...
+ad_wait_for_too_long:等待太久了?
+quit_confirm:離開遊戲？
+skin_confirm:使用
+skin_preparing_skin:正為你準備造型...
+purchase_thanks_for_support:你已購買廣告移除\n感謝您你支持，喵
+purchase_not_available:這個商品暫時無法購買\n請檢查你的網絡及重新開啟遊戲
+purchase_restore_success:恢復已購內購商品成功!
+purchase_restore_fail:恢復已購內購商品失敗\n請檢查你的網絡及重新開啟遊戲
+loading:載入中...
+//Achievement
+achievement_chapter_title_1:大教堂
+achievement_chapter_title_2:森林
+achievement_chapter_title_3:月球
+achievement_chapter_description_1:完成第一章
+achievement_chapter_description_2:完成第二章
+achievement_chapter_description_3:完成第三章
+achievement_postcard_title:我是誰？
+achievement_postcard_description:收集三張明信片
+achievement_fish_title_1:我愛魚！
+achievement_fish_title_2:我要更多的魚！
+achievement_fish_title_3:捕魚達人
+achievement_fish_description_1:收集十個魚罐頭
+achievement_fish_description_2:收集三十個魚罐頭
+achievement_fish_description_3:收集四十五個魚罐頭
+achievement_skin_title_1:貓模特
+achievement_skin_title_2:名牌貓
+achievement_skin_title_3:絕對不是貓
+achievement_skin_description_1:解鎖一個造型
+achievement_skin_description_2:解鎖六個造型
+achievement_skin_description_3:解鎖所有個造型
+//Ending
+ending_the_end:- THE END -
+ending_game_by:GAME BY
+ending_programming:程式
+ending_art_and_story:美術 & 故事
+ending_sound_and_music:音效 & 音樂
+ending_translation:翻譯
+ending_special_thanks:特別嗚謝
+ending_and_those_you_met:還有你遇見的...
+ending_your_record:你的記錄
+ending_total_death:死亡次數
+ending_total_fish_can:收集罐頭
+ending_thank_you_for_playing_upper:THANK YOU FOR PLAYING
+ending_thank_you_for_playing:感謝你的遊玩
+//Stat
+stat_play_time:遊戲時間
+stat_jump_count:跳躍次數
+stat_move_distance:移動距離
+stat_move_distance_far:非常遠
+stat_block_attach_count:附屬能力次數
+stat_block_trade_count:交換能力次數
+stat_dead_count:死亡次數
+stat_collected_fish_can:已收集貓罐頭
+stat_collected_postcard:已收集明信片
+//Button
+btn_clearData:清除記錄
+btn_language:語言
+btn_hide_button:隱藏按鈕
+btn_show_button:顯示按鈕
+btn_adjust_button:設置按鈕
+btn_adjust_button_reset:重設
+btn_adjust_button_apply:確定
+btn_clear:清除
+btn_ok:Ok
+btn_cancel:取消
+btn_ad_play:我需要
+btn_ad_cancel:不用了
+btn_quit:離開
+btn_skin_buy:購買
+btn_story_skip:跳過
+//killing tag
+Monster:怪物
+Falling:跌崖
+Trap:陷阱
+Boss1:Boss1
+Boss2:Boss2
+Boss3:Boss3
+//level name
+1-1:Nameless Grave
+1-2:Up
+1-3:Cliff
+1-4:Snow Vally
+1-5:Enter Church
+1-6:Trap
+1-7:More Trap
+1-8:Deadly Blade
+1-9:Moving Platform
+1-10:Those Tombstone
+1-11:Puzzle
+1-12:Easy Path
+1-13:Double Puzzle
+1-14:Monster Habitat
+1-15:The Gate
+1-16:Boss1
+2-1:Locked Door
+2-2:Mineshaft
+2-3:Red Plant
+2-4:Strange Flower
+2-5:Safe Rock
+2-6:Exit
+2-7:The Jungle
+2-8:Danger Puzzle
+2-9:Overgrown
+2-10:Jump higher
+2-11:Attention
+2-12:Sharp Platform
+2-13:The Insect
+2-14:On The Top
+2-15:The Guardian
+2-16:Boss2
+3-1:The Moon
+3-2:Timer
+3-3:Vent
+3-4:Floating Blade
+3-5:Deadly City
+3-6:Vanishing Platform
+3-7:Cross Area
+3-8:Avoid Void
+3-9:Dodge It
+3-10:The Blocking Walls
+3-11:Straight Dart
+3-12:Twin Puzzles
+3-13:Greatest Puzzle
+3-14:Void Switch
+3-15:Last Battle
+3-16:The End

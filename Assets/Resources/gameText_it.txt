@@ -1,0 +1,133 @@
+//Text
+clear_data_confirm:Are you sure to clear game data?\n(Will remove all coins and skins purchased with game currency)\n*This cannot be undone
+clear_data_timer:Wait {0} sec
+ad_confirm:Unlock check point by watching a short video?
+ad_load_fail:Failed to load video
+ad_loading_video:Loading Video...
+ad_wait_for_too_long:Wait for too long?
+quit_confirm:Quit the game?
+skin_confirm:Use
+skin_preparing_skin:Preparing Skin...
+purchase_thanks_for_support:You have already purchased ad removal\nThanks for support us, meow
+purchase_not_available:This item is currently not available\nPlease check your network
+purchase_restore_success:Restore purchases success!
+purchase_restore_fail:Restore purchases fail\nPlease check your network
+loading:Loading...
+//Achievement
+achievement_chapter_title_1:Cathedral
+achievement_chapter_title_2:Forest
+achievement_chapter_title_3:Moon
+achievement_chapter_description_1:Complete chapter 1
+achievement_chapter_description_2:Complete chapter 2
+achievement_chapter_description_3:Complete chapter 3
+achievement_postcard_title:Who Am I?
+achievement_postcard_description:Collect 3 postcards
+achievement_fish_title_1:I Love Fish
+achievement_fish_title_2:I WANT MORE FISH!
+achievement_fish_title_3:I Am Fish Hunter
+achievement_fish_description_1:Collect 15 canned fish
+achievement_fish_description_2:Collect 30 canned fish
+achievement_fish_description_3:Collect 45 canned fish
+achievement_skin_title_1:Cat Walk
+achievement_skin_title_2:Prada Cat
+achievement_skin_title_3:Definitely Not A Cat
+achievement_skin_description_1:Unlock 1 skin
+achievement_skin_description_2:Unlock 6 skins
+achievement_skin_description_3:Unlock all skins
+//Ending
+ending_the_end:- THE END -
+ending_game_by:GAME BY
+ending_programming:Programming
+ending_art_and_story:Art & Story
+ending_sound_and_music:Sound & Music
+ending_translation:Translation
+ending_special_thanks:Special Thanks
+ending_and_those_you_met:And those you met...
+ending_your_record:Your record
+ending_total_death:Total death
+ending_total_fish_can:Total fish can
+ending_thank_you_for_playing_upper:THANK YOU FOR PLAYING
+ending_thank_you_for_playing:Thank you for playing
+//Stat
+stat_play_time:Game Time
+stat_jump_count:Jump Count
+stat_move_distance:Move Distance
+stat_move_distance_far:Very Far
+stat_block_attach_count:Attach Ability Count
+stat_block_trade_count:Trade Ability Count
+stat_dead_count:Dead Count
+stat_collected_fish_can:Collected Fish Can
+stat_collected_postcard:Collected Postcard
+//Button
+btn_clearData:Clear Data
+btn_language:Language
+btn_hide_button:Hide Button
+btn_show_button:Show Button
+btn_adjust_button:Adjust Button
+btn_adjust_button_reset:Reset
+btn_adjust_button_apply:Apply
+btn_clear:Clear
+btn_ok:Ok
+btn_cancel:Cancel
+btn_ad_play:I need it
+btn_ad_cancel:No thanks
+btn_quit:Quit
+btn_skin_buy:Buy
+btn_google_play
+btn_story_skip:SKIP
+//killing tag
+Monster:Monster
+Falling:Falling
+Trap:Trap
+Boss1:Boss1
+Boss2:Boss2
+Boss3:Boss3
+//level name
+1-1:Nameless Grave
+1-2:Up
+1-3:Cliff
+1-4:Snow Valley
+1-5:Enter Church
+1-6:Trap
+1-7:More Trap
+1-8:Deadly Blade
+1-9:Moving Platform
+1-10:Those Tombstone
+1-11:Puzzle
+1-12:Easy Path
+1-13:Double Puzzle
+1-14:Monster Lair
+1-15:The Gate
+1-16:Boss1
+2-1:Locked Door
+2-2:Mineshaft
+2-3:Red Plant
+2-4:Strange Flower
+2-5:Safe Rock
+2-6:Exit
+2-7:The Jungle
+2-8:Danger Puzzle
+2-9:Overgrown
+2-10:Jump Higher
+2-11:Attention
+2-12:Sharp Platform
+2-13:The Insect
+2-14:On The Top
+2-15:The Guardian
+2-16:Boss2
+3-1:The Moon
+3-2:Timer
+3-3:Vent
+3-4:Floating Blade
+3-5:Deadly City
+3-6:Vanishing Platform
+3-7:Cross Area
+3-8:Avoid Void
+3-9:Dodge It
+3-10:The Blocking Walls
+3-11:Straight Dart
+3-12:Twin Puzzles
+3-13:Greatest Puzzle
+3-14:Void Switch
+3-15:Last Battle
+3-16:The End

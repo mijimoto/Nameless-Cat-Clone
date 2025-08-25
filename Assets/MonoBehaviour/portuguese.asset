@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072067aa06323447e89de6852221aac0, type: 3}
+  m_Name: portuguese
+  m_EditorClassIdentifier:
+  lanKey: pt
+  lanName: Português
+  applySystemLanguages: 1c000000
+  font: {fileID: 11400000, guid: 680067a17c776894a852a431782360ee, type: 2}
+  maxFontSize: 0.15
+  minFontSize: 0.14
+  lineSpacing: -20
+  wordSpacing: -0.5
+  characterSpacing: -0.3

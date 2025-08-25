@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7202cb7747dcd21ee316d1bc735eefe8, type: 3}
+  m_Name: CompleteChapter
+  m_EditorClassIdentifier:
+  id: completeChapter
+  titleKey: achievement_chapter_title_{0}
+  descriptionKey: achievement_chapter_description_{0}
+  outerReference: {fileID: 0}
+  progresses:
+  - {fileID: 11400000, guid: 6828ccff17ea26f4e8ce2ebd96674108, type: 2}
+  - {fileID: 11400000, guid: fa8102c7b2d7a524f820ea2a5df28090, type: 2}
+  - {fileID: 11400000, guid: 691e0683d6b866841afb9a0ac69261c7, type: 2}

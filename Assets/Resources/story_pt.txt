@@ -1,0 +1,718 @@
+1-1:
+#noSpawnEffect
+#hideActiveButton
+#dropDown
+God|Olá!\nConsegues me ver?
+God|Ótimo! Você não caiu naquela pilha de insetos
+God|Eu odiaria limpar meu corpo de novo
+God|Hmm... Isso é estranho, tu não sabes falar?
+God|Oh... É a primeira vez que isso me acontece
+God|Bem... Veja pelo lado bom,
+God|Pelo menos você não se verá em uma discussão
+God|Agora, vamos indo para um outro lugar
+God|(Pressione os botões <color=#ffff00>< % ^</color> para se mover)
+#godLeave
+;
+1-2:
+#hideActiveButton
+#waitForGround
+God|Boas notícias! De acordo com o manual...
+God|A solução para esse problema é a telepatia!
+God|Hm...Vamos tentar
+God|Eu posso ouvir a voz da sua cabeça agora...
+God|Você está pensando em como sair daqui...
+God|Quem sou eu...
+God|E como me fazer calar a boca...
+God|Ah! Esqueci-me de me introduzir!
+God|Olá, Eu sou o deus desse mundo
+God|Não se preocupe,
+God|Para deixar esse mundo é fácil
+God|Você poderá voltar pra casa se coletar todas as <color=#ffff00>pequenas esferas brancas</color> daqui
+#godLeave
+;
+1-3:
+#hideActiveButton
+#waitForGround
+God|Está se perguntando o que era aquela espera branca?
+God|É a forma de <color=#ffff00>tesouro</color> em seu coração
+God|Você pode tocar coletando as esferas brancas
+God|E quando isso ocorre ela vai te transportar para a próxima área
+God|Geralmente um lugar perto da próxima esfera
+God|Ah, e os outros não conseguem ver seu <color=#ffff00>tesouro</color>
+God|É por isso que não sei se é uma <color=#ffff00>bola de neve</color> ou um <color=#ffff00>tesouro</color>
+God|Ainda mais se você for idiota a ponto de não dizer a diferença
+God|Haha, é brincadeira. Pegue isto!
+#unlockSkill
+God|Eu compartilhei um pouco do meu poder com você
+God|Isso pode te ajudar a passsar por áreas perigosas
+God|Toda vez que você ver uma <color=#ff0000>flecha</color> sobre um objeto
+God|É quando você pode interagir com ele usando o <color=#ff0000>botão especial</color>
+God|Oh, meu tempo acabou
+God|Estou indo pra casa alimentar meus animais de estimação. Tchau!
+#godLeave
+#activeButtonLight
+;
+JN-1:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Ei, gatinho
+Jellyhead|Olhe para as suas patinhas
+Jellyhead|É impossível de pular por esse cânion
+Jellyhead|Não recomendo você fazer isso
+Jellyhead|Muitos gatinhos ignorantes já perderam suas vidas nesse cânion
+Jellyhead|Mas sou uma pessoa gentil, fiquei aqui especialmente para te alertar
+Jellyhead|É claro, fiz isso por vontade própria, então não precisa me agradecer
+Jellyhead|Como eu sou incrível!
+;
+JN-2:
+#noSpawnEffect
+#waitForGround
+Nora|Oh! Que gatinho fofo!
+Nora|Meu nome é <color=#ffff00>Nora</color>
+Nora|Mas que tempestade de neve, não é? Fica difícil viajar nesse clima
+Nora|Embora a igreja tenha bloqueado boa parte da neve,
+Nora|Se você não for cuidadoso pode ficar perdido aqui
+Nora|Preso por armadilhas mortais e monstros
+Nora|Apesar disso, a caça ao <color=#ffff00>tesouro</color> vale a pena
+Nora|Você também está procurando o <color=#ffff00>tesouro</color>?
+Nora|Uau! Então nós dois somos aventureiros!
+Nora|Se precisar de alguma coisa, pode falar comigo
+;
+JN-3:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Oi
+Jellyhead|Não achei que fôssemos nos ver de novo
+Jellyhead|Sabe…
+Jellyhead|Aquele cânion não era tão perigoso...
+Jellyhead|Você pode simplesmente pular por cima!
+Jellyhead|Mas as plataformas a frente parecem perigosas
+Jellyhead|Ainda irei te avisar a não atravessar
+Jellyhead|É claro, sendo esse animal gentil como sou
+Jellyhead|Fiz esse ato de coração
+Jellyhead|Como eu sou incrível!
+;
+JN-4:
+#noSpawnEffect
+#waitForGround
+Nora|Cuidado com os <color=#ff0000>monstros vermelhos</color>!
+Nora|Eles andam de um lado ao outro e atacam quando alguém aparece no caminho. 
+Nora|Há rumores que, muito tempo atrás, eles eram animais como nós
+Nora|Mas eles perderam a esperança de continuar vivendo
+Nora|No fim, eles lentamente se tornam nisto...
+Nora|......
+Nora|Outros também dizem que eles foram os únicos a encontrarem o <color=#ffff00>tesouro</color>...
+Nora|Não importa qual seja real, eles não me impedirão de seguir em frente
+;
+JN-5:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Oi, nos encontramos de novo
+Jellyhead|Esqueci de falar, meu nome é <color=#ffff00>Jellyhead</color>
+Jellyhead|A propósito, seus movimentos são bastante precisos
+Jellyhead|Não acredito que você conseguiu pular por essas armadilhas!
+Jellyhead|Mas gostaria que tu tomasses cuidado com o <color=#ff0000>monstro vermelho</color> na frente
+Jellyhead|Se ele te ver, ele vai vir com tudo contra você
+Jellyhead|Óbvio, fiquei aqui propositalmente para te dizer isso
+Jellyhead|Caso contrário eu seguiria em frente
+Jellyhead|Como eu sou incrível!
+;
+JN-6:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Como você passou por aquele monstrinho?
+Jellyhead|Quando me dei conta, você já tinha se livrado dele
+Jellyhead|Por acaso você tem o superpoder de atravessar paredes?
+Jellyhead|Eu quero um super poder também!
+Jellyhead|O superpoder de voar pelos céus como o Superman
+Jellyhead|Assim não terei mais medo de passar pelos espinhos...
+Jellyhead|Uh... Eu quis dizer...
+Jellyhead|Que eu poderia ajudar os outros a passarem pelos espinhos
+Jellyhead|Como eu sou incrível!
+;
+JN-7:
+#noSpawnEffect
+#waitForGround
+Nora|Ei gatinho, deixe-me te contar uma coisa
+Nora|Alguns viajantes deixam comida enlatada pelo caminho 
+Nora|Se achar alguma dessas latas,
+Nora|Você pode trocar com o <color=#ffff00>comerciante</color> por alguns itens
+Nora|(troque comida enlatada por skins no menu)
+Nora|Se nós acharmos uma saída, e deixar essa igreja
+Nora|Nós podemos ir à floresta atravessando a ponte
+Nora|Veja pelo lado bom, a igreja ainda está de pé depois de tantos anos
+Nora|Talvez nós ainda podemos partir daqui
+;
+JN-8:
+#noSpawnEffect
+#waitForGround
+Nora|Por que eles construíram uma igreja justo na neve?
+Nora|Nenhuma das lápides aqui tem nomes gravados
+Nora|E muitas cruzes estão em lugares que não conseguimos alcançar
+Nora|Com tantas armadilhas dentro,
+Nora|Parece até que a igreja foi feita como se fosse uma pirâmide de faraó
+Nora|Executando qualquer um que entra neste lugar
+Nora|Se não fosse pela grande tempestade de neve
+Nora|Talvez não iríamos sair daqui tão cedo
+;
+JN-9:
+#noSpawnEffect
+#waitForGround
+Nora|Agora que parei pra pensar, tem muitas construções como essa nesse mundo
+Nora|Qual o propósito delas?
+Nora|Cada vez que penso nisso, eu não posso esperar para continuar explorando
+Nora|Talvez, algum dia, eu possa descobrir todos os segredos do mundo
+;
+JN-10:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Você chegou na hora certa!
+Jellyhead|Tem uma ponte quebrada pela frente, parece inutilizável
+Jellyhead|Mas quando eu estava naquela ponte vi uma menor embaixo dela
+Jellyhead|Embora parecia um pouco gasta, pelo menos está inteira
+Jellyhead|Está localizada na parte inferior da ilha
+Jellyhead|Passei um tempo aqui, procurando a entrada da ponte
+Jellyhead|Acho que encontrarei logo
+Jellyhead|Como eu sou incrível!
+;
+JN-11:
+#noSpawnEffect
+#waitForGround
+Nora|Uau! De onde saiu aquele monstro?!
+Jellyhead|Você acabou com ele, gatinho!
+Nora|Ei, você conhece ela?
+Jellyhead|Oi... Olá, eu sou <color=#ffff00>Jellyhead</color>
+Nora|Olá, me chamo <color=#ffff00>Nora</color>
+Nora|Você é amiga do gatinho? Não te vi no meu caminho
+Jellyhead|É porque eu estava ajudando os outros!
+Jellyhead|Eu vivi nessa igreja por todos esses anos
+Jellyhead|Avisando outros aventureiros dos perigos
+Nora|Entendi, obrigada pela sua ajuda
+Nora|Vamos seguindo em frente, gatinho
+Jellyhead|Pensando bem, essa igreja não é tão perigosa
+Jellyhead|Então vou indo junto com vocês
+Jellyhead|Assim poderei ajudar mais pessoas!
+Nora|Muito bom! Vamos ir andando
+Jellyhead|Espera!
+Nora|O que foi?
+Jellyhead|Como... Como eu sou incrível!
+Nora|Hã?
+;
+F-1:
+#noSpawnEffect
+#waitForGround
+IT|Olha só! A porta finalmente abriu!
+IT|Espero que não tenha pegado chuva, Sr. ou Sra. Gato
+IT|Desculpa, não dizer a diferença entre um macho e uma fêmea
+IT|Você parece bem ocupado, está tendo um dia difícil?
+IT|Mês passado convidei minha namorada para um encontro na neve
+IT|Mas agora estou um mês atrasado, por causa dessa maldita porta!
+IT|Encontrei o minerador, ele disse que a chave dessa porta sumiu
+IT|A não ser que abrissem pelo outro lado, não teria como entrar
+IT|Obrigado Deus, ela finalmente se abriu!
+IT|Preciso me apressar agora, até mais!
+;
+F-2:
+#noSpawnEffect
+#waitForGround
+IT|Você me parece um viajante, estou certo?
+IT|Siga esse caminho para cima, assim você pode chegar à mina
+IT|Passe pela mina para chegar na floresta lá fora
+IT|Essa mina é muito mais segura que a floresta
+IT|Aceite esse conselho como meu pagamento
+;
+F-3:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Para onde vai, gatinho?
+Rabbitman|Estás perdido?
+Rabbitman|Há apenas arbustos e criaturas mortas por aqui
+Rabbitman|Então dê a volta e vá para outro lugar
+;
+F-4:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Ei, eu reparei em uma coisa
+Jellyhead|Está vendo aquela <color=#ffff00>flor</color> acima?
+Jellyhead|Ele sugou alguma coisa e cuspiu de volta
+Jellyhead|Como um mini buraco de minhoca
+Jellyhead|Mas acho que aquilo não é perigoso
+Jellyhead|Você não precisa ter medo
+Jellyhead|Como eu sou incrível!
+;
+F-5:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Se precisar, eu posso te levar de volta
+Rabbitman|A floresta está coberta de <color=#ff0000>plantas vermelhas</color> por toda parte
+Rabbitman|Não se engane pelas cores chamativas
+Rabbitman|Elas são extremamente perigosas
+;
+F-6:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Arrá, você está aqui! 
+Jellyhead|Vocês felinos têm um físico forte
+Jellyhead|Vocês conseguem pular de um lugar tão alto tão facilmente...
+Jellyhead|Aliás! Apenas saí do lado da Nora porque quis te procurar
+Jellyhead|Sabe o que mais eu descobri?
+Jellyhead|Arrisquei minha vida para descobrir esse segredo
+Jellyhead|Notei que as tartarugas aqui são bastante amigáveis
+Jellyhead|Se você subir no casco, elas podem te carregar sem perigo
+Jellyhead|Como eu sou incrível!
+;
+F-7:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Tu não estás procurando pelo <color=#ffff00>tesouro</color>, estás?
+Rabbitman|Se for verdade, deixe-me te contar uma história
+Rabbitman|Essa área costumava ser uma floresta comum, sem plantas vermelhas
+Rabbitman|Os corpos dos aventureiros mortos fertilizaram aquelas plantas
+Rabbitman|Mais e mais corpos deram os nutrientes perfeitos para a reprodução
+Rabbitman|O resultado, a floresta agora está coberta de plantas vermelhas
+Rabbitman|As coisas poderiam ser diferentes se eles se contentassem com uma vida segura
+Rabbitman|Mas o <color=#ffff00>tesouro</color> os atraiu para lugares arriscados
+Rabbitman|Aqueles idiotas preferiram o suicídio. Eu não iria impedi-los,
+Rabbitman|Mas a morte deles apenas fez desse lugar mais perigoso
+;
+F-8:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Não espero que vocês entendam...
+Nora|Cala a boca, não nos compare com você
+Nora|Nunca gostaria de ser como vocês, trancados dentro de uma jaula 
+Nora|Tendo que depender dos outros para a sobrevivência básica
+Nora|Eu prefiro morrer aqui e virar comida daquelas plantas
+Nora|Escolhi cuidar do meu destino e fazer meu próprio caminho!
+Nora|Esse é o meu jeito de viver!
+Rabbitman|Idiotas
+Rabbitman|Vindo aqui, apenas trarão mais perigo à esse lugar
+Rabbitman|Se não me entenderam até esse ponto,
+Rabbitman|Isso quer dizer que o cérebro de vocês é bem limitado
+Nora|Mesmo se fosse verdade, você não está em posição para nos insultar
+Nora|Vir aqui foi o caminho que nós escolhemos
+Rabbitman|Você pensa que vir aqui foi decisão sua
+Rabbitman|Também passei por muitas dificuldades até chegar aqui
+Rabbitman|Não importa o quanto tentemos, não há fim para isso
+Rabbitman|Eu e meus amigos montamos um acampamento que protegeu muitas famílias
+Rabbitman|Se não fossem por aqueles idiotas...
+Nora|Você está errado! Vocês estavam presos desde o início
+Nora|É por isso que você nunca teve a necessidade de buscar liberdade
+Nora|......
+Jellyhead|Olha só, é o gatinho!
+Nora|Haha... Não percebi que você estava aqui...
+;
+F-9:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Eu não esperava que você fosse um aventureiro
+Rabbitman|E você chegou aqui com aquele corpo
+Rabbitman|Porém, seu corpo vai começar a mudar se ficares muito tempo aqui
+Rabbitman|Quanto mais tempo ficar, mais drástico será as mudança.  Mas você continua na sua forma original
+Rabbitman|Isso significa que não faz muito tempo desde que você chegou
+Rabbitman|Honestamente, não quero ver mais animais perdendo as suas vidas aqui
+Rabbitman|É por isso que recomendo a você sair daqui
+Rabbitman|Aparentemente, nem todos os animais pensam o mesmo...
+Rabbitman|Eu não entendo o porquê vale a pena seguir essas coisas
+Rabbitman|Meus amigos com quem construí uma grande família
+Rabbitman|No fim, todo mundo escolheu procurar pelo seu <color=#ffff00>tesouro</color>
+Rabbitman|Me responda uma coisa, com o quê o seu <color=#ffff00>tesouro</color> se parece?
+;
+F-10:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Estou apenas frustrado, como ao receber uma segunda chance de viver
+Rabbitman|No entanto, meus amigos ainda escolheram arruiná-lo por esse motivo
+Rabbitman|Eu nunca vou entender aqueles idiotas
+Rabbitman|Se vocês realmente vão atrás do <color=#ffff00>tesouro</color>
+Rabbitman|<color=#ff0000>Imploro a vocês, por favor, morram em um lugar que ninguém possa ver</color>
+;
+F-11:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Nora, você está bem?
+Nora|Estou bem.
+Jellyhead|Ei, o que ele quis dizer com aquilo...
+Jellyhead|Quando o Sr. Coelho que não há fim para nossa jornada
+Jellyhead|O que isso significa?
+Jellyhead|Ele disse que nós não vamos morrer?
+Nora|É apenas uma metáfora, estúpida
+Jellyhead|Que metáfora?
+Nora|Quem sabe, por que você mesmo não pergunta pra ele?
+Jellyhead|Acho que ele já se foi...
+Nora|Que bom, ninguém irá nos parar agora
+;
+F-12:
+#noSpawnEffect
+#waitForGround
+Jellyhead|De onde viemos?
+Nora|Quem sabe?
+Nora|Não tenho qualquer memória disso
+Nora|Do mesmo jeito que a gente não tem memórias pré-nascimento
+Jellyhead|Isso é estranho, ainda que eu me lembre de coisas do passado
+Jellyhead|Não consigo lembrar como cheguei aqui
+Jellyhead|Pensei que eu conseguia recordar bem das coisas
+;
+F-13:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Alguém disse que há uma ruína no topo da floresta 
+Jellyhead|De acordo com o Sr. Coelho, é guardado por um antigo monstro
+Jellyhead|Podemos evitá-lo se formos cuidadosos
+Jellyhead|Ah, e o Sr. Coelho queria que eu dissesse uma coisa
+Jellyhead|As criaturas da floresta conseguem sentir seu cheiro
+Jellyhead|Eles podem te atacar mesmo que você esteja escondido
+Jellyhead|Ele também disse que os mosquitos não são bons em sentir aromas
+Jellyhead|Como eu sou incrível!
+;
+F-14:
+#noSpawnEffect
+#waitForGround
+Nora|A ponte quebrou, precisamos procurar outro meio de passagem
+Nora|A gente pode achar um caminho se formos para um lugar mais alto
+Jellyhead|Mas o Sr. Coelho disse para não irmos até o topo da floresta
+Nora|Uh! Esse cara de novo!
+Nora|Eu faço o que eu quiser!
+;
+2-16:
+#useOuterController
+God|Você chegou até aqui!
+God|Para minha surpresa, você derrotou aquele cara
+God|E coletasse 30 <color=#ffff00>bolas de neve</color>!
+God|Por essa eu não esperava 
+God|Você sabe, muitos desistiram no meio do caminho
+God|ISe eles fossem que nem você...
+God|Não vamos falar disso agora
+God|Todas as bolas de neve aqui foi você quem coletou
+God|As restantes estão na lua
+God|Eu posso abrir o portal para a lua para você
+God|Acredite em mim, esse é o único jeito para te mandar pra casa
+God|A propósito, se encontrar algo incomum na lua 
+God|Pode falar pra mim
+#useOuterController2
+#wait3Second
+#wait3Second
+#nextLevel
+;
+M-1:
+#noSpawnEffect
+#waitForGround
+Muscrap|Você pretende continuar o desafio?
+Muscrap|Se não treinar seus músculos em um ambiente de baixa gravidade
+Muscrap|Você vai gradualmente perdendo seus músculos
+Muscrap|A única maneira é malhar todos os dias
+Muscrap|Olhe só para meus incríveis músculos
+;
+M-2:
+#noSpawnEffect
+#waitForGround
+Muscrap|Espera, quem é você?
+Muscrap|Por que estás aqui?
+;
+M-3:
+#noSpawnEffect
+#waitForGround
+Owlvin|Lá vem mais um cordeiro para ser abatido
+Owlvin|Vamos indo direto ao ponto, deixarei tudo claro a você
+Owlvin|Meu nome é <color=#ffff00>Owlvin</color>, a coruja protetora da verdade
+Owlvin|Você foi enganado, completamente enganado
+Owlvin|És um idiota de confiança excessiva
+Owlvin|Me desculpe, talvez eu tenha te machucado com essas palavras
+Owlvin|Mas ele vai te levar pra casa? Não seja estúpido
+Owlvin|Mesmo se você coletar todo o <color=#ffff00>tesouro</color> daqui
+Owlvin|Nada acontecerá no fim
+Owlvin|Todas as suas <color=#ffff00>memórias</color> relacionadas à humanos serão consumidas
+Owlvin|Você apenas irá se lembrar que se aventurou pelo <color=#ffff00>tesouro</color>
+Owlvin|Assim como os outros, você continuará se aventurando nas ilhas, até morrer
+Owlvin|Você foi avisado.
+;
+M-4:
+#noSpawnEffect
+#waitForGround
+Muscrap|Deverias ter visto a sua reação
+Muscrap|Você já deve conhecer Owlvin
+Muscrap|Ele é o único que pode ir e sair livremente da lua
+Muscrap|Mas agora, as asas dele foram pegas por aquele desgraçado
+Muscrap|Todo mundo que teve uma conexão com "ela" é abandonado na lua
+Muscrap|Até hoje, Owlvin e eu somos os únicos aqui
+;
+M-5:
+#noSpawnEffect
+#waitForGround
+Muscrap|A propósito
+Muscrap|Todas as armadilhas aqui foram feitas pelo Owlvin
+Muscrap|Para alguém com asas, é fácil de passar
+Muscrap|Para outros, é quase impossível
+Muscrap|Mas os músculos conseguem fazer o impossível ser possível
+Muscrap|Nada pode machucar essa camada de músculo!
+;
+M-6:
+#noSpawnEffect
+#waitForGround
+Nora|Por onde você estava?!
+Jellyhead|Acho que você o assustou... Mas ele está bem
+Nora|Achamos que você estava em perigo na floresta
+Nora|Até a Jellyhead tocar em uma coisa preta... E caótica
+Nora|E nos transportou até aqui
+Jellyhead|Pelo menos nos trouxe até ele!
+Nora|Então, você sabe que lugar é esse?
+Jellyhead|O espaço?
+Jellyhead|Como eu sou incrível!
+;
+M-7:
+#noSpawnEffect
+#waitForGround
+Nora|Estranho, consigo pular mais alto aqui sem usar muita força
+Jellyhead|Ei, nós podemos ir para um lugar mais quente?
+Jellyhead|Meus tentáculos estão congelando!
+Nora|E também esse cheiro...
+Nora|Mas não tem outra criatura aqui
+Nora|Quem construiu essas armadilhas aqui?
+Jellyhead|É possível que estejamos em uma catacumba espacial?
+;
+M-8:
+#noSpawnEffect
+#waitForGround
+Owlvin|Eu vi você passando por minhas armadilhas
+Owlvin|Você não é como aqueles tolos que mal sabem como pular
+Owlvin|Mas ainda há uma coisa me incomodando...
+Owlvin|Hm... Pode ser apenas impressão minha
+;
+M-9:
+#noSpawnEffect
+#waitForGround
+Owlvin|Era isso mesmo!
+Owlvin|Você deve ter adquirido o poder "dela"!
+Owlvin|Mas por quê?
+Owlvin|Por que você?
+;
+3-10:
+#noSpawnEffect
+#waitForGround
+God|Como estão indo as coisas?
+God|Você viu algum objeto estranho por aqui?
+God|Se não se importar, pode me contar sobre isso
+God|Hm... Estou com fome
+God|Vou indo tomar meu chazinho da tarde, até mais!
+#godLeave
+;
+M-10:
+#noSpawnEffect
+#waitForGround
+Nora|Eu juro que senti uma quarta pessoa aqui
+Jellyhead|Acho que seu olfato tá estranho, eu não vejo ninguém
+;
+M-11:
+#noSpawnEffect
+#waitForGround
+Owlvin|Idiotas, apenas você pode me ver
+Owlvin|Aqueles que tiveram as memórias devoradas não conseguem me ver
+Nora|Gatinho? Para onde você está olhando?
+Owlvin|A menos que você tenha "o poder" em você
+Owlvin|Irei pensar em um plano para derrotar aquele mentiroso
+Nora|Você me parece distraído...
+Owlvin|Se apresse e vá coletar os <color=#ffff00>tesouros</color>
+Owlvin|Para atrair aquele mentiroso
+Owlvin|Preciso ir preparando alguns suprimentos
+;
+3-12:
+#noSpawnEffect
+#waitForGround
+God|Aquela mem... Melancia tinha um gosto estranho
+God|Eu realmente não gostei do que comi
+God|Você coletou quase todas as <color=#ffff00>bolas de neve</color>
+God|Está feliz por estar perto de chegar em casa?
+God|Eu imagino sua resposta sem usar telepatia
+God|Você realmente quer voltar pra casa, não é?
+#godLeave
+;
+M-13:
+#noSpawnEffect
+#waitForGround
+Owlvin|Use esta cruz para imobiliza-lo temporariamente
+Muscrap|E por fim, o <color=#ffff00>canhão</color>!
+Owlvin|Idiota, acorrente ele primeiro, e então use o canhão 
+Owlvin|Com o "poder dela", não há como perder para ele 
+Muscrap|Mas aquele mentiroso pode tirar o poder de outros!
+Owlvin|Aquele bastardo não entende esse poder
+Owlvin|Felino, tu deves conhecer esse poder muito melhor que qualquer um de nós
+Owlvin|A propósito, pare de pensar sobre voltar pra casa
+Owlvin|No momento, isso é impossível
+;
+M-14:
+#noSpawnEffect
+#waitForGround
+Nora|Pare agora mesmo, gatinho
+Jellyhead|O que foi?
+Nora|Ele vai... Hm...
+Nora|...Quando os gatos sentem que o seu fim está próximo
+Nora|Pelo nosso instinto animal
+Nora|Nós procuramos por um lugar quieto para esperar...
+Nora|Esperar... e esperar mais um pouco
+Nora|Até o momento em que o ceifador vem pegar nossas almas
+Nora|Não lembro exatamente de onde ouvi isso
+Nora|Mas os gatos também podem escolher ficar perto de outros seres
+Nora|Eles se sentem seguros ficando perto em quem confiam
+Jellyhead|O que você está tentando dizer?
+Nora|Somos amigos, certo?
+Nora|Ou tem algo mais importante te esperando do outro lado?
+Nora|O teu olhar me diz que sim...
+Nora|Prometa que não vai morrer, tudo bem?
+Jellyhead|Umn... Não tenho ideia do que possa estar acontecendo
+Jellyhead|Mas você sempre pode conversar comigo sobre suas preocupações!
+Jellyhead|Como eu sou incrível!
+;
+Boss3Start:
+#noSpawnEffect
+#waitForGround
+#wait1Second
+God|Esse é o fim.
+God|Vamos cumprir nossa promessa
+God|Entregue-me todas as <color=#ffff00>bolas de neve</color> que você coletou
+God|E então poderei te levar pra casa
+#useOuterController
+;
+Boss3Shoot:
+#noSpawnEffect
+God|O que você está fazendo?!
+#useOuterController2
+God|<color=#ff0000>Parece que</color>
+God|<color=#ff0000>Aqueles ratos</color>
+God|<color=#ff0000>Te contaram tudo</color>
+God|Você decide
+God|Mato você e extraio as <color=#ffff00>memórias</color> de ti
+God|Ou
+God|Me entregue as <color=#ffff00>memórias</color> e eu pouparei sua vida
+God|Para mim, não há qualquer diferença
+God|Pra você, há uma grande diferença
+God|Mas agora, você tem que morrer
+God|<color=#ff0000>Por que me contrarias?</color>
+#useOuterController3
+;
+Boss3End:
+#noSpawnEffect
+God|Por que queres me parar?
+God|Quero remover todas as memórias relacionadas à humanos pelo seu bem
+God|Humanos nos machucam, nos abandonam, e eventualmente nos deixam
+God|Humanos são maus, eu não aceito a existência deles
+God|Você acha que me derrotou?
+God|Eu... Estou exausto
+#useOuterController
+#wait1Second
+;
+Boss3PreEnding:
+#noSpawnEffect
+#waitForGround
+#useOuterController
+God|O que você está fazendo aqui?
+God|Agora tu concordas com o que eu disse?
+God|Humanos apenas trazem más memórias
+God|Deixe... Deixe-me consumir tudo!
+#useOuterController2
+God|O que são essas memórias? Isso não está certo!
+God|Humanos não são tão gentis!
+God|Eles não nos fazem carinho desse jeito!
+God|Essas lembranças... Por que elas são assim?
+God|Mas agora você está morto. Por quê?
+God|Por quê...Por que você ainda quer voltar pra casa?
+God|Por que você é tão diferente dos outros?
+God|Então essa é... A sensação de ser lembrado...
+God|Você não pertence a esse lugar
+God|Me desculpe, não consegui me controlar
+God|Tem certeza que quer voltar com as memórias?
+God|Depois de voltar, você não irá mais lembrar do seu dono
+God|Mas se você ficar aqui...
+God|Deixa pra lá, eu sei que você não gostaria de ficar aqui
+God|Aliás
+God|A cor dos teus olhos é similar aos "dela"
+#useOuterController3
+;
+Boss3Ending:
+#noSpawnEffect
+#useOuterController
+God|Então ela é a sua dona?
+God|Ouvi uma vez que gatos não conseguem reconhecer rostos
+God|Pelo visto você reconheceu ela pelo cheiro dela
+God|...
+God|......
+God|Bem, posso te fazer uma pergunta?
+God|Qual o seu nome?
+God|O seu nome deve estar escrito nessa lápide 
+God|Mas eu não sei ler esses símbolos...
+#useOuterController2
+God|No final, ainda não sei nada sobre você
+God|Preciso ir
+God|Adeus, gato sem nome.
+#useOuterController3
+;
+Kelvin:
+#noSpawnEffect
+#waitForGround
+Kelvin|Ei cara!
+Kelvin|Sabia que uma fêmea linda acabou de passar por aqui?
+Kelvin|Você viu ela?
+Kelvin|Acredite, ela deve estar aqui em algum lugar
+Kelvin|Eu consigo sentir o seu aroma
+Kelvin|Se achá-la, fala pra mim
+;
+Cindy:
+#noSpawnEffect
+#waitForGround
+Cindy|Oh! Mas que gatinho adorável!
+Cindy|Vem cá me dar um abraço!
+Cindy|Você tem que tomar cuidado ao passar por aqui sozinho
+Cindy|Eu senti um cheiro estranho agora
+Cindy|A propósito, um pinguim está me seguindo muito ultimamente
+Cindy|Ele deve ser um “amante de gatos” pervertido 
+Cindy|Se estiver em perigo, grite por ajuda!
+;
+Sliman:
+#noSpawnEffect
+#waitForGround
+Sliman|Cuidado com o monstro pela frente!
+Sliman|A cruz em que trabalhei duro foi destruído por aquele bastardo
+Sliman|Gastei um mês inteiro reconstruindo um novo
+Sliman|Se alguém conseguir passar por aquele idiota
+Sliman|Farei uma cruz para o túmulo de graça
+Sliman|Bem, apenas se morrer antes de mim
+Sliman|Pare de interromper meu trabalho!
+;
+Ken:
+#noSpawnEffect
+#waitForGround
+Ken|Você chegou na hora certa!
+Ken|Eu estava tentando dormir agora
+Ken|Portanto, preciso dizer boa noite a você
+Ken|Podemos nos ver novamente logo depois
+Ken|No mesmo local da próxima vez
+;
+Ken_1:
+#noSpawnEffect
+#waitForGround
+Ken|Ei! Nos encontramos novamente!
+Ken|Então quer dizer que você quer descobrir algo de mim
+Ken|A verdade desse mundo?
+Ken|Sinto muito, nós nunca iremos saber o que é isto
+Ken|Talvez esse lugar seja uma realidade criada pelos animais
+Ken|Se ficares aqui por muito tempo, você vai lentamente esquecendo das memórias do passado
+Ken|Eu lembro que havia também uma lua atrás de onde eu estava 
+Ken|Embora tenha sido dividida em pedaços logo depois
+Ken|Ainda me lembro claramente daquela noite 
+Ken|E daquelas caixas de metal flutuantes super-rápidas
+;
+Ken_2:
+#noSpawnEffect
+#waitForGround
+Ken|Eu chamo esse lugar de "Terra dos Esquecidos"
+Ken|Porque nenhum humano se lembraria dos animais daqui
+Ken|E nós também gradualmente esquecemos de nosso passado
+Ken|Estive aqui por um bom tempo
+Ken|Antes da ida "dela"...
+Ken|Desculpe, já estou bocejando
+Ken|Eu preciso ir dormir, boa noite.
+;
+KenZ:
+#noSpawnEffect
+#waitForGround
+Ken|Z Z Z...
+;

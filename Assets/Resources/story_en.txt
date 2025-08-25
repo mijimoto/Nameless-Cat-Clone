@@ -1,0 +1,718 @@
+1-1:
+#noSpawnEffect
+#hideActiveButton
+#dropDown
+God|Hey there!\nCan you see me?
+God|Oh nice! You didn't fall into that nasty bug pile
+God|I would hate to have to clean my body again
+God|Hmm this is odd, could you not speak?
+God|Huh... this is the first time this has happened
+God|Well... think on the bright side,
+God|At least you won't find yourself in an argument
+God|Now, let's move to somewhere else first
+God|(Press <color=#ffff00>< % ^</color> buttons to move)
+#godLeave
+;
+1-2:
+#hideActiveButton
+#waitForGround
+God|Good news! According to the manual here...
+God|The fix for this situation is to use telepathy!
+God|Hm...let's try it out
+God|I can now hear the voice in your head...
+God|You're thinking how to get out of here...
+God|Who am I...
+God|And how to shut me up...
+God|Oh! I forgot to introduce myself!
+God|Hello, I am the caretaker of this world
+God|Don't worry,
+God|To leave this world is easy
+God|You can return home once you've collected all the <color=#ffff00>little white orbs</color> in this world
+#godLeave
+;
+1-3:
+#hideActiveButton
+#waitForGround
+God|You're asking what was the white orb you touched?
+God|It is the form of the <color=#ffff00>treasure</color> in your heart
+God|You can touch to collect the white orbs
+God|And then it will teleport you to the next area
+God|Usually it will take you to somewhere near the next white orb
+God|Oh and, others actually can't see your <color=#ffff00>treasure</color>
+God|Which is why I don't know if it was a <color=#ffff00>snowball</color> or the <color=#ffff00>treasure</color>
+God|Oh, unless you're an idiot that can't tell the difference
+God|Haha, just joking. Catch this!
+#unlockSkill
+God|I just shared some of my power to you
+God|It can help you get through dangerous areas
+God|Whenever you see an <color=#ff0000>arrow</color> appear above an object
+God|That's when you can use the <color=#ff0000>special button</color> to interact with it
+God|Oh, my time is up
+God|I'm going home now to feed my pets. Bye!
+#godLeave
+#activeButtonLight
+;
+JN-1:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Hey, kitty
+Jellyhead|Look at your tiny legs
+Jellyhead|It's impossible to jump over this canyon
+Jellyhead|I recommend you not to try it 
+Jellyhead|Too many ignorant tiny legs had lost their lives to this canyon
+Jellyhead|But I'm such a kind person, I stayed here especially to warn you
+Jellyhead|Of course, I did this kind act out of my own will, so no need to thank me
+Jellyhead|Why am I so goddamn great!
+;
+JN-2:
+#noSpawnEffect
+#waitForGround
+Nora|Oh! It's a cute little kitten!
+Nora|My name is <color=#ffff00>Nora</color>
+Nora|What a big snowstorm huh, it's difficult to travel in this weather
+Nora|Although this church has blocked out most of the snow
+Nora|But if you're not careful, you can still get lost in here
+Nora|Trapped by the deadly booby traps and monsters
+Nora|But <color=#ffff00>treasure</color> hunting is worth any risk
+Nora|Are you also seeking for the <color=#ffff00>treasure</color>?
+Nora|Wow cool! so we're both adventurers!
+Nora|Let me know if you need anything
+;
+JN-3:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Hi
+Jellyhead|I didn't think we would meet again so soon
+Jellyhead|Did you know?
+Jellyhead|That canyon wasn't so dangerous after all...
+Jellyhead|You could simply jump over it
+Jellyhead|But the platforms ahead look dangerous indeed
+Jellyhead|I would still advise you not to cross
+Jellyhead|Of course, being such a nice animal like me
+Jellyhead|I do this kind act from my heart
+Jellyhead|Why am I so goddamn great!
+;
+JN-4:
+#noSpawnEffect
+#waitForGround
+Nora|Watch out for the <color=#ff0000>red monsters</color>!
+Nora|They will pace back and forth and attack whoever passes by. 
+Nora|Rumor has it that, long time ago, they were once normal animals like us
+Nora|But they lost their hope to keep on living
+Nora|In the end, they slowly turned into this...
+Nora|......
+Nora|Some also said that they were the ones who found the <color=#ffff00>treasure</color>...
+Nora|No matter what the truth is, it won't stop me from going forward
+;
+JN-5:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Hi, we met again
+Jellyhead|Actually, my name is <color=#ffff00>JellyHead</color>
+Jellyhead|By the way, your moves are quite sharp
+Jellyhead|I cant believe you just jumped over those traps!
+Jellyhead|But I would watch out for the <color=#ff0000>red guy</color> ahead
+Jellyhead|If it sees you, it will charge towards you
+Jellyhead|Of course, I purposely stayed behind to tell you this
+Jellyhead|Otherwise I would already move on
+Jellyhead|Why am I so goddamn great!
+;
+JN-6:
+#noSpawnEffect
+#waitForGround
+Jellyhead|How did you get past that monster?
+Jellyhead|When I looked back, you've already got rid of him
+Jellyhead|Could it be that you have the superpower to pass through walls?
+Jellyhead|I want a superpower too
+Jellyhead|A superpower to fly in the sky like superman
+Jellyhead|Then I won't be scared of jumping over those spikes...
+Jellyhead|Uh um...I meant
+Jellyhead|Then I could help others pass through those spikes
+Jellyhead|Why am I so goddamn great!
+;
+JN-7:
+#noSpawnEffect
+#waitForGround
+Nora|Hey kitty, let me tell you something
+Nora|Some travelers will leave canned cat food behind 
+Nora|If you find any,
+Nora|You can trade those with the <color=#ffff00>merchant</color> for some items
+Nora|(you can trade the can cat food for skins from the menu)
+Nora|If we can find a way out, and leave this church
+Nora|We can head over to the forest across the bridge
+Nora|Look on the bright side, this church's still standing after all these years
+Nora|Perhaps we can still find the exit
+;
+JN-8:
+#noSpawnEffect
+#waitForGround
+Nora|Why would they build a church in the snow?
+Nora|None of the gravestone here have names engraved on it
+Nora|And many crosses are placed in a place you cannot reach
+Nora|With boobytraps set inside
+Nora|As if the church was designed like pharaoh's pyramid
+Nora|Executing whoever enters this place
+Nora|If not for the heavy snow that damaged the traps here
+Nora|We might not be able to leave this place
+;
+JN-9:
+#noSpawnEffect
+#waitForGround
+Nora|Come to think about it, there are many more buildings like this in this world
+Nora|What are the purpose of them?
+Nora|Whenever I think about it, I just can't wait to keep on exploring
+Nora|Perhaps someday I could uncover all the secrets of this world
+;
+JN-10:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Kitty, you're just in time!
+Jellyhead|There is a broken bridge ahead, it seems unusable though
+Jellyhead|But when I was on that bridge I saw a smaller one underneath it
+Jellyhead|Although it looks a little shabby, at least it's in one piece
+Jellyhead|It's located at the bottom of the island
+Jellyhead|I spent some time looking for the entrance to the bridge
+Jellyhead|I think I can find it pretty soon
+Jellyhead|Why am I so goddamn great!
+;
+JN-11:
+#noSpawnEffect
+#waitForGround
+Nora|Whoa!  Where did you draw out this monster!
+Jellyhead|You're finally out, kitty
+Nora|Hey kitty, you know him?
+Jellyhead|Hi...Hello, I'm <color=#ffff00>Jellyhead</color>
+Nora|Hello, I'm <color=#ffff00>Nora</color>
+Nora|Are you kitty's friend? I didn't see you on my way here
+Jellyhead|Because I was helping others!
+Jellyhead|Actually I've been staying in this church all these years
+Jellyhead|Warning passing adventurers to watch out for dangers
+Nora|I see, thank you for your help
+Nora|Let's keep moving forward, Kitty
+Jellyhead|Actually this church isn't dangerous at all
+Jellyhead|Therefore I'm going to the place you guys are heading
+Jellyhead|This way I will be able to help more people!
+Nora|That's great! Let's head out Kitty
+Jellyhead|Wait!
+Nora|What's wrong?
+Jellyhead|Why... why am I so goddamn great!
+Nora|What?
+;
+F-1:
+#noSpawnEffect
+#waitForGround
+IT|Oh! this door finally opened!
+IT|Hello, hope you didn't get caught in the rain, Mr. or Mrs. Cat
+IT|Sorry, I couldn't tell the difference between a male and female cat
+IT|You look so busy, a tough day at work huh?
+IT|Last month I invited my crush to a date in the snowland
+IT|But I've been late for a month now, because of this damn locked door
+IT|I found the miner, he said the key to this door is gone
+IT|Unless someone opens it from the other side, there is no other way to open it
+IT|Thank God, it is finally opened now!
+IT|Now I need to hurry over to the snow land, bye kitty!
+;
+F-2:
+#noSpawnEffect
+#waitForGround
+IT|You look like you're a traveler, am I right?
+IT|Follow this path upwards then you can reach the mine
+IT|Go through the mine then you can get to the forest outside 
+IT|The mine is much safer than the forest
+IT|Take this advice as my repayment for you
+;
+F-3:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Kitty, where are you heading?
+Rabbitman|Are you lost?
+Rabbitman|There's only shrubs and deadly creatures ahead
+Rabbitman|So hurry and turn around head the other way
+;
+F-4:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Hey, I just noticed something
+Jellyhead|You see the <color=#ffff00>flower</color> up there?
+Jellyhead|It just sucked something in and spat it out again
+Jellyhead|Just like a mini wormhole
+Jellyhead|But I don't think it's dangerous
+Jellyhead|You don't have to be afraid of it
+Jellyhead|Why am I so goddamn great!
+;
+F-5:
+#noSpawnEffect
+#waitForGround
+Rabbitman|If you need, I can take you back
+Rabbitman|This forest is covered in <color=#ff0000>red plants</color> everywhere
+Rabbitman|Do not let their bright colors fool you
+Rabbitman|They're extremely dangerous
+;
+F-6:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Aha, here you are! 
+Jellyhead|You feline animals do have strong physical
+Jellyhead|You guys can jump up to a very high place so easily...
+Jellyhead|But! I only left Nora because I want to come look for you
+Jellyhead|Oh, you know what else I found out?
+Jellyhead|I risked my life to discover this secret
+Jellyhead|I noticed the turtles here are really friendly
+Jellyhead|They'd let you stand on their back, and carry you through danger
+Jellyhead|Why am I so goddamn great!
+;
+F-7:
+#noSpawnEffect
+#waitForGround
+Rabbitman|You're not looking for the <color=#ffff00>treasure</color>, are you?
+Rabbitman|If it's true, let me tell you a story
+Rabbitman|This area used to be a forest without red plants
+Rabbitman|It's the corpses of the adventurers that fertilized the shrubs
+Rabbitman|More and more dead bodies gave them the perfect nutrients for reproduction
+Rabbitman|As a result, the forest is now covered in red plants
+Rabbitman|Things could be different if only they would settle for a secure life
+Rabbitman|But the <color=#ffff00>treasure</color> lured them to more dangerous place
+Rabbitman|Those idiots wanted to suicide, I would not stop them
+Rabbitman|But their death only made this place more dangerous
+;
+F-8:
+#noSpawnEffect
+#waitForGround
+Rabbitman|I don't expect you guys to understand
+Nora|Shut up, don't compare us to you
+Nora|I would never want to be like you guys, chained and locked up in the cage 
+Nora|Having to rely on others for basic survival
+Nora|I'd rather die here and become plant food
+Nora|I choose to take charge of my fate, make my own path!
+Nora|This is my way of life
+Rabbitman|Idiots
+Rabbitman|Coming here, you're only bringing more danger to this place
+Rabbitman|If you haven't realized that until this point
+Rabbitman|That means your brains are very limited
+Nora|Even if it was true you are not in a position to insult us
+Nora|Coming here is the path we have chosen
+Rabbitman|You must think coming here is your own decision
+Rabbitman|I also went through many struggles to get here
+Rabbitman|No matter how hard we try, there's no end to this
+Rabbitman|Me and my buddies set up a camp protected many families
+Rabbitman|If it wasn't for those idiots...
+Nora|You're wrong! you guys were raised in the cage from the beginning
+Nora|That's why you never have the need to pursue freedom
+Nora|......
+Jellyhead|Hey look, it's Kitty!
+Nora|Haha... I didn't notice you were here
+;
+F-9:
+#noSpawnEffect
+#waitForGround
+Rabbitman|I didn't expect you're also an adventurer
+Rabbitman|And you got here with that body
+Rabbitman|After all, your body will start to change if you stay here for too long
+Rabbitman|The longer you stay, the more drastic your body will change.  but you still remain in your original form
+Rabbitman|This means you've just got here not too long ago
+Rabbitman|Honestly, I don't want to see any more animals lose their lives here
+Rabbitman|That's why I really recommend you turn around
+Rabbitman|Apparently, not all animals think the same
+Rabbitman|I don't understand why is that stuff even worth pursuing
+Rabbitman|My buddies that I built up a big family with
+Rabbitman|In the end, everyone chose to seek after their own <color=#ffff00>treasure</color>
+Rabbitman|Let me ask you a question, what does your <color=#ffff00>treasure</color> look like?
+;
+F-10:
+#noSpawnEffect
+#waitForGround
+Rabbitman|I'm just frustrated, How come upon receiving a second chance to live
+Rabbitman|Yet my buddies still chose to ruin it for such matter
+Rabbitman|I can never understand those idiots
+Rabbitman|If you really are going to chase after the <color=#ffff00>treasure</color>
+Rabbitman|<color=#ff0000>I beg you guys, please die at a place where no one can see</color>
+;
+F-11:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Nora, you look mad
+Nora|I'm fine
+Jellyhead|Hey, what do you guys think he meant...
+Jellyhead|When Mr. Rabbit said there's no end to this journey
+Jellyhead|What does that mean?
+Jellyhead|Does it mean we won't die?
+Nora|That was just a metaphor, stupid
+Jellyhead|What metaphor?
+Nora|Who knows, why don't you ask him yourself?
+Jellyhead|I think he left already
+Nora|Good, no one will stop us anymore
+;
+F-12:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Where did we come from?
+Nora|Who knows
+Nora|I don't have any memories of it
+Nora|Just like how you have no pre-birth memories
+Jellyhead|That's strange, although I still remember things from the past
+Jellyhead|I couldn't remember how I got here
+Jellyhead|I thought I just can't remember things well
+;
+F-13:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Some said there is a ruin on top of this forest 
+Jellyhead|According to Mr. Rabbit, it's guarded by an ancient monster
+Jellyhead|We can avoid him as long as we are careful
+Jellyhead|Oh and Mr. Rabbit wanted me to tell you
+Jellyhead|The creatures in the forests can sense our smell
+Jellyhead|They can still attack you even when you're hidden
+Jellyhead|He also said, mosquitoes aren't good at sensing smell
+Jellyhead|Why am I so goddamn great!
+;
+F-14:
+#noSpawnEffect
+#waitForGround
+Nora|The bridge collapsed, we need to find another way to cross
+Nora|We can find a path if we head to higher ground
+Jellyhead|But Mr. Rabbit said not to go to the top of the forest
+Nora|Uh! that guy again!
+Nora|I do what I want
+;
+2-16:
+#useOuterController
+God|You actually got here!
+God|To my surprise, you actually defeated that guy
+God|And you collected 30 <color=#ffff00>snowballs</color>!
+God|You way exceeded my expectation 
+God|Oh, you know, many have given up halfway
+God|If only they could all be like you...
+God|Now, let's not talk about this
+God|All the snowballs here has been collected by you
+God|The only ones left are on the moon
+God|I can open the portal to the moon for you
+God|Believe me, this is the only way to send you home
+God|By the way, if you find anything unusual on the moon 
+God|Please let me know
+#useOuterController2
+#wait3Second
+#wait3Second
+#nextLevel
+;
+M-1:
+#noSpawnEffect
+#waitForGround
+Muscrap|You plan to keep on challenging?
+Muscrap|If you don't train your muscles in a low gravity environment
+Muscrap|You will gradually lose your muscles
+Muscrap|The only way is to work out every day
+Muscrap|Check out my flawless muscles
+;
+M-2:
+#noSpawnEffect
+#waitForGround
+Muscrap|Wait, who are you?
+Muscrap|Why are you here?
+;
+M-3:
+#noSpawnEffect
+#waitForGround
+Owlvin|Here comes another poor lamb to be slaughtered
+Owlvin|Let's be brief, I'll make it clear for you
+Owlvin|My name is <color=#ffff00>Owlvin</color>, the owl who protects the truth
+Owlvin|You've been fooled, completely fooled
+Owlvin|You are an overconfident idiot
+Owlvin|I'm sorry, perhaps I've made you butthurt with these words
+Owlvin|But he'll let you go? don't be stupid
+Owlvin|Even if you can collect every single <color=#ffff00>treasure</color> there is
+Owlvin|Nothing will happen in the end
+Owlvin|All your <color=#ffff00>memories</color> related to human will be consumed
+Owlvin|You will only remember that you're adventuring for the <color=#ffff00>treasure</color>
+Owlvin|Just like others you will continue to venture in the islands below, until you die
+Owlvin|I've warned you
+;
+M-4:
+#noSpawnEffect
+#waitForGround
+Muscrap|You should've seen the look on your face
+Muscrap|You must've already met Owlvin
+Muscrap|He was the only one who could come and go freely of the moon
+Muscrap|But now, his wings were taken by that bastard
+Muscrap|Anyone that's in connection with "her" is left abandoned on the moon
+Muscrap|Til today, Owlvin and I are the only ones left
+;
+M-5:
+#noSpawnEffect
+#waitForGround
+Muscrap|By the way
+Muscrap|All the traps here were set by Owlvin
+Muscrap|For someone with wings, they're easy to pass
+Muscrap|For others, it is impossible
+Muscrap|But muscles can make the impossible possible
+Muscrap|Nothing can scratch this layer of muscle!
+;
+M-6:
+#noSpawnEffect
+#waitForGround
+Nora|Where have you been?!
+Jellyhead|I think you scared him...but he looks fine
+Nora|I thought you got in danger in the forest
+Nora|Until JellyHead touched a black...chaotic thing
+Nora|And then it transported us here
+Jellyhead|But it brought us to him!
+Nora|So you know where this place is?
+Jellyhead|The space?
+Jellyhead|Why am I so goddamn great!
+;
+M-7:
+#noSpawnEffect
+#waitForGround
+Nora|Weird, I can jump really high here without using too much strength
+Jellyhead|Hey, can we go to somewhere warmer?
+Jellyhead|My tentacles are all frozen!
+Nora|And also this smell...
+Nora|But there isn’t even a creature here
+Nora|Who built these traps here?
+Jellyhead|Is it possible that we're at the space catacomb?
+;
+M-8:
+#noSpawnEffect
+#waitForGround
+Owlvin|I saw you dodged my boobytraps
+Owlvin|You're not like those trash who doesn't even know how to jump
+Owlvin|But one thing keeps bothering me
+Owlvin|Hm.... it might just be my illusion
+;
+M-9:
+#noSpawnEffect
+#waitForGround
+Owlvin|Yes! That's right!
+Owlvin|You must have acquired "her" power!
+Owlvin|But why?
+Owlvin|Why you?
+;
+3-10:
+#noSpawnEffect
+#waitForGround
+God|How are things going?
+God|Oh, have you seen any strange objects nearby?
+God|If you don't mind you can tell me about it
+God|Hm....I'm hungry
+God|Imma go enjoy my afternoon tea, see you!
+#godLeave
+;
+M-10:
+#noSpawnEffect
+#waitForGround
+Nora|I swear I sensed the fourth person
+Jellyhead|You should have your nose checked, I don't see anyone
+;
+M-11:
+#noSpawnEffect
+#waitForGround
+Owlvin|Idiots, only you can see me
+Owlvin|The ones who have their memories eaten cannot see me
+Nora|Kitty? what are you looking at?
+Owlvin|As long as you have "the power" in you
+Owlvin|I can think of a plan to defeat that liar
+Nora|You look distracted
+Owlvin|Hurry and go collect those <color=#ffff00>treasure</color>
+Owlvin|To lure out that liar 
+Owlvin|I need to go prepare some supplies
+;
+3-12:
+#noSpawnEffect
+#waitForGround
+God|What a nasty mem....meatball
+God|Ah, I really want to forget the taste of what I just ate
+God|You're almost done collecting all the <color=#ffff00>snowballs</color>
+God|Are you happy that you're almost home?
+God|I have already known it without using telepathy
+God|You must really want to go back, right?
+#godLeave
+;
+M-13:
+#noSpawnEffect
+#waitForGround
+Owlvin|Use this cross to temporary immobilized him
+Muscrap|And the finale, the <color=#ffff00>Cannon</color>!
+Owlvin|Dumbass, wait till he is chained first then use the cannon 
+Owlvin|With "her power", there's no way you will lose to him 
+Muscrap|But that liar can take away other's power!
+Owlvin|That bastard does not understand this power
+Owlvin|Kitty, You should know this power better than any of us
+Owlvin|Also, stop thinking about going home
+Owlvin|That already is, impossible
+;
+M-14:
+#noSpawnEffect
+#waitForGround
+Nora|Stop right there, kitty
+Jellyhead|What's wrong?
+Nora|Are you going to....um...
+Nora|...when cats sense the end of their life is approaching
+Nora|Out of our animal instinct
+Nora|We will go find a quiet place and wait
+Nora|Wait... and wait
+Nora|Wait for the moment where grim reaper comes to take our lives
+Nora|I'm not sure where I heard this from
+Nora|But cats will also choose to stay beside other beings
+Nora|They feel safe near the body they trust
+Jellyhead|What are you trying to say?
+Nora|We're friends, right?
+Nora|Or is there more important thing waiting on the other side
+Nora|The view of your back is telling me yes
+Nora|Promise me, don't die, would you?
+Jellyhead|Um...although I'm not sure what's going on
+Jellyhead|But you can always talk to me about your worries!
+Jellyhead|Why am I so goddamn great!
+;
+Boss3Start:
+#noSpawnEffect
+#waitForGround
+#wait1Second
+God|This is the end
+God|Let's both fullfill our promise
+God|Hand over the <color=#ffff00>snowballs</color> you collected
+God|Then I will send you home
+#useOuterController
+;
+Boss3Shoot:
+#noSpawnEffect
+God|What are you doing?!
+#useOuterController2
+God|<color=#ff0000>Looks like</color>
+God|<color=#ff0000>Those rats</color>
+God|<color=#ff0000>Told you everything</color>
+God|You know 
+God|Killing you and then extract the <color=#ffff00>memories</color> from you
+God|Or
+God|You hand over the <color=#ffff00>memories</color> and I'll spare your life
+God|To me, there is no difference
+God|To you, it's a huge difference
+God|But now, you must die
+God|<color=#ff0000>Why must you upset me?</color>
+#useOuterController3
+;
+Boss3End:
+#noSpawnEffect
+God|Why are you stopping me?
+God|I swallowed all human-related memories for their good
+God|Humans hurt us, abandon us, and eventually leave us
+God|Humans are evil, I won't allow their existence
+God|You think you have defeated me?
+God|I... I'm just exhausted
+#useOuterController
+#wait1Second
+;
+Boss3PreEnding:
+#noSpawnEffect
+#waitForGround
+#useOuterController
+God|What are you doing here?
+God|Have you now agreed with what I said?
+God|Humans only bring evil memories
+God|Let me...let me consume them all!
+#useOuterController2
+God|What are these memories? this is not right!
+God|Humans aren't such gentle creatures!
+God|They do not pet our head like this!
+God|These memories... why are they like this?
+God|But you're dead already. Why?
+God|Why...why would you still want to go back?
+God|Why are you different than the others in this land?
+God|So this is... the feeling of being remembered...
+God|You don't belong to this place
+God|Im sorry, I wasn't able to control myself
+God|But are you sure you want to go back with the memories?
+God|Once you get back, you wouldn't even be able to reminisce your owner
+God|But if you stay here...
+God|Never mind, I knew you wouldn't want to stay here
+God|By the way
+God|The color of your eyes is similar to "hers"
+#useOuterController3
+;
+Boss3Ending:
+#noSpawnEffect
+#useOuterController
+God|So she's your owner?
+God|I heard that cats cant recognize human faces
+God|Perhaps you recognized her by her smell
+God|...
+God|......
+God|Oh, by the way, can I ask you a question?
+God|What is your name?
+God|The engraving on the tombstone must be your name right 
+God|But I can't read these symbols...
+#useOuterController2
+God|In the end, I still know nothing about you
+God|I should go
+God|See you, nameless cat
+#useOuterController3
+;
+Kelvin:
+#noSpawnEffect
+#waitForGround
+Kelvin|Hey man!
+Kelvin|Guess what? A hot penguin just passed by here
+Kelvin|Have you seen her?
+Kelvin|Believe me, she must be somewhere stalking us right now
+Kelvin|Because my nose can smell her scent
+Kelvin|If you see her, let me know
+;
+Cindy:
+#noSpawnEffect
+#waitForGround
+Cindy|Oh! What an adorable kitten!
+Cindy|Come give me a hug!
+Cindy|You must be careful walking around here by yourself
+Cindy|I smelled something strange just now
+Cindy|Oh, by the way, a penguin is following me around a lot lately
+Cindy|He might be a cat-loving pervert
+Cindy|If you're in danger, scream for help!
+;
+Sliman:
+#noSpawnEffect
+#waitForGround
+Sliman|Watch out for the monster ahead!
+Sliman|the cross I worked hard on was smashed by that bastard
+Sliman|I spent the whole month rebuilding a new one
+Sliman|If someone can drive away from this bastard
+Sliman|I'll make him a cross for his grave for free
+Sliman|Welp, only if he dies before me
+Sliman|Stop disturbing my work!
+;
+Ken:
+#noSpawnEffect
+#waitForGround
+Ken|You're here just in time!
+Ken|I'm trying to get a good sleep right now
+Ken|Therefore I need to say goodnight to you
+Ken|We might see each other again soon after all
+Ken|At the same place next time
+;
+Ken_1:
+#noSpawnEffect
+#waitForGround
+Ken|Hey! We meet again!
+Ken|this means you want to find out something from me
+Ken|the truth of this world?
+Ken|I'm sorry, we can never know what it is
+Ken|perhaps this place is another reality created for animals
+Ken|if you stay here for too long, you will slowly lose memories of your past
+Ken|I remember there's also a moon back where I was from 
+Ken|although it was teared up into pieces soon after
+Ken|I could still remember clearly of that night 
+Ken|and those super-fast floating metal boxes
+;
+Ken_2:
+#noSpawnEffect
+#waitForGround
+Ken|I call this place "The Land of Forgotten"
+Ken|because no humans would remember the animals here
+Ken|and we would also gradually forget our own past
+Ken|I've been here for quite a while now
+Ken|before "she" left...
+Ken|Sorry, I'm yawning already
+Ken|I should head to sleep, good night.
+;
+KenZ:
+#noSpawnEffect
+#waitForGround
+Ken|Z Z Z...
+;

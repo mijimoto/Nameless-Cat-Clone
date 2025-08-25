@@ -1,0 +1,142 @@
+//Text
+clear_data_confirm:Вы действительно хотите стереть все игровые данные?\n(Будут сброшены все монеты и облики, приобретённые за эти монеты.)\n* Последствия необратимы.
+clear_data_timer:Подождите {0} сек.
+ad_confirm:Открыть контрольную точку просмотром короткого видео?
+ad_load_fail:Ошибка загрузки видео.
+ad_loading_video:Загрузка Видео...
+ad_wait_for_too_long:Ждёте слишком долго?
+quit_confirm:Вы действительно хотите выйти из игры?
+skin_title:ОБЛИК
+skin_confirm:Использ.
+skin_preparing_skin:Подготовка Облика...
+purchase_thanks_for_support:Вы успешно приобрели удаление рекламы.\nСпасибо за то, что поддержали нас, мяу
+purchase_not_available:На данный момент, недоступно.\nПожалуйста, проверьте соединение с Интернетом.
+purchase_restore_success:Покупки успешно восстановлены!
+purchase_restore_fail:Ошибка восстановки.\nПожалуйста, проверьте соединение с Интернетом.
+loading:Загрузка...
+click_to_play:Нажмите, чтобы начать
+please_select_language:Пожалуйста, выберите язык.
+//Achievement
+achievement_chapter_title_1:Скорый Побег из Собора
+achievement_chapter_title_2:В Этом Лесу Растёт Что-то Не То
+achievement_chapter_title_3:Ощущение, Что Тебя Помнят
+achievement_chapter_description_1:Завершить первую главу - Собор.
+achievement_chapter_description_2:Завершить вторую главу - Лес.
+achievement_chapter_description_3:Завершить третью главу - Луна.
+achievement_postcard_title:Кто Я?
+achievement_postcard_description:Собрать 3 фотокарточки.
+achievement_fish_title_1:Я Люблю Рыбу
+achievement_fish_title_2:Я ХОЧУ БОЛЬШЕ РЫБЫ!
+achievement_fish_title_3:Лучший Рыболов
+achievement_fish_description_1:Собрать 15 консервных банок.
+achievement_fish_description_2:Собрать 30 консервных банок.
+achievement_fish_description_3:Собрать 45 консервных банок.
+achievement_skin_title_1:Прогуляемся Вдвоём
+achievement_skin_title_2:Кошачий Прайд
+achievement_skin_title_3:Воистину Непростой Котёнок
+achievement_skin_description_1:Открыть 1 облик.
+achievement_skin_description_2:Открыть 6 обликов.
+achievement_skin_description_3:Открыть все облики.
+//Ending
+ending_the_end:- КОНЕЦ -
+ending_game_by:GAME BY
+ending_programming:ПРОГРАММИРОВАНИЕ
+ending_art_and_story:РИСОВКА & СЦЕНАРИЙ
+ending_sound_and_music:МУЗЫКА & ЗВУК
+ending_translation:НАШИ ПЕРЕВОДЧИКИ
+ending_special_thanks:ОСОБАЯ БЛАГОДАРНОСТЬ
+ending_and_those_you_met:И ТЕМ, КОГО ВЫ ПОВСТРЕЧАЛИ...
+ending_your_record:ВАШ РЕКОРД
+ending_total_death:Всего Смертей
+ending_total_fish_can:Всего Консервных Банок
+ending_thank_you_for_playing_upper:СПАСИБО ЗА ИГРУ
+ending_thank_you_for_playing:Спасибо за игру!
+//Stat
+stat_play_time:Время Игры
+stat_jump_count:Количество Прыжков
+stat_move_distance:Пройденный Путь
+stat_move_distance_far:Очень Далёкий
+stat_block_attach_count:Количество Вселений
+stat_block_trade_count:Количество Обменов
+stat_dead_count:Количество Смертей
+stat_collected_fish_can:Собрано Рыбных Консерв
+stat_collected_postcard:Собрано Фотокарточек
+stat_time_day: {0}дн
+stat_time_hour: {0}ч
+stat_time_min: {0}мин
+stat_time_sec: {0}сек
+stat_distance:{0}м
+//Button
+btn_privacy_policy:Политика\nКонфиденц.
+btn_clearData:СТЕРЕТЬ ДАННЫЕ
+btn_language:ЯЗЫК
+btn_hide_button:СКРЫВАТЬ КНОПКИ
+btn_show_button:ПОКАЗЫВАТЬ КНОПКИ
+btn_adjust_button:НАСТРОИТЬ КНОПКИ
+btn_adjust_button_reset:СБРОС
+btn_adjust_button_apply:ПРИМЕНИТЬ
+btn_clear:Стереть
+btn_ok:ОК
+btn_cancel:Отмена
+btn_ad_play:Мне нужно это
+btn_ad_cancel:Нет, спасибо
+btn_quit:Выйти
+btn_skin_buy:Купить
+btn_google_play
+btn_story_skip:ПРОПУСТИТЬ
+//killing tag
+Monster:Монстр
+Falling:Пропасть
+Trap:Ловушка
+Boss1:Первый Босс
+Boss2:Второй Босс
+Boss3:Третий Босс
+//level name
+1-1:Безымянная Могила
+1-2:Вверх
+1-3:Утёс
+1-4:Снежная Долина
+1-5:Вход в Собор
+1-6:Ловушки
+1-7:Больше Ловушек
+1-8:Острые Пилы
+1-9:Нестабильные Платформы
+1-10:Эти Надгробия и Те
+1-11:Головоломка
+1-12:Лёгкий Путь.
+1-13:Двойная Головоломка
+1-14:Недружелюбное Логово
+1-15:Ворота и Мост... и Босс
+1-16:Драконоподобное Чудище
+2-1:Запертая Дверь
+2-2:Шахтёрская Штольня
+2-3:Странный Цветок
+2-4:Красные Растения
+2-5:Безопасная Пробежка
+2-6:Выход
+2-7:Джунгли
+2-8:Опасное Испытание.
+2-9:Заросли
+2-10:Прыжок Повыше
+2-11:Внимание
+2-12:Платформы с Лезвиями
+2-13:Насекомые
+2-14:На Вершине
+2-15:Лесной Блюститель
+2-16:Дикий Шипоглаз
+3-1:Луна
+3-2:По Таймеру
+3-3:Вентиляция
+3-4:Парящие Шипы
+3-5:Мёртвый Город
+3-6:Больше Нестабильных Платформ
+3-7:Зона Гибридов
+3-8:Избегая Пустот
+3-9:Изворотливость
+3-10:Непроницаемые Стены
+3-11:Чёткий Пролёт
+3-12:Испытания-Близнецы
+3-13:Его Лучшая Головоломка
+3-14:Кнопка Пустоты
+3-15:Последняя Битва
+3-16:Конец.

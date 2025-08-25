@@ -1,0 +1,726 @@
+1-1:
+#noSpawnEffect
+#hideActiveButton
+#dropDown
+God|Xin chào!\nCậu có nhìn thấy tôi không?
+God|Hay quá! May là cậu không bị rơi vào cái hố sâu bọ kinh tởm kia.
+God|Tại vì tôi ghét phải tắm lại lắm.
+God|Mà lạ quá nhỉ, cậu không nói được sao?
+God|Hừm… Đây là lần đầu tiên có chuyện như này xảy ra đấy.
+God|Mà thôi, nhìn vào mặt tích cực đi.
+God|Ít ra cậu sẽ chẳng cần phải lo về chuyện cãi nhau với người khác.
+God|Rồi, giờ thì di chuyển sang chỗ khác cái đã nào.
+God|(Nhấn nút <color=#ffff00>↑ ← →</color> để di chuyển)
+#godLeave
+;
+1-2:
+#hideActiveButton
+#waitForGround
+God|Tin tốt đây! Theo như sách hướng dẫn thì...
+God|Thần giao cách cảm chính là cách giải quyết cho vấn đề này!
+God|Hừm… Để thử xem.
+God|Tôi nghe được giọng nói trong đầu cậu rồi...
+God|Cậu đang nghĩ làm thế nào để thoát ra khỏi đây…
+God|Tôi là ai…
+God|Và làm thế nào để khiến tôi ngừng nói…
+God|A quên mất! Tôi vẫn chưa tự giới thiệu nhỉ!
+God|Xin chào, tôi chính là người cai quản của thế giới này.
+God|Đừng lo,
+God|Muốn rời khỏi đây thì dễ lắm.
+God|Thu thập xong toàn bộ <color=#ffff00>khối cầu trắng</color> trong thế giới này là cậu được về nhà ngay ấy mà.
+#godLeave
+;
+1-3:
+#hideActiveButton
+#waitForGround
+God|Cậu muốn hỏi cái quả cầu trăng trắng mình vừa chạm vào là gì ấy hả?
+God|Đó là hình dạng của <color=#ffff00>báu vật</color> trong trái tim cậu.
+God|Cậu có thể thu thập những quả cầu ấy bằng cách chạm vào chúng,
+God|Sau đó, nó sẽ dịch chuyển cậu đến một nơi khác.
+God|Thường thì sẽ là một đâu đó gần nơi quả cầu tiếp theo thôi.
+God|À mà, người ngoài sẽ không thể nhìn thấy được <color=#ffff00>báu vật</color> của cậu là gì đâu.
+God|Thế nên chính tôi cũng chẳng thể phân biệt nổi đó là <color=#ffff00>bóng tuyết</color> hay <color=#ffff00>báu vật</color> nữa kìa.
+God|Ô, mà đó là còn chưa tính trường hợp cậu ngốc tới mức không phân biệt nổi hai thứ ấy nhé.
+God|Ha ha, đùa thôi. Nhận lấy này!
+#unlockSkill
+God|Tôi vừa mới chia sẻ một ít năng lực của mình cho cậu đấy.
+God|Chắc cũng ít nhiều giúp cậu vượt qua được mấy khu vực nguy hiểm.
+God|Khi cậu nhìn thấy <color=#ff0000>mũi tên</color> hiện bên trên một vật thể,
+God|Cậu có thể nhấn <color=#ff0000>nút đặc biệt</color> để tương tác với chúng.
+God|Ồ, đến lúc mất rồi.
+God|Tôi phải về nhà cho thú cưng ăn đây! Tạm biệt nhé!
+#godLeave
+#activeButtonLight
+;
+JN-1:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Mèo con ơi,
+Jellyhead|Nhìn những cặp chân bé nhỏ của cậu kìa.
+Jellyhead|Cậu sẽ chẳng thể nào nhảy qua được hẻm núi này đâu.
+Jellyhead|Tớ khuyên rằng tốt nhất cậu đừng nên thử. 
+Jellyhead|Quá nhiều sinh vật với những cặp chân tí hon đã phải bỏ mạng tại đây rồi.
+Jellyhead|Nhưng mà vì tớ là người tốt, nên tớ đặc biệt ở lại đây để cảnh báo cho cậu đấy.
+Jellyhead|Tất nhiên, vì hành động này xuất phát hoàn toàn từ lòng tốt của tớ. 
+Jellyhead|Nên cậu không cần phải cảm ơn đâu.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+JN-2:
+#noSpawnEffect
+#waitForGround
+Nora|Ồ! Một chú mèo con mới dễ thương làm sao!
+Nora|Tên tôi là <color=#ffff00>Nora</color>​
+Nora|Quả là một một cơn bão tuyết lớn nhỉ, thời tiết mà cứ thế này thì khó đi lại lắm.
+Nora|Mà cũng may là có cái nhà thờ lớn này chặn cho hầu hết tuyết rồi.
+Nora|Nhưng nếu không cẩn thận thì cậu vẫn có thể bị lạc đấy.
+Nora|Hay bị dính phải những cái bẫy nguy hiểm hoặc phải đụng độ với quái vật chẳng hạn.
+Nora|Nhưng mà tìm được <color=#ffff00>báu vật</color> thì có bao nhiêu rủi ro cũng thành bõ công tất.
+Nora|Cậu cũng đang đi tìm <color=#ffff00>báu vật</color> hả?
+Nora|Hay quá! Thế thì hai ta đều là nhà phiêu lưu rồi!
+Nora|Cần gì thì cứ bảo tôi nhé.
+;
+JN-3:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Chào.
+Jellyhead|Tớ không nghĩ bọn mình lại gặp nhau sớm đến vậy đấy.
+Jellyhead|Mà cậu có biết không?
+Jellyhead|Cái hẻm núi ấy thực ra cũng chẳng nguy hiểm tới vậy.
+Jellyhead|Cậu chỉ cần nhảy qua một cái là xong luôn.
+Jellyhead|Nhưng còn mấy cái bục ở trước mặt thì trông đúng là nguy hiểm thật đấy.
+Jellyhead|Tớ vẫn sẽ khuyên cậu đừng nên đi tiếp.
+Jellyhead|Tất nhiên, với một động vật tốt bụng như tớ,
+Jellyhead|hành động này đương nhiên phải xuất phát hoàn toàn từ lòng nhân hậu rồi.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+JN-4:
+#noSpawnEffect
+#waitForGround
+Nora|Cẩn thận mấy con <color=#ff0000>quái vật màu đỏ</color> đấy!
+Nora|Chúng cứ đi qua đi lại và sẽ tấn công bất kỳ ai đi ngang qua.
+Nora|Người ta còn đồn rằng, rất lâu trước kia, chúng cũng đã từng là động vật như chúng ta.
+Nora|Nhưng rồi một ngày, họ mất đi hi vọng sống
+Nora|Và từ từ bị biến thành như thế kia.
+Nora|......
+Nora|Có người thì lại nói rằng chúng chính là những kẻ đã tìm ra <color=#ffff00>báu vật</color>...
+Nora|Nhưng dù sự thật có là gì đi chăng nữa, tôi cũng vẫn sẽ không ngừng tiến tới đâu.
+;
+JN-5:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Xin chào, bọn mình lại gặp nhau nữa rồi.
+Jellyhead|Thật ra tên tớ là <color=#ffff00>Đầu Sứa</color> đó.
+Jellyhead|Mà nhân tiện này, cậu di chuyển đúng là nghệ thật.
+Jellyhead|Tớ còn chẳng tin nổi cậu vừa mới nhảy qua đống bẫy kia luôn!
+Jellyhead|Nhưng nếu là cậu thì tớ vẫn sẽ cẩn thận cái <color=#ff0000>tên màu đỏ</color> ở đằng trước đấy.
+Jellyhead|Để nó mà nhìn thấy, nó sẽ ngay lập tức phóng tới chỗ cậu ngay.
+Jellyhead|Tất nhiên, tớ cố tình ở lại đây để cảnh báo cho cậu mà,
+Jellyhead|chứ không tớ đã đi trước từ lâu rồi.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+JN-6:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Cậu vượt qua con quái vật ấy kiểu gì vậy?
+Jellyhead|Tớ vừa mới quay đi có một xíu mà cậu đã xử lý xong nó từ đời nào rồi.
+Jellyhead|Lẽ nào cậu có sức mạnh đi xuyên tường?
+Jellyhead|Tớ cũng muốn có sức mạnh.
+Jellyhead|Sức mạnh bay lượn giống như siêu nhân chẳng hạn.
+Jellyhead|Như vậy thì tớ sẽ chẳng còn phải sợ việc nhảy qua những cái gai nhọn kia nữa…
+Jellyhead|À e hèm… ý tớ là…
+Jellyhead|Như vậy thì tớ có thể giúp người khác nhảy qua chỗ gai nhọn ấy.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+JN-7:
+#noSpawnEffect
+#waitForGround
+Nora|Mèo con này, để tôi bảo cậu một chuyện.
+Nora|Có một vài nhà du hành sẽ bỏ lại những hộp thức ăn cho mèo trên đường đi của họ, 
+Nora|Nên nếu cậu tìm thấy,
+Nora|Cậu có thể đổi với <color=#ffff00>thương nhân</color> để lấy một số vật phẩm đấy.
+Nora|(Bạn có thể đổi lấy skin bằng thức ăn cho mèo ở menu)
+Nora|Nếu chúng ta tìm được đường mà thoát ra khỏi nơinày,
+Nora|Chúng ta có thể hướng tới cánh rừng ở bên kia cây cầu.
+Nora|Mà dù sao thì nhà thờ này cũng đã đứng vững được qua suốt chừng ấy năm rồi còn gì.
+Nora|Có lẽ bọn mình vẫn còn đường tìm ra lối thoát.
+;
+JN-8:
+#noSpawnEffect
+#waitForGround
+Nora|Mà sao người ta lại xây nhà thờ ngay giữa cánh đồng tuyết này nhỉ?
+Nora|Những bia mộ ở đây cũng chẳng cái nào là có đề tên cả.
+Nora|Nhiều cây thập tự thì lại được đặt ở những nơi chẳng ai có thể với tới được.
+Nora|Lại còn toàn bẫy là bẫy nữa chứ.
+Nora|Cứ như thể đây là lăng mộ của một vị Pha-ra-ông nào đó vậy.
+Nora|Những ai dám đặt chân vào nơi đây đều sẽ bị trừng phạt.
+Nora|Nếu không nhờ tuyết đã làm hư hại đi phần nào đám bẫy kia,
+Nora|Thì có lẽ chúng ta cũng chẳng bao giờ có thể rời khỏi nơi này.
+;
+JN-9:
+#noSpawnEffect
+#waitForGround
+Nora|Nghĩ lại mới nhớ, thế giới này vẫn còn nhiều tòa nhà như này lắm.
+Nora|Mục đích của chúng là gì nhỉ?
+Nora|Cứ mỗi lần nghĩ đến là tớ lại cảm thấy mình chẳng thể đợi lâu hơn nữa để tiếp tục khám phá.
+Nora|Có lẽ rồi một ngày tớ tìm ra được sự thật về thế giới này.
+;
+JN-10:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Mèo con, cậu tới đúng lúc lắm!
+Jellyhead|Có một cây cầu bị hỏng ở phía trước, trông có vẻ không qua được đâu.
+Jellyhead|Nhưng mà khi ở trên cây cầu ấy, tớ trông thấy một cái cầu nhỏ hơn ở bên dưới đấy.
+Jellyhead|Trông có vẻ cũng ọp ẹp lắm, nhưng ít ra vẫn còn nguyên vẹn.
+Jellyhead|Nó nằm ở phía dưới cùng của hòn đảo này.
+Jellyhead|Tớ tìm lối vào cây cầu ấy cũng được một lúc rồi.
+Jellyhead|Chắc là sẽ tìm ra nó sớm thôi.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+JN-11:
+#noSpawnEffect
+#waitForGround
+Nora|Ối! Cậu kéo ở đâu ra con quái vật gì thế này!
+Jellyhead|Cậu cuối cùng cũng ra đến nơi rồi hả mèo con.
+Nora|Mèo con này, cậu biết nó à?
+Jellyhead|Chào… Xin chào, tớ là <color=#ffff00>Đầu Sứa</color>
+Nora|Chào, tôi là <color=#ffff00>Nora</color>
+Nora|Cậu là bạn của mèo con à? Tôi không thấy cậu trên đường tới đây đấy.
+Jellyhead|Thì là bởi vì tớ đang bận giúp đỡ người khác mà!
+Jellyhead|Thật ra, suốt bao năm nay tớ đã luôn ở lại tại nhà thờ này
+Jellyhead|Cảnh báo nguy hiểm cho bất kỳ nhà du hành nào đi qua đấy.
+Nora|Tôi hiểu rồi, cảm ơn cậu vì sự giúp đỡ ấy nhé.
+Nora|Mình đi tiếp thôi, mèo con.
+Jellyhead|Mà thực ra nhà thờ này cũng chả nguy hiểm mấy.
+Jellyhead|Nên là tớ quyết định sẽ đi cùng các cậu tới địa điểm tiếp theo.
+Jellyhead|Như vậy thì tớ sẽ có thể giúp đỡ được nhiều người hơn!
+Nora|Tuyệt quá! Vậy thì mình đi thôi.
+Jellyhead|Khoan đã!
+Nora|Sao vậy?
+Jellyhead|Sao… sao mình tuyệt vời thế nhỉ!
+Nora|Hả?
+;
+F-1:
+#noSpawnEffect
+#waitForGround
+IT|Ôi! Cánh cửa này cuối cùng cũng mở ra!
+IT|Xin chào anh mèo hoặc cô mèo, mong là cậu không bị dính mưa.
+IT|Xin thứ lỗi, tôi không thể phân biệt giới tính của giống mèo các cậu.
+IT|Trông cậu có vẻ bận rộn quá nhỉ, một ngày làm việc mệt mỏi hả?
+IT|Tháng trước tôi có mời người thầm thích tới hẹn hò ở vùng đất băng giá này.
+IT|Nhưng mà từ đó đến nay tôi muộn cũng phải một tháng rồi, 
+IT|Chỉ tại cái cánh cửa khóa đáng nguyền rủa kia.
+IT|Tôi có hỏi người thợ mỏ thì anh ta bảo rằng chìa khóa chìa khóa đã mất rồi,
+IT|Trừ khi có người khác mở từ phía bên kia, còn không thì chỉ còn nước chịu chết.
+IT|Tạ ơn Chúa, cuối cùng nó cũng mở ra!
+IT|Tôi phải mau chóng đi tới vùng đất tuyết đây, tạm biệt nhé chú mèo nhỏ!
+;
+F-2:
+#waitForGround
+IT|Nếu tôi không nhầm thì cậu là một nhà phiêu lưu phải không?
+IT|Cứ đi lên theo con đường này là cậu sẽ tới một hầm mỏ.
+IT|Đi qua hầm mỏ là cậu sẽ tới được khu rừng ở bên ngoài. 
+IT|Hầm mỏ kia còn an toàn gấp vạn lần khu rừng ấy.
+IT|Hãy coi lời khuyên này như quà đáp lễ của tôi dành cho cậu.
+;
+F-3:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Chú mèo bé nhỏ kia, cậu đang đi đâu vậy?
+Rabbitman|Cậu bị lạc sao?
+Rabbitman|Phía trước chỉ toàn những bụi cây và bao sinh vật nguy hiểm khác thôi.
+Rabbitman|Hãy mau chóng quay đầu mà chọn con đường khác đi.
+;
+F-4:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Nè, tớ vừa nhận ra một chuyện.
+Jellyhead|Cậu có thấy <color=#ffff00>bông hoa/color> trên kia không?
+Jellyhead|Nó vừa hút một thứ gì đó vào rồi lại nhả nó ra đấy.
+Jellyhead|Trông cứ như một cái lỗ sâu mini vậy.
+Jellyhead|Nhưng mà theo tớ thì nó cũng không nguy hiểm lắm đâu.
+Jellyhead|Không cần phải sợ nó làm gì cả.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+F-5:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Nếu cậu cần, ta có thể đưa cậu quay lại.
+Rabbitman|Khắp nơi trong khu rừng này, đâu đâu cũng đều đã bị bao phủ bởi <color=#ff0000>cây đỏ</color> rồi.
+Rabbitman|Đừng có để màu sắc sặc sỡ của chúng đánh lừa cậu.
+Rabbitman|Sự nguy hiểm của chúng không đùa được đâu.
+;
+F-6:
+#noSpawnEffect
+#waitForGround
+Jellyhead|À ha, cậu đây rồi! 
+Jellyhead|Khả năng thể chất của giống mèo các cậu đáng nể thật.
+Jellyhead|Các cậu cứ nhảy qua nhảy lại mấy chỗ cao vút dễ như không ấy…
+Jellyhead|Nhưng mà nhé! Tớ chỉ rời khỏi Nora bởi vì tớ muốn qua chỗ cậu xem một chút thôi.
+Jellyhead|À, cậu muốn biết tớ đã tìm hiểu được thêm cái gì ấy hả?
+Jellyhead|Điều này là tớ suýt mất cả mạng sống mới khám phá ra được đấy nhé.
+Jellyhead|Tớ nhận ra rằng những chú rùa ở đây rất thân thiện.
+Jellyhead|Chúng sẽ để cậu ngồi trên lưng và chở cậu qua những nơi nguy hiểm.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+F-7:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Đừng bảo là cậu cũng đang đi tìm kiếm <color=#ffff00>báu vật</color>, đấy?
+Rabbitman|Nếu là vậy thì để ta kể cậu nghe một câu chuyện này.
+Rabbitman|Khu vực này từng là một khu rừng không có lấy một bóng cây đỏ.
+Rabbitman|Chính tử thi của những nhà phiêu lưu du hành tới nơi đây 
+Rabbitman|Đã là thứ cung cấp dưỡng chất cho những cái cây ấy đấy.
+Rabbitman|Xác chết lại chồng chất xác chết, cứ như vậy, 
+Rabbitman|những loài cây có một nguồn dinh dưỡng hoàn hảo để sinh sôi nẩy nở ngày càng nhiều.
+Rabbitman|Để rồi ngày nay hậu quả chính là đây.
+Rabbitman|Khu rừng đã bị bao phủ bởi giống cây màu đỏ ấy.
+Rabbitman|Nếu bọn họ chịu ổn định cuộc sống mà cố giữ cho cái mạng mình được an toàn 
+Rabbitman|thì có lẽ chuyện đã khác.
+Rabbitman|Nhưng cái thứ <color=#ffff00>báu vật</color> kia cứ tiếp tục mê hoặc họ tới những nơi nguy hiểm.
+Rabbitman|Nếu lũ ngốc ấy muốn tự tử thì ta cũng chẳng rảnh nợ mà đòi xía vào,
+Rabbitman|Nhưng vấn đề là cái chết của họ lại chỉ càng làm khu rừng thêm phần nguy hiểm…
+;
+F-8:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Ta cũng không mong các cậu hiểu.
+Nora|Im đi, đừng có so sánh chúng tôi với ông.
+Nora|Có chết tôi cũng chẳng bao giờ muốn bị cầm tù và giam hãm như trong cái lồng như các người. 
+Nora|Cứ phải dựa dẫm vào kẻ khác để sống sót,
+Nora|Chẳng thà tôi tự làm thức ăn cho đám cây kia còn hơn.
+Nora|Tôi mới là người quyết định số phận và tự làm nên con đường của chính mình!
+Nora|Đây là lối sống của tôi.
+Rabbitman|Lũ ngốc.
+Rabbitman|Cứ càng tới đây, ngươi chỉ càng đem lại nguy hiểm cho nơi này mà thôi.
+Rabbitman|Nếu đến tận nước này rồi mà vẫn còn chưa chịu nhận ra điều này,
+Rabbitman|Thì chứng tỏ đầu óc của các cậu cũng chỉ đến thế.
+Nora|Kể cả có là vậy thì ông cũng đâu có quyền mà chỉ trích bọn tôi?
+Nora|Đi tới đây chính là con đường mà chúng tôi đã chọn.
+Rabbitman|Các cậu hẳn đã nghĩ đi tới tận đây chính là quyết định của chính các cậu.
+Rabbitman|Chính ta cũng đã vượt qua biết bao nhiêu khó khăn để tới được nơi này ấy chứ,
+Rabbitman|Nhưng dù có cố gắng thế nào đi chăng nữa, nó cũng chẳng bao giờ chịu kết thúc.
+Rabbitman|Tôi và bạn bè của mình đã dựng nên một khu cắm trại và bảo vệ rất nhiều gia đình.
+Rabbitman|Nếu không phải vì lũ thiển cận kia…
+Nora|Ông sai rồi! Chỉ có lũ đã lớn lên trong cái lồng chật hẹp như mấy người
+Nora|Mới chẳng bao giờ thèm đếm xỉa tới cái thứ gọi là tự do thôi.
+Nora|......
+Jellyhead|Ô, mèo con kìa!
+Nora|Ha ha… tôi không nhận ra cậu đứng đó đấy.
+;
+F-9:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Ta không ngờ cậu cũng là một nhà phiêu lưu đấy.
+Rabbitman|Lại còn tới được tận đây với cơ thể đó chứ.
+Rabbitman|Dù sao thì nếu ở lại đây quá lâu, cơ thể cậu sẽ bắt đầu bị biến đổi mà.
+Rabbitman|Cứ ở lại càng lâu, cơ thể người ta thay đổi ngày càng rõ rệt. 
+Rabbitman|Vậy mà cậu vẫn giữ nguyên được hình hài gốc của mình.
+Rabbitman|Tức là cậu cũng chỉ vừa mới tới đây thôi.
+Rabbitman|Thực sự mà nói, ta không còn muốn nhìn thấy bất kỳ loài động vật nào 
+Rabbitman|bỏ mạng tại nơi này nữa.
+Rabbitman|Thế nên ta mới khuyên cậu hãy quay đầu lại.
+Rabbitman|Tất nhiên, đâu phải động vật nào cũng nghĩ như ta.
+Rabbitman|Ta chẳng thể hiểu nổi cái thứ ấy có gì đáng để người ta theo đuổi nữa.
+Rabbitman|Những người bạn đã cùng ta dựng nên gia đình ấy…
+Rabbitman|Cuối cùng, tất cả bọn họ đều lựa chọn theo đuổi <color=#ffff00>báu vật</color> của riêng mình.
+Rabbitman|Cho ta hỏi cậu một cậu được không? <color=#ffff00>Báu vật</color> của cậu trông như thế nào?
+;
+F-10:
+#noSpawnEffect
+#waitForGround
+Rabbitman|Ta chỉ cảm thấy khó chịu rằng, trước một cơ hội nhận được một cuộc sống thứ hai như thế.
+Rabbitman|Bạn bè ta vẫn chọn gạt nó đi chỉ vì cái thứ không đâu như vậy.
+Rabbitman|Ta sẽ chẳng bao giờ có thể hiểu được suy nghĩ của lũ ngốc
+Rabbitman|Nếu các cậu vẫn một lòng quyết tâm tìm kiếm <color=#ffff00>báu vật</color>,
+Rabbitman|<color=#ff0000>Ta van các cậu, nếu có bỏ mạng xin hãy bỏ mạng tại một nơi không ai có thể thấy.</color>
+;
+F-11:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Nora này, trông cậu có vẻ giận quá nhỉ.
+Nora|Tôi không sao hết.
+Jellyhead|Này, khi mà ông thỏ ấy bảo chuyến hành trình của chúng ta sẽ không có hồi kết ấy…
+Jellyhead|Các cậu nghĩ ông ấy muốn nói gì?
+Jellyhead|Như vậy nghĩa là sao?
+Jellyhead|Tức là chúng ta sẽ không bao giờ chết ư?
+Nora|Đồ ngốc, đó chỉ là ẩn dụ thôi.
+Jellyhead|Ẩn dụ gì cơ?
+Nora|Ai mà biết được? Sao cậu không đi mà hỏi lão ta ấy?
+Jellyhead|Tớ nghĩ ông ấy đi mất rồi.
+Nora|Càng tốt, thế thì chẳng còn ai cản đường chúng ta nữa.
+;
+F-12:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Chúng ta tới từ đâu?
+Nora|Ai mà biết được.
+Nora|Tôi cũng chẳng nhớ gì hết.
+Nora|Cứ giống như ta không thể nhớ được chút ký ức nào từ trước khi sinh ra vậy.
+Jellyhead|Kỳ lạ thật đấy, tuy có thể nhớ được tất cả mọi thứ trong quá khứ,
+Jellyhead|Tớ lại chẳng nhớ chút nào về cách mình đến đây cả.
+Jellyhead|Tớ còn cứ tưởng là do mình có trí nhớ kém cơ.
+;
+F-13:
+#noSpawnEffect
+#waitForGround
+Jellyhead|Nghe nói trên đỉnh khu rừng này có một tàn tích cổ.
+Jellyhead|Theo như ông thỏ thì nó được canh giữ bởi một con quái vật cổ đại.
+Jellyhead|Miễn là cẩn thận thì chúng ta có thể tránh được nó thôi.
+Jellyhead|À, ông thỏ còn bảo tớ nhắn lại cho cậu,
+Jellyhead|Những sinh vật trong khu rừng này có thể đánh hơi thấy mùi của cậu
+Jellyhead|Nên dù cậu có trốn, chúng vẫn có thể tìm và tấn công đấy.
+Jellyhead|Ông ấy còn bảo là lũ muỗi không giỏi đánh hơi lắm đâu.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+F-14:
+#noSpawnEffect
+#waitForGround
+Nora|Cây cầu bị hỏng rồi, cần phải tìm đường khác qua thôi.
+Nora|Có khi nếu cứ đi dần lên cao hơn thì ta sẽ tìm được đường đi đấy.
+Jellyhead|Nhưng ông thỏ đã dặn chúng ta không được đi lên đỉnh của khu rừng mà.
+Nora|Hừ! Lại là cái lão ấy!​
+Nora|Tôi thích gì thì tôi làm.
+;
+2-16:
+#useOuterController
+God|Cậu đến được đây thật rồi này!
+God|Ngạc nhiên hơn là cậu còn đánh bại được cả gã ấy cơ đấy.
+God|Lại còn thu thập được những 30 <color=#ffff00>quả bóng tuyết</color> nữa kìa!
+God|Cậu quả là vượt xa cả tưởng tượng của tôi. 
+God|À mà cậu biết không, có nhiều người đã phải bỏ cuộc giữa chừng lắm đấy.
+God|Ai cũng đều như cậu thế này thì có phải hay biết mấy không…
+God|Nào, giờ quay lại vấn đề chính.
+God|Cậu đã thu thập xong toàn bộ bóng tuyết ở đây rồi.
+God|Chỉ còn những cái cuối cùng là ở nằm ở trên mặt trăng thôi.
+God|Tôi có thể mở một cánh cổng không gian lên đó cho cậu.
+God|Tin tôi đi, đây là cách duy nhất để đưa cậu trở về nhà.
+God|Mà nhân tiện này, nếu cậu tìm thấy bất kỳ điều gì bất thường ở trên mặt trăng 
+God|Thì hãy nhớ báo cho tôi biết nhé.
+#useOuterController2
+#wait3Second
+#wait3Second
+#nextLevel
+;
+M-1:
+#noSpawnEffect
+#waitForGround
+Muscrap|Cậu định tiếp tục thử thách bản thân hả?
+Muscrap|Nếu không chịu rèn luyện cơ bắp ở môi trường trọng lực thấp như này,
+Muscrap|Cơ bắp của cậu sẽ dần bị mất đi đấy.
+Muscrap|Cách duy nhất để tránh chuyện ấy là luyện tập mỗi ngày.
+Muscrap|Xem những múi cơ hoàn hảo không chút tì vết của tôi này.
+;
+M-2:
+#noSpawnEffect
+#waitForGround
+Muscrap|Mà khoan đã, cậu là ai?
+Muscrap|Tại sao cậu lại ở đây?
+;
+M-3:
+#noSpawnEffect
+#waitForGround
+Owlvin|Lại thêm một chú cừu đáng thương nữa tới đây để bỏ mạng.
+Owlvin|Tóm lại là thế này, để ta nói thẳng luôn.
+Owlvin|Tên ta là <color=#ffff00>Owlvin</color>, chú cú bảo vệ sự thật.
+Owlvin|Ngươi đã bị lừa rồi, lừa từ đầu đến đuôi luôn.
+Owlvin|Ngươi đúng là một tên ngốc tự phụ.
+Owlvin|Xin thứ lỗi, ta hẳn đã làm tổn thương ngươi với những lời vừa rồi.
+Owlvin|Nhưng ngươi nghĩ hắn sẽ để ngươi đi ấy hả? Đừng có ngốc thế chứ.
+Owlvin|Dù ngươi có thu thập được tất cả <color=#ffff00>báu vật</color> đi chăng nữa,
+Owlvin|Cuối cùng vẫn sẽ chẳng có gì xảy ra đâu.
+Owlvin|Tất cả những <color=#ffff00>ký ức</color> liên quan đến con người của ngươi sẽ bị hấp thụ.
+Owlvin|Ngươi sẽ chỉ còn nhớ rằng bản thân đang đi tìm kiếm <color=#ffff00>báu vật</color> mà thôi.
+Owlvin|Để rồi, ngươi sẽ tiếp tục lang bạt như những kẻ ở vùng đất phía dưới kia, 
+Owlvin|Mãi mãi cho tới tận khi lìa đời.
+Owlvin|Ta đã cảnh cáo rồi đấy.
+;
+M-4:
+#noSpawnEffect
+#waitForGround
+Muscrap|Trông cái vẻ mặt của cậu kìa.
+Muscrap|Chắc là cậu vừa mới gặp Owlvin rồi.
+Muscrap|Lão ta đã từng là người duy nhất có thể đến và đi tự do khỏi nơi này.
+Muscrap|Nhưng giờ, đôi cánh của lão đã bị tước đi bởi tên khốn ấy.
+Muscrap|Bất kỳ ai có mối liên hệ với “cô ấy” đều đã bị bỏ mặc trên mặt trăng.
+Muscrap|Đến ngày nay, chỉ còn có Owlvin và tôi là những người duy nhất còn tồn tại thôi.
+;
+M-5:
+#noSpawnEffect
+#waitForGround
+Muscrap|Nhân tiện,
+Muscrap|Tất cả cạm bẫy ở đây đều được lắp đặt bởi Owlvin đấy.
+Muscrap|Với những người có cánh, vượt qua chúng chỉ dễ như trở bàn tay,
+Muscrap|Còn nếu không, việc đi tiếp là bất khả thi.
+Muscrap|Nhưng cơ bắp có thể biến ngay cả những điều không thể thành có thể.
+Muscrap|Không gì có thể làm tổn thương lớp cơ dày dặn này của tôi đâu!
+;
+M-6:
+#noSpawnEffect
+#waitForGround
+Nora|Cậu vừa ở đâu vậy?!
+Jellyhead|Tớ nghĩ cậu làm cậu ấy giật mình rồi kìa… nhưng mà trông cậu ấy vẫn có vẻ không sao.
+Nora|Tôi còn cứ tưởng cậu gặp nguy hiểm gì ở khu rừng cơ.
+Nora|Xong rồi Đầu Sứa tự nhiên chạm phải vào một thứ gì đó màu đen trông… rất hỗn loạn…
+Nora|Thế là nó dịch chuyển bọn tôi đến đây.
+Jellyhead|Nhưng nó đưa ta đến chỗ cậu ấy mà.
+Nora|Cậu có biết đây là đâu không?
+Jellyhead|Vũ trụ à?
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+M-7:
+#noSpawnEffect
+#waitForGround
+Nora|Lạ quá nhỉ, ở đây tôi có thể nhảy rất cao dù chẳng dùng mấy sức lực.
+Jellyhead|Này, bọn mình qua chỗ nào ấm hơn được không?
+Jellyhead|Xúc tu của tớ đóng băng hết cả rồi!
+Nora|Cả cái mùi này nữa…
+Nora|Nhưng mà quanh đây làm gì còn sinh vật nào khác?
+Nora|Ai lại đi dựng mấy cái bẫy ở đây nhỉ?
+Jellyhead|Lẽ nào chúng ta đang ở trong một lăng mộ ngoài không gian?
+;
+M-8:
+#noSpawnEffect
+#waitForGround
+Owlvin|Ta nhìn thấy ngươi né tránh những cái bẫy của ta rồi.
+Owlvin|Xem ra ngươi khác với những tên rác rưởi còn chẳng biết nhảy kia.
+Owlvin|Nhưng không hiểu sao cứ có điều gì đó làm ta nghĩ mãi…
+Owlvin|Hừm… chắc là do ta tự tưởng tượng ra thôi.
+;
+M-9:
+#noSpawnEffect
+#waitForGround
+Owlvin|Đúng! Phải rồi!
+Owlvin|Ngươi hẳn đã nhận được sức mạnh của “cô ấy”!
+Owlvin|Nhưng tại sao?
+Owlvin|Tại sao lại là ngươi?
+;
+3-10:
+#noSpawnEffect
+#waitForGround
+God|Chuyện thế nào rồi?
+God|Ô, à mà cậu có thấy vật thể nào kỳ lạ quanh đây không?
+God|Nếu không phiền thì cậu có thể kể cho tôi mà.
+God|Hừm… tôi đói rồi.
+God|Tôi phải đi làm bữa trà chiều cái đây, tạm biệt nhé!
+#godLeave
+;
+M-10:
+#noSpawnEffect
+#waitForGround
+Nora|Rõ ràng là tôi cảm thấy có người thứ tư mà.
+Jellyhead|Thế thì cậu đi kiểm tra lại mũi đi, tớ có thấy ai đâu.
+;
+M-11:
+#noSpawnEffect
+#waitForGround
+Owlvin|Lũ ngốc, chỉ có ngươi mới nhìn thấy được ta thôi.
+Owlvin|Những kẻ bị ăn mất ký ức sẽ không thể nào nhìn thấy ta đâu.
+Nora|Mèo con? Cậu đang nhìn cái gì vậy?
+Owlvin|Miễn là thứ “sức mạnh” ấy còn ở trong ngươi,
+Owlvin|Ta có thể nghĩ ra một kế hoạch để đánh bại tên dối trá ấy.
+Nora|Trông cậu có vẻ phân tâm thế.
+Owlvin|Mau đi thu thập nốt chỗ <color=#ffff00>báu vật</color> còn lại đi
+Owlvin|Để còn dụ tên dối trá ra ngoài. 
+Owlvin|Ta cần phải chuẩn bị ít đồ.
+;
+3-12:
+#noSpawnEffect
+#waitForGround
+God|Đúng là một ký ứ-… miếng ức kinh tởm.
+God|Aa, tôi chỉ muốn quên ngay đi vị của thứ mình mới ăn thôi.
+God|Cậu sắp thu thập xong hết <color=#ffff00>bóng tuyết</color> rồi đấy.
+God|Cậu có vui vì mình sắp được về nhà không?
+God|Thực ra dùng thần giao cách cảm tôi cũng thừa biết rồi.
+God|Cậu chắc phải muốn được về nhà lắm đấy nhỉ?
+#godLeave
+;
+M-13:
+#noSpawnEffect
+#waitForGround
+Owlvin|Sử dụng cây thập tự này để tạm thời khóa lại chuyển động của hắn ta.
+Muscrap|Và rồi để hạ màn, hãy dùng khẩu <color=#ffff00>Đại bác</color>!
+Owlvin|Đồ ngốc, phải đợi đến khi hắn ta bị xích đã rồi mới sử dụng khẩu pháo.  
+Owlvin|Có “sức mạnh của cô ấy”, cậu không thể thua hắn ta được đâu.
+Muscrap|Nhưng tên dối trá ấy có thể tước đi năng lực của người khác mà.
+Owlvin|Hắn không hiểu thứ sức mạnh này.
+Owlvin|Mèo con, ngươi mới là kẻ hiểu rõ sức mạnh này hơn bất kỳ ai trong chúng ta.
+Owlvin|Và còn, đừng nghĩ đến việc trở về nhà nữa.
+Owlvin|Giờ đây, điều ấy đã là bất khả thi rồi.
+;
+M-14:
+#noSpawnEffect
+#waitForGround
+Nora|Dừng lại đã, mèo con.
+Jellyhead|Sao vậy?
+Nora|Có phải cậu định… ừm…
+Nora|… khi loài mèo bọn mình cảm thấy những ngày cuối đời của ta đang dần cận kề
+Nora|qua bản năng động vật,
+Nora|Chúng ta sẽ tới một nơi yên tĩnh và chờ đợi
+Nora|Đợi… rồi lại đợi…
+Nora|Cho đến khoảnh khắc thần chết đến và lấy mạng sống của ta đi.
+Nora|Tôi không biết mình nghe được điều này ở đâu,
+Nora|Nhưng mèo cũng chọn ở cạnh người khác nữa.
+Nora|Chúng cảm thấy an toàn nhất khi ở bên người mà mình tin tưởng.
+Jellyhead|Cậu định nói gì vậy?
+Nora|Chúng ta là bạn bè phải không?
+Nora|Hay là còn thứ gì khác quan trọng hơn đang đợi cậu ở phía bên kia nữa?
+Nora|Bóng lưng cậu dường như nói ừ thì phải.
+Nora|Hãy hứa với tôi rằng đừng chết nhé?
+Jellyhead|Ừm… Tuy không hiểu chuyện gì đang xảy ra…
+Jellyhead|Nhưng cậu luôn có thể nói chuyện với tớ về những khó khăn của cậu mà.
+Jellyhead|Sao mình tuyệt vời thế nhỉ!
+;
+Boss3Start:
+#noSpawnEffect
+#waitForGround
+#wait1Second
+God|Đến đây là kết thúc rồi.
+God|Cả hai hãy cùng hoàn thành lời hứa của mình thôi.
+God|Đưa những <color=#ffff00>quả cầu tuyết</color> mà cậu đã thu thập cho tôi,
+God|Và tôi sẽ đưa cậu về nhà.
+#useOuterController
+;
+Boss3Shoot:
+#noSpawnEffect
+God|Cậu làm gì vậy?!
+#useOuterController2
+God|<color=#ff0000>Xem ra</color>
+God|<color=#ff0000>Lũ chuột nhắt đó</color>
+God|<color=#ff0000>Đã kể cho cậu tất cả rồi.</color>
+God|Cậu biết không? 
+God|Giết cậu rồi sau đó rút cạn toàn bộ <color=#ffff00>ký ức</color> của cậu
+God|Hay
+God|Tha mạng cho cậu nếu cậu chịu giao ra những <color=#ffff00>ký ức</color> của mình.
+God|Với tôi thì chẳng có gì khác biệt là bao.
+God|Nhưng còn với cậu thì là cả một khác biệt lớn lao đấy.
+God|Giờ thì cậu phải chết đi thôi.
+God|<color=#ff0000>Tại sao cậu cứ phải làm tôi buồn?</color>
+#useOuterController3
+;
+Boss3End:
+#noSpawnEffect
+God|Tại sao cậu lại ngăn cản tôi?
+God|Tôi hấp thụ tất cả những ký ức liên quan tới con người là vì chính họ mà.
+God|Con người làm tổn thương chúng ta, bỏ mặc chúng ta rồi cuối cùng là rời bỏ ta.
+God|Con người là ác quỷ, tôi không cho phép họ được tồn tại đâu.
+God|Cậu nghĩ cậu đánh bại được tôi rồi sao?
+God|Tôi… tôi chỉ mệt thôi…
+#useOuterController
+#wait1Second
+;
+Boss3PreEnding:
+#noSpawnEffect
+#waitForGround
+#useOuterController
+God|Cậu đang làm gì ở đây?
+God|Cậu đã đồng ý với những lời tôi nói chưa?
+God|Con người chỉ mang tới những ký ức đau khổ mà thôi.
+God|Hãy… hãy cứ để tôi hấp thụ hết tất cả đi!
+#useOuterController2
+God|Những ký ức này là sao? Không đúng!
+God|Con người đâu phải những sinh vật tử tế tới vậy!
+God|Chúng đâu có xoa đầu ta như thế này!
+God|Những ký ức này… Tại sao chúng lại như vậy?
+God|Nhưng cậu đã chết rồi cơ mà. Tại sao?
+God|Tại sao… sao cậu vẫn còn muốn quay lại?
+God|Sao cậu lại khác với những những kẻ còn lại trên vùng đất này?
+God|Vậy ra… đây là cảm giác được nhớ sao…
+God|Cậu không thuộc về nơi này.
+God|Tôi xin lỗi, tôi đã không thể kiểm soát được bản thân.
+God|Nhưng cậu có thật sự chắc cậu muốn quay lại không vậy?
+God|Khi đã quay lại, có khi cậu còn không nhớ nổi chủ nhân mình là ai đâu đấy.
+God|Nhưng nếu cậu ở đây…
+God|Thôi bỏ đi, tôi biết cậu không muốn ở lại đây mà.
+God|Mà nhân tiện này,
+God|Màu mắt của cậu giống của “cô ấy” lắm đấy.
+#useOuterController3
+;
+Boss3Ending:
+#noSpawnEffect
+#useOuterController
+God|Vậy ra cô ấy là chủ của cậu à?
+God|Tôi có nghe nói rằng mèo không thể nhận diện được khuôn mặt của con người.
+God|Có lẽ cậu nhận ra cô ta bằng mùi hương.
+God|...
+God|......
+God|À mà này, tôi hỏi cậu một câu được không?
+God|Tên cậu là gì?
+God|Hình khắc trên tấm bia hẳn là tên cậu nhỉ…
+God|Nhưng tôi không thể đọc được những biểu tượng này…
+#useOuterController2
+God|Cuối cùng, tôi vẫn chẳng biết gì về cậu.
+God|Có lẽ tôi nên đi thôi.
+God|Tạm biệt, chú mèo không tên.
+#useOuterController3
+;
+Kelvin:
+#noSpawnEffect
+#waitForGround
+Kelvin|Này!
+Kelvin|Cậu biết gì không? Vừa có một cô cánh cụt nóng bỏng lắm đi ngang qua đây đấy.
+Kelvin|Cậu có thấy cô ấy không?
+Kelvin|Mà tin tôi đi, chắc là cô ấy đang ở đâu đó theo dõi chúng ta ngay bây giờ đấy.
+Kelvin|Bởi tôi ngửi thấy mùi của cô ấy mà.
+Kelvin|Nếu cậu nhìn thấy cô ta thì nhớ báo tôi nhé.
+;
+Cindy:
+#noSpawnEffect
+#waitForGround
+Cindy|Ôi! Một chú mèo con mới dễ thương làm sao!
+Cindy|Lại đây cho chị ôm một cái nào!
+Cindy|Nhưng em phải cẩn thận quanh đây đấy nhé.
+Cindy|Chị vừa ngửi thấy mùi gì lạ lắm.
+Cindy|Mà nhân tiện, dạo này cứ có tên cánh cụt nào bám theo chị ấy.
+Cindy|Hắn ta có thể là tên cuồng mèo biến thái đấy,
+Cindy|Nên nếu em gặp nguy hiểm, nhớ hét gọi người giúp nghe chưa!
+;
+Sliman:
+#noSpawnEffect
+#waitForGround
+Sliman|Coi chừng con quái vật ở phía trước!
+Sliman|Cây thánh giá tôi làm biết bao nhiêu công sức bị nó phá hoại không thương tiếc đấy.
+Sliman|Tôi phải mất nguyên một tháng giời mới xây lại được cái mới.
+Sliman|Ai mà dụ được con quái ấy ra chỗ khác,
+Sliman|Tôi sẵn sàng làm một cây thánh giá cho ngôi mộ của người ấy miễn phí luôn.
+Sliman|Tất nhiên ấy là nếu họ chết trước tôi rồi.
+Sliman|Đừng có làm phiền tôi làm việc nữa!
+;
+Ken:
+#noSpawnEffect
+#waitForGround
+Ken|Cậu đến đúng lúc đấy!
+Ken|Tôi đang định đánh một giấc ngủ ngon đây.
+Ken|Thế nên tôi cần phải nói chúc ngủ ngon với cậu.
+Ken|Dù sao thì chúng ta sẽ gặp lại nhau sớm thôi.
+Ken|Cùng nơi này vào lần tới.
+;
+Ken_1:
+#noSpawnEffect
+#waitForGround
+Ken|Chào! Chúng ta lại gặp nhau rồi!
+Ken|Như vậy tức là có điều gì đó cậu muốn biết từ tôi.
+Ken|Sự thật của thế giới này ấy à?
+Ken|Tôi xin lỗi, có lẽ chúng ta sẽ không bao giờ có thể biết được nó là gì.
+Ken|Có thể nơi này là một thực tại được tạo ra dành riêng cho động vật.
+Ken|Nếu ở lại đây quá lâu, cậu sẽ dần mất đi ký ức về quá khứ của mình.
+Ken|Tôi còn nhớ thế giới mà tôi từng ở cũng đã từng có một mặt trăng. 
+Ken|Tuy là không lâu sau đó, nó đã bị vỡ tan thành từng mảnh.
+Ken|Ký ức về đêm hôm đó vẫn còn hiện rõ trong tôi,
+Ken|cả những chiếc hộp kim loại di chuyển cực kỳ nhanh kia cũng vậy.
+;
+Ken_2:
+#noSpawnEffect
+#waitForGround
+Ken|Tôi gọi nơi này là “Vùng đất của sự Quên lãng”
+Ken|Bởi vì chẳng có con người nào nhớ về những loài động vật ở đây.
+Ken|Cũng như chúng ta sẽ dần dần quên đi quá khứ của mình vậy.
+Ken|Tôi ở đây cũng đã được một thời gian
+Ken|trước khi “cô ấy” rời đi rồi.
+Ken|Xin lỗi, chưa gì tôi đã lại ngáp rồi.
+Ken|Có lẽ tôi nên đi ngủ thôi, chúc ngủ ngon nhé.
+;
+KenZ:
+#noSpawnEffect
+#waitForGround
+Ken|Z Z Z...
+;

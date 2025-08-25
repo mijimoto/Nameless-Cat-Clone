@@ -1,0 +1,133 @@
+//Text
+clear_data_confirm:Bạn có chắc bạn muốn xóa toàn bộ dữ liệu?\n(Xóa toàn bộ xu và skin đã được mua bằng tiền tệ trong game)\n*Hành động này không thể bị hủy sau đó
+clear_data_timer:Đợi {0} giây
+ad_confirm:Xem một video ngắn và mở khóa điểm hồi sinh?
+ad_load_fail:Tải video thất bại
+ad_loading_video:Đang tải...
+ad_wait_for_too_long:Video tải quá lâu?
+quit_confirm:Thoát game?
+skin_confirm:Chọn
+skin_preparing_skin:Đang chuẩn bị skin...
+purchase_thanks_for_support:Bạn đã mua gói chặn quảng cáo thành công\nCảm ơn vì đã ủng hộ chúng tôi, meo~
+purchase_not_available:Sản phẩm hiện không có sẵn\nXin hãy kiểm tra lại kết nối mạng của bạn
+purchase_restore_success:Khôi phục giao dịch mua thành công!
+purchase_restore_fail:Khôi phục giao dịch mua thất bại\nXin hãy kiểm tra lại kết nối mạng của bạn
+loading:Đang tải...
+//Achievement
+achievement_chapter_title_1:Thánh đường
+achievement_chapter_title_2:Khu rừng
+achievement_chapter_title_3:Mặt trăng
+achievement_chapter_description_1:Hoàn thành chương 1
+achievement_chapter_description_2:Hoàn thành chương 2
+achievement_chapter_description_3:Hoàn thành chương 3
+achievement_postcard_title:Tôi là ai?
+achievement_postcard_description:Thu thập 3 tấm bưu thiếp
+achievement_fish_title_1:Mình Yêu Cá
+achievement_fish_title_2:MÌNH CẦN THÊM CÁ!
+achievement_fish_title_3:Ta Là Thợ Săn Cá
+achievement_fish_description_1:Thu thập 15 lon cá đóng hộp
+achievement_fish_description_2:Thu thập 30 lon cá đóng hộp
+achievement_fish_description_3:Thu thập 45 lon cá đóng hộp
+achievement_skin_title_1:Cat Walk
+achievement_skin_title_2:Mèo Prada
+achievement_skin_title_3:Đây Chắc Chắn Không Phải Mèo
+achievement_skin_description_1:Mở khóa 1 skin
+achievement_skin_description_2:Mở khóa 6 skin
+achievement_skin_description_3:Mở khóa toàn bộ skin
+//Ending
+ending_the_end:- HẾt -
+ending_game_by:GAME BY
+ending_programming:Lập trình
+ending_art_and_story:Đồ họa & Cốt truyện
+ending_sound_and_music:Nhạc & Âm thanh
+ending_translation:Bản dịch
+ending_special_thanks:Đặc biệt cảm ơn tới
+ending_and_those_you_met:Và cả những người bạn đã gặp...
+ending_your_record:Thành tích của bạn
+ending_total_death:Số lần chết
+ending_total_fish_can:Tổng số lon cá
+ending_thank_you_for_playing_upper:CẢM ƠN BẠN VÌ ĐÃ CHƠI
+ending_thank_you_for_playing:Cảm ơn bạn vì đã chơi
+//Stat
+stat_play_time:Thời Gian Chơi
+stat_jump_count:Số Lần Nhảy
+stat_move_distance:Đã Đi Được
+stat_move_distance_far:Rất xa
+stat_block_attach_count:Số Lần Dùng Kỹ Năng
+stat_block_trade_count:Số Lần Dùng Hoán Đổi
+stat_dead_count:Số lần chết
+stat_collected_fish_can:Số Lon Cá Thu Thập Được
+stat_collected_postcard:Số Bưu Thiếp Thu Thập Được
+//Button
+btn_clearData:Xóa Dữ Liệu
+btn_language:Ngôn Ngữ
+btn_hide_button:Ẩn Nút
+btn_show_button:Hiện Nút
+btn_adjust_button:Điều Chỉnh Nút
+btn_adjust_button_reset:Đặt Lại
+btn_adjust_button_apply:OK
+btn_clear:Xóa
+btn_ok:Ok
+btn_cancel:Hủy
+btn_ad_play:Được thôi
+btn_ad_cancel:Không cần
+btn_quit:Thoát
+btn_skin_buy:Mua
+btn_google_play
+btn_story_skip:BỎ QUA
+//killing tag
+Monster:Quái vật
+Falling:Rơi
+Trap:Bẫy
+Boss1:Boss1
+Boss2:Boss2
+Boss3:Boss3
+//level name
+1-1:Ngôi Mộ Vô Danh
+1-2:Đi Lên
+1-3:Vách Đá
+1-4:Thung Lũng Tuyết
+1-5:Bước Vào Nhà Thờ
+1-6:Bẫy
+1-7:Lại Thêm Bẫy
+1-8:Lưỡi Dao Chết Chóc
+1-9:Chiếc Bục Di Động
+1-10:Những Tấm Bia Ấy
+1-11:Câu Đố
+1-12:Con Đường Dễ Dàng
+1-13:Câu Đố Đôi
+1-14:Hang Ổ Của Quái Vật
+1-15:Cánh Cổng
+1-16:Boss1
+2-1:Cánh Cửa Bị Khóa
+2-2:Hầm Mỏ
+2-3:Loài Cây Màu đỏ
+2-4:Đóa Hoa Kỳ Lạ
+2-5:Tảng Đá An Toàn
+2-6:Lối Ra
+2-7:Rừng Rậm
+2-8:Câu Đố Hiểm Hóc
+2-9:Cây Cối Um Tùm 
+2-10:Nhảy Cao Hơn Nữa
+2-11:Sự Tập Trung
+2-12:Bề Mặt Sắc Bén
+2-13:Côn Trùng
+2-14:Ở Trên Đỉnh
+2-15:Người Canh Gác
+2-16:Boss2
+3-1:Mặt Trăng
+3-2:Bộ Đếm Giờ
+3-3:Ống Thông Gió
+3-4:Lưỡi Dao Lơ Lửng
+3-5:Thành Phố Chết
+3-6:Bề Mặt Biến Mất
+3-7:Khu Vực Thập Tự 
+3-8:Tránh Khỏi Hư Không
+3-9:Né Tránh
+3-10:Bức Tường Sừng Sững
+3-11:Phóng Về Phía Trước
+3-12:Câu Đố Song Sinh
+3-13:Câu Đố Vĩ Đại Nhất
+3-14:Công Tắc Hư Ảo
+3-15:Trận Chiến Cuối Cùng
+3-16:Kết Thúc

@@ -1,0 +1,133 @@
+//Text
+clear_data_confirm:คุณแน่ใจหรือไม่ว่าต้องการล้างข้อมูลในเกม?\n(ลบเหรียญทั้งหมดและการซื้อสกินด้วยเงินตราในเกม)\n*สิ่งนี้ไม่สามารถยกเลิกได้
+clear_data_timer:โปรดรอ {0} วินาที
+ad_confirm:ปลดล็อกด่านด้วยการดูวิดีโอสั้นๆ?
+ad_load_fail:ไม่สามารถโหลดวิดีโอ
+ad_loading_video:กำลังโหลดวิดีโอ...
+ad_wait_for_too_long:รอนานเกินไป?
+quit_confirm:ออกจากเกม?
+skin_confirm:ใช้
+skin_preparing_skin:กำลังเตรียมใช้สกิน...
+purchase_thanks_for_support:คุณได้ซื้อการลบโฆษณาแล้ว \n ขอบคุณสำหรับการสนับสนุนนะเหมียว~
+purchase_not_available:รายการนี้ไม่สามารถใช้ได้ในขณะนี้\nโปรดตรวจสอบเครือข่ายของคุณ
+purchase_restore_success:เรียกคืนข้อมูลการซื้อสำเร็จ!
+purchase_restore_fail:เรียกคืนข้อมูลการซื้อล้มเหลว\nโปรดตรวจสอบเครือข่ายของคุณ
+loading: กำลังโหลด...
+//Achievement
+achievement_chapter_title_1:โบสถ์หลังใหญ่
+achievement_chapter_title_2:ป่าไม้
+achievement_chapter_title_3:ดวงจันทร์
+achievement_chapter_description_1:จบบทที่ 1
+achievement_chapter_description_2:จบบทที่ 2
+achievement_chapter_description_3:จบบทที่ 3
+achievement_postcard_title:ฉันเป็นใคร?
+achievement_postcard_description:รวบรวมโปสการ์ด 3 ใบ
+achievement_fish_title_1:ฉันรักปลา
+achievement_fish_title_2:ฉันอยากได้ปลาเพิ่ม!
+achievement_fish_title_3:ฉันเป็นนักล่าปลา
+achievement_fish_description_1:รวบรวม15ปลากระป๋อง
+achievement_fish_description_2:รวบรวม30ปลากระป๋อง
+achievement_fish_description_3:รวบรวม45ปลากระป๋อง
+achievement_skin_title_1:แคทวอล์ค
+achievement_skin_title_2:ปราด้าแคท
+achievement_skin_title_3:ไม่ใช่แมวอย่างแน่นอน
+achievement_skin_description_1:ปลดล็อก 1 สกิน
+achievement_skin_description_2:ปลดล็อก 6 สกิน
+achievement_skin_description_3:ปลดล็อกสกินทั้งหมด
+//Ending
+ending_the_end:- จบบริบูรณ์ -
+ending_game_by: เกมโดย
+ending_programming:ผู้เขียนโปรแกรม
+ending_art_and_story:ศิลปะและเรื่องราว
+ending_sound_and_music:เสียงและดนตรี
+ending_translation:ผู้แปล
+ending_special_thanks:ขอขอบคุณเป็นพิเศษ
+ending_and_those_you_met:และคนที่คุณพบ...
+ending_your_record:บันทึกของคุณ
+ending_total_death:ความตายทั้งหมด
+ending_total_fish_can:ปลากระป๋องทั้งหมด
+ending_thank_you_for_playing_upper:ขอขอบคุณสำหรับการเล่น
+ending_thank_you_for_playing:ขอขอบคุณสำหรับการเล่น
+//Stat
+stat_play_time:เวลาเล่นเกม
+stat_jump_count:จำนวนการกระโดด
+stat_move_distance:ระยะทางการเคลื่อนที่
+stat_move_distance_far:ไกลมาก
+stat_block_attach_count:จำนวนการติดความสามารถ
+stat_block_trade_count:จำนวนการซื้อขายแลกเปลี่ยน
+stat_dead_count:จำนวนการตาย
+stat_collected_fish_can:จำนวนการเก็บปลากระป๋อง
+stat_collected_postcard:จำนวนการเก็บโปสการ์ด
+//Button
+btn_clearData:ล้างข้อมูล
+btn_language:ภาษา
+btn_hide_button:ซ่อนปุ่ม
+btn_show_button:แสดงปุ่ม
+btn_adjust_button:ปรับปุ่ม
+btn_adjust_button_reset:รีเซ็ต
+btn_adjust_button_apply:นำไปใช้
+btn_clear:ล้าง
+btn_ok:ตกลง
+btn_cancel:ยกเลิก
+btn_ad_play:ฉันต้องการ
+btn_ad_cancel:ไม่ ขอบคุณ
+btn_quit:ออก
+btn_skin_buy:ซื้อ
+ปุ่ม กูเกิล เพลย์
+btn_story_skip:ข้าม
+//killing tag
+Monster:สัตว์ประหลาด
+Falling:ล้มเหลว
+Trap:กับดัก
+Boss1:บอส1
+Boss2:บอส2
+Boss3:บอส3
+//level name
+1-1:หลุมศพนิรนาม
+1-2:ขึ้นไป
+1-3:หน้าผา
+1-4:หุบเขาหิมะ
+1-5:เข้าสู่คริสตจักร
+1-6:กับดัก
+1-7:กับดักอีกแล้ว
+1-8:ดาบแห่งความตาย
+1-9:การย้ายฐาน
+1-10:หลุมศพเหล่านั้น
+1-11:ปริศนา
+1-12:เส้นทางอันง่าย
+1-13:ปริศนาซ้อน
+1-14:ที่ซ่อนของมอนสเตอร์
+1-15:ประตู
+1-16:บอส1
+2-1:ประตูถูกล็อค
+2-2:เหมือง
+2-3:พืชสีแดง
+2-4:ดอกไม้ประหลาด
+2-5:หินที่หลบภัย
+2-6:ทางออก
+2-7:ป่า
+2-8:ปริศนาอันตราย
+2-9:ป่ารก
+2-10:กระโดดให้สูงขึ้น
+2-11:ระวัง
+2-12:ฐานชั่วคราว
+2-13:แมลง
+2-14:ด้านบน
+2-15:ผู้พิทักษ์
+2-16:บอส2
+3-1:ดวงจันทร์
+3-2:เครื่องจับเวลา
+3-3:ช่องทางออก
+3-4:ใบมีดลอย
+3-5:เมืองแห่งความตาย
+3-6:ฐานที่หายไป
+3-7:การข้ามเขต
+3-8:หลีกหนีความว่างเปล่า
+3-9:หลบมัน
+3-10:กำแพงที่ปิดกั้น
+3-11:พุ่งตรง
+3-12:ปริศนาคู่
+3-13:ปริศนาที่ใหญ่ที่สุด
+3-14:สลับความว่างเปล่า
+3-15:การต่อสู้ครั้งสุดท้าย
+3-16:จุดจบ

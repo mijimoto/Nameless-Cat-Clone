@@ -1,0 +1,133 @@
+//Text
+clear_data_confirm:¿Seguro quieres borrar los datos?\n(Eliminará todas las monedas y trajes comprados con la moneda del juego)\n*Esto no se puede deshacer
+clear_data_timer:espera {0} seg
+ad_confirm:¿Quiere desbloquear el punto de control viendo un pequeño video?
+ad_load_fail:Carga del video fallida
+ad_loading_video:Cargando video...
+ad_wait_for_too_long:¿Esperas demasiado?
+quit_confirm:¿Salir del juego?
+skin_title:Traje or Piel
+skin_confirm:Use
+skin_preparing_skin:Preparando traje...
+purchase_thanks_for_support:Ya ha comprado la eliminación de anuncios\nGracias por apoyarnos, miau
+purchase_not_available:Este artículo no está disponible actualmente\n Por favor revise su red
+purchase_restore_success:¡Restauración de compras exitosa!
+purchase_restore_fail:Restauración de compras fallida\nPor favor revise su red
+loading:Cargando...
+//Achievement
+achievement_chapter_title_1:Catedral
+achievement_chapter_title_2:Bosque
+achievement_chapter_title_3:Luna
+achievement_chapter_description_1:Completa el capítulo 1
+achievement_chapter_description_2:Completa el capítulo 2
+achievement_chapter_description_3:Completa el capítulo 3
+achievement_postcard_title:¿Quién Soy?
+achievement_postcard_description:Colecciona 3 postales
+achievement_fish_title_1:Adoro El Pescado
+achievement_fish_title_2:¡Quiero Mas Pescado!
+achievement_fish_title_3:Soy El Cazador De Peces
+achievement_fish_description_1:Colecciona 15 peces enlatados
+achievement_fish_description_2:Colecciona 30 peces enlatados
+achievement_fish_description_3:Colecciona 45 peces enlatados
+achievement_skin_title_1:Paseo De Gato
+achievement_skin_title_2:Gato Prada
+achievement_skin_title_3:Definitivamente No Es Un Gato
+achievement_skin_description_1:Desbloquea 1 traje
+achievement_skin_description_2:Desbloquea 6 trajes
+achievement_skin_description_3:Desbloquea todos los trajes
+//Ending
+ending_the_end:- El fin -
+ending_game_by:Juego Pro
+ending_programming:Programador
+ending_art_and_story:Arte & Historia
+ending_sound_and_music:Música & Sonido
+ending_translation:Traducción
+ending_special_thanks:Agradecimientos Especiales
+ending_and_those_you_met:Y los que conociste...
+ending_your_record:Tu récord
+ending_total_death:Muertes totales
+ending_total_fish_can:Latas de pescado totales
+ending_thank_you_for_playing_upper:Gracias por jugar
+ending_thank_you_for_playing:Gracias por jugar
+//Stat
+stat_play_time:Tiempo de juego
+stat_jump_count:Conteo de saltos
+stat_move_distance:Distancia recorrida
+stat_move_distance_far:Muy lejos
+stat_block_attach_count:Conteo de habilidad
+stat_block_trade_count:Conteo de habilidad comercial
+stat_dead_count:Contador de muertes
+stat_collected_fish_can:Collected Fish Can
+stat_collected_postcard:Collected Postcard
+//Button
+btn_clearData:Borrar datos
+btn_language:Lenguaje
+btn_hide_button:Ocultar Botones
+btn_show_button:Mostrar Botones
+btn_adjust_button:Ajustar Botones
+btn_adjust_button_reset:Reiniciar
+btn_adjust_button_apply:Aplicar
+btn_clear:Borrar
+btn_ok:Ok
+btn_cancel:Cancelar
+btn_ad_play:Lo necesito
+btn_ad_cancel:No gracias
+btn_quit:Salir
+btn_skin_buy:Buy
+btn_google_play
+btn_story_skip:Omitir
+//killing tag
+Monster:Monster
+Falling:Falling
+Trap:Trap
+Boss1:Boss1
+Boss2:Boss2
+Boss3:Boss3
+//level name
+1-1:Tumba sin nombre
+1-2:Arriba
+1-3:Acantilado
+1-4:Valle de nieve
+1-5:Entrar a la iglesia
+1-6:Trampa
+1-7:Más tranpas
+1-8:Cuchilla mortal
+1-9:Plataforma móvil
+1-10:Esas lápidas
+1-11:Rompecabezas
+1-12:Camino fácil
+1-13:Rompecabezas doble
+1-14:Guarida de monstruos
+1-15:La puerta
+2-1:Puerta cerrada
+2-2:Pozo de minería
+2-3:Plantas rojas
+2-4:Flor extraña
+2-5:Roca segura
+2-6:Salida
+2-7:La jungla
+2-8:Rompecabezas peligroso
+2-9:Sobre crecido
+2-10:salta más alto
+2-11:Atención
+2-12:Plataforma compartida
+2-13:Los insectos
+2-14:En la parte superior
+2-15:El guardián
+2-16:El guardián
+3-1:La Luna
+3-2:Temporizador
+3-3:Ventilación
+3-4:Cuchilla flotante
+3-5:Ciudad mortal
+3-6:Plataforma de fuga
+3-7:Area cruzada
+3-8:Evitar el vacío
+3-9:Esquivalo
+3-10:Las paredes de bloqueo
+3-11:Recta oscura
+3-12:Rompecabezas gemelos
+3-13:Gran prueba
+3-14:Interruptor al vacío
+3-15:Ultima batalla
+3-16:El final
