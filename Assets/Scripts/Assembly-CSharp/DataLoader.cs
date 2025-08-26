@@ -97,7 +97,7 @@ public class DataLoader : MonoBehaviour
             }
 
             // Update achievement localizations
-            updateAchievementLocalization();
+            updateAchievemenLocaliztion();
         }
     }
 
@@ -151,23 +151,36 @@ public class DataLoader : MonoBehaviour
 
     public static AchievementData getAchievementData(string id)
     {
-        if (achievementDataDictionary == null) return null;
-        return achievementDataDictionary.ContainsKey(id) ? achievementDataDictionary[id] : null;
+        if (achievementDataDictionary != null && achievementDataDictionary.ContainsKey(id))
+        {
+            return achievementDataDictionary[id];
+        }
+        
+        return null;
     }
 
-	public static void updateAchievementLocalization()
-	{
-		// Update all achievement UI elements with current language
-		// This would typically notify achievement UI components to refresh their text
-		if (achievementDataDictionary != null)
-		{
-			foreach (var achievement in achievementDataDictionary.Values)
-			{
-				if (achievement != null)
-				{
-					achievement.UpdateLocaliztion();
-				}
-			}
-		}
-	}
+    public static void updateAchievemenLocaliztion()
+    {
+        // Update all achievement UI elements with current language
+        if (achievementDataDictionary != null)
+        {
+            foreach (var achievement in achievementDataDictionary.Values)
+            {
+                if (achievement != null)
+                {
+                    achievement.UpdateLocaliztion();
+                }
+            }
+        }
+
+        // Update achievement controllers
+        AchievementController[] controllers = FindObjectsOfType<AchievementController>();
+        foreach (var controller in controllers)
+        {
+            if (controller != null)
+            {
+                controller.OnLanguageChanged();
+            }
+        }
+    }
 }

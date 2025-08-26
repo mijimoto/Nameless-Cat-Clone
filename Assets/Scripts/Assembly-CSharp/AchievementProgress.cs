@@ -1,81 +1,136 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu]
-[SerializeField]
+[CreateAssetMenu(fileName = "New Achievement Progress", menuName = "Achievements/Achievement Progress")]
 public class AchievementProgress : ScriptableObject
 {
-	[SerializeField]
-	private Sprite icon;
+    [SerializeField]
+    private Sprite icon;
 
-	[SerializeField]
-	private float targetProgress;
+    [SerializeField]
+    private float targetProgress;
 
-	protected float progress;
+    protected float progress;
+    protected DateTime completeDate;
+    protected bool completed;
+    protected string title;
+    protected string description;
+    protected int index;
+    protected string id;
+    protected string titleKey;
+    protected string descriptionKey;
+    protected AchievementProgressReference outerReference;
 
-	protected DateTime completeDate;
+    public string ProgressId => id;
+    public Sprite Icon => icon;
+    public string Title => title;
+    public string Description => description;
+    public float Progress => progress;
+    public float TargetProgress => targetProgress;
+    public DateTime CompleteDate => completeDate;
+    public bool Completed => completed;
 
-	protected bool completed;
+    public virtual void Init(int index, string id, string titleKey, string descriptionKey, AchievementProgressReference outerReference)
+    {
+        this.index = index;
+        this.id = id;
+        this.titleKey = titleKey;
+        this.descriptionKey = descriptionKey;
+        this.outerReference = outerReference;
+        
+        UpdateLocalization();
+        LoadProgress();
+    }
 
-	protected string title;
+    public void UpdateLocalization()
+    {
+        // Get localized text using TextLoader
+        title = TextLoader.getText(titleKey);
+        description = TextLoader.getText(descriptionKey);
+    }
 
-	protected string description;
+    public virtual void LoadProgress()
+    {
+        // Load progress from PlayerPrefs
+        string progressKey = $"Achievement_{id}_Progress";
+        string completedKey = $"Achievement_{id}_Completed";
+        string dateKey = $"Achievement_{id}_CompleteDate";
 
-	protected int index;
+        progress = PlayerPrefs.GetFloat(progressKey, 0f);
+        completed = PlayerPrefs.GetInt(completedKey, 0) == 1;
 
-	protected string id;
+        if (completed)
+        {
+            string dateString = PlayerPrefs.GetString(dateKey, "");
+            if (!string.IsNullOrEmpty(dateString) && DateTime.TryParse(dateString, out DateTime savedDate))
+            {
+                completeDate = savedDate;
+            }
+        }
 
-	protected string titleKey;
+        // Load from outer reference if available
+        if (outerReference != null)
+        {
+            float outerProgress = outerReference.LoadProgress();
+            if (outerProgress > progress)
+            {
+                SetProgress(outerProgress);
+            }
+        }
+    }
 
-	protected string descriptionKey;
+    public virtual void SaveProgress()
+    {
+        // Save progress to PlayerPrefs
+        string progressKey = $"Achievement_{id}_Progress";
+        string completedKey = $"Achievement_{id}_Completed";
 
-	protected AchievementProgressReference outerReference;
+        PlayerPrefs.SetFloat(progressKey, progress);
+        PlayerPrefs.SetInt(completedKey, completed ? 1 : 0);
 
-	public string ProgressId => null;
+        if (completed)
+        {
+            saveDate();
+        }
 
-	public Sprite Icon => null;
+        PlayerPrefs.Save();
+    }
 
-	public string Title => null;
+    protected void saveDate()
+    {
+        string dateKey = $"Achievement_{id}_CompleteDate";
+        PlayerPrefs.SetString(dateKey, completeDate.ToString());
+    }
 
-	public string Description => null;
+    public virtual void SetProgress(float amount)
+    {
+        if (completed)
+            return;
 
-	public float Progress => 0f;
+        progress = Mathf.Clamp(amount, 0f, targetProgress);
+        UpdateCompleted();
+        SaveProgress();
+    }
 
-	public float TargetProgress => 0f;
+    public virtual void AddProgress(float amount)
+    {
+        if (completed)
+            return;
 
-	public DateTime CompleteDate => default(DateTime);
+        SetProgress(progress + amount);
+    }
 
-	public bool Completed => false;
-
-	public virtual void Init(int index, string id, string titleKey, string descriptionKey, AchievementProgressReference outerReference)
-	{
-	}
-
-	public void UpdateLocalization()
-	{
-	}
-
-	public virtual void LoadProgress()
-	{
-	}
-
-	public virtual void SaveProgress()
-	{
-	}
-
-	protected void saveDate()
-	{
-	}
-
-	public virtual void SetProgress(float amount)
-	{
-	}
-
-	public virtual void AddProgress(float amount)
-	{
-	}
-
-	protected virtual void UpdateCompleted()
-	{
-	}
+    protected virtual void UpdateCompleted()
+    {
+        if (!completed && progress >= targetProgress)
+        {
+            completed = true;
+            completeDate = DateTime.Now;
+            
+            // Notify achievement system
+            Debug.Log($"Achievement Completed: {title}");
+            
+            // You can add achievement notification/popup logic here
+        }
+    }
 }

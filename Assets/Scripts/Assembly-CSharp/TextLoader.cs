@@ -40,11 +40,11 @@ public class TextLoader
     public static void loadText()
     {
         texts = new Dictionary<string, string>();
-        
+
         // Load text file based on current language
         string languageKey = DataLoader.usingFileLan ?? DataLoader.DEFAULT_LANGUAGE_KEY;
         TextAsset textFile = LoadFile(languageKey);
-        
+
         if (textFile != null)
         {
             ParseTextFile(textFile.text);
@@ -66,16 +66,16 @@ public class TextLoader
     public static TextAsset LoadFile(string prefix)
     {
         // Try to load text file from Resources folder
-        string filePath = $"Localization/{prefix}";
+        string filePath = $"gameText_{prefix}";
         TextAsset textAsset = Resources.Load<TextAsset>(filePath);
-        
+
         if (textAsset == null)
         {
             Debug.LogWarning($"Could not load localization file at path: {filePath}");
         }
-        
         return textAsset;
     }
+
 
     private static void ParseTextFile(string fileContent)
     {
@@ -83,11 +83,11 @@ public class TextLoader
             return;
 
         string[] lines = fileContent.Split('\n');
-        
+
         foreach (string line in lines)
         {
             string trimmedLine = line.Trim();
-            
+
             // Skip empty lines and comments
             if (string.IsNullOrEmpty(trimmedLine) || trimmedLine.StartsWith("#") || trimmedLine.StartsWith("//"))
                 continue;
@@ -98,19 +98,19 @@ public class TextLoader
             {
                 string key = trimmedLine.Substring(0, separatorIndex).Trim();
                 string value = trimmedLine.Substring(separatorIndex + 1).Trim();
-                
+
                 // Remove quotes if present
                 if (value.StartsWith("\"") && value.EndsWith("\""))
                 {
                     value = value.Substring(1, value.Length - 2);
                 }
-                
+
                 // Handle escape sequences
                 value = value.Replace("\\n", "\n")
                             .Replace("\\t", "\t")
                             .Replace("\\\"", "\"")
                             .Replace("\\\\", "\\");
-                
+
                 if (!texts.ContainsKey(key))
                 {
                     texts[key] = value;
