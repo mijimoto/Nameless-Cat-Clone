@@ -66,7 +66,7 @@ public class mainMeun : MonoBehaviour
         if (loading) yield break;
         loading = true;
 
-        asyncLoad = SceneManager.LoadSceneAsync("GameScene"); // Replace with actual scene name
+        asyncLoad = SceneManager.LoadSceneAsync("selectList");
         asyncLoad.allowSceneActivation = false;
 
         // Wait until load is almost complete

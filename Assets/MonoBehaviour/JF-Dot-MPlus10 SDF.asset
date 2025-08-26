@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: JF-Dot-MPlus10 SDF
   m_EditorClassIdentifier:
   hashCode: 2019882612
-  material: {fileID: 2100000, guid: 83a02044e4299e44db7c59a2390afc65, type: 2}
+  material: {fileID: 2100000, guid: 3cebd7fbdb4086e4696ec555f38b2df6, type: 2}
   materialHashCode: -431032492
   m_Version: 1.1.0
   m_SourceFontFileGUID: fa97d1a8971a56b4aac695e5676995c5
-  m_SourceFontFile: {fileID: 12800000, guid: 0cff5e09ac8f3fa41a56eea78fb8d4dc, type: 3}
+  m_SourceFontFile: {fileID: 12800000, guid: 6fd047e6b82c24341912680f7bcbf297, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
     m_FamilyName: JF Dot M+ 10
@@ -13758,7 +13758,7 @@ MonoBehaviour:
     m_GlyphIndex: 7092
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: f81353e1bd469a04daf4848777290091, type: 3}
+  - {fileID: 2800000, guid: 7bd9272ca88ba0d4395133d1f5abd6e3, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

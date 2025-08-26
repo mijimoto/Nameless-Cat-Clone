@@ -17,6 +17,6 @@ MonoBehaviour:
   descriptionKey: achievement_chapter_description_{0}
   outerReference: {fileID: 0}
   progresses:
-  - {fileID: 11400000, guid: 6828ccff17ea26f4e8ce2ebd96674108, type: 2}
-  - {fileID: 11400000, guid: fa8102c7b2d7a524f820ea2a5df28090, type: 2}
-  - {fileID: 11400000, guid: 691e0683d6b866841afb9a0ac69261c7, type: 2}
+  - {fileID: 11400000, guid: 486808e783ca84740a58c90f4ebbfee6, type: 2}
+  - {fileID: 11400000, guid: 4ffe46e978b5cc64b88384a099ea0205, type: 2}
+  - {fileID: 11400000, guid: b461e413bd1b4f645938f283406f2655, type: 2}

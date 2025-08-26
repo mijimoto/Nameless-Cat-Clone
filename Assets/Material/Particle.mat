@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Particle
-  m_Shader: {fileID: 4800000, guid: d3e28dc359f122c4285b94b5ffb267b7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6e465d815a0779242b72a9b6cfd81481, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

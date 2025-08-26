@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Barberspole_0
   m_EditorClassIdentifier:
-  m_Sprite: {fileID: 21300000, guid: d87d9a41fe87c2c4da77160d8f949f17, type: 2}
+  m_Sprite: {fileID: 21300000, guid: bd756ca1affb19143837579654824891, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

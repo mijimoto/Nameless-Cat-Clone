@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ZF#2ndPixelus SDF
   m_EditorClassIdentifier:
   hashCode: 467898776
-  material: {fileID: 2100000, guid: 19aab044fe96b824d8c58da8c3879f48, type: 2}
+  material: {fileID: 2100000, guid: 3f32d0ddf9934b9419c5e7c6190d154f, type: 2}
   materialHashCode: 867473976
   m_Version: 1.1.0
   m_SourceFontFileGUID: 45ecefaa08bf73141ad462379c34a749
-  m_SourceFontFile: {fileID: 12800000, guid: 657b929e09a1f7a42aac1dd4981d4498, type: 3}
+  m_SourceFontFile: {fileID: 12800000, guid: b29ca44a5282a0a4ba6ef60b5384fcf0, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
     m_FamilyName: ZF #2ndPixelus
@@ -2544,7 +2544,7 @@ MonoBehaviour:
     m_GlyphIndex: 58
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 5d49abcbd1167134a9a703d810a7e81c, type: 3}
+  - {fileID: 2800000, guid: 0372cb0082c72ba4ab3dd4f84d864b4c, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

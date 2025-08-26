@@ -15,7 +15,7 @@ MonoBehaviour:
   lanKey: th
   lanName: ไทย
   applySystemLanguages: 22000000
-  font: {fileID: 11400000, guid: 6cbc9fdfee710e642bcf9fdd648af7de, type: 2}
+  font: {fileID: 11400000, guid: ebaf571e25778634383d37f93967e0fb, type: 2}
   maxFontSize: 0.17
   minFontSize: -1
   lineSpacing: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   lanKey: ja
   lanName: 日本語
   applySystemLanguages: 16000000
-  font: {fileID: 11400000, guid: bf4eb87758a352841b6acdae07f12d03, type: 2}
+  font: {fileID: 11400000, guid: 6c4e136539f76a643b9c8407d410fece, type: 2}
   maxFontSize: 0.18
   minFontSize: -1
   lineSpacing: 3

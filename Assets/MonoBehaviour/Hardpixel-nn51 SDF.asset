@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Hardpixel-nn51 SDF
   m_EditorClassIdentifier:
   hashCode: -812589073
-  material: {fileID: 2100000, guid: 1c7d92740e2d6874e9b60d273e4939af, type: 2}
+  material: {fileID: 2100000, guid: bbef1b540b4f6814fa301be6372f8e79, type: 2}
   materialHashCode: 1084679407
   m_Version: 1.1.0
   m_SourceFontFileGUID: 887d1180db19f50428c1beebbdd59da7
-  m_SourceFontFile: {fileID: 12800000, guid: f9e20b929385f734b9b30acf8e5affff, type: 3}
+  m_SourceFontFile: {fileID: 12800000, guid: 26cbd28b5a0dc8e429ac91996f5cd022, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
     m_FamilyName: Hardpixel
@@ -2742,7 +2742,7 @@ MonoBehaviour:
     m_GlyphIndex: 177
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 232b9ffd9295d0b4c836d5560284ae40, type: 3}
+  - {fileID: 2800000, guid: 9ed95f11634b2724b9b99386c8b373ee, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

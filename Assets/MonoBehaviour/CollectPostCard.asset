@@ -17,4 +17,4 @@ MonoBehaviour:
   descriptionKey: achievement_postcard_description
   outerReference: {fileID: 0}
   progresses:
-  - {fileID: 11400000, guid: a25023928caae2b4695f420d8ccfd7a4, type: 2}
+  - {fileID: 11400000, guid: f252f54239d6dac43a157df66dc2c5a9, type: 2}

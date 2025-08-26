@@ -15,7 +15,7 @@ MonoBehaviour:
   lanKey: szh
   lanName: 简体中文
   applySystemLanguages: 28000000
-  font: {fileID: 11400000, guid: dd19b3d72db3a65419765c9e6becc48f, type: 2}
+  font: {fileID: 11400000, guid: 23199feeb3b9d994b80d6e1fc38dc8a9, type: 2}
   maxFontSize: 0.21
   minFontSize: -1
   lineSpacing: 2

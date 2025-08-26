@@ -7,15 +7,15 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: player_skin_12
-  m_Controller: {fileID: 9100000, guid: 29d4067ed2e50744595923a911889372, type: 2}
+  m_Controller: {fileID: 9100000, guid: 066e3eb8f24d4d24b9c7ce43ff82ed7e, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 1c3a338e3c451444aac23b074876e589, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: a41e372e14629bf48bb717fd99910b0b, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: d5bf48632da979a4cb01c0ffad785618, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 79bf4ec642a55ba4e8932b1b8ee0146a, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 7d2a6245f4732db45bfd0e710241dc65, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: d4eaab26b2bfe714ca1de93536c31ea5, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 0d3d2881b1838a045ab1c7e18b883032, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 1374acd664c54604683a8196a838d855, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: 914dd09252a160745acaba244eef21a4, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: ee123b3c66a4f6b459de2268e7b05108, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 35933913a9b3fca4b9aeb15d233af63b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d6f21ce945d6d142bf2d4f5a56ea5fe, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6e6ab36a92b64b746967968f9b3c0889, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 897c92ebcc1f08a48a581230b50236be, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4dabd555d3d425a44a63b8be99e32467, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 47740265dd8448a4289088d09f28778a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 89ce808316954ac4cbbab1a18c8ecced, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0ffdec821fe10c64d8078b56c957cf96, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1bf8bf02b37ffe345bb9bbe7e5fa02cc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2121e97e647ccb6449883db5d233af74, type: 2}

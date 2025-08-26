@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: d3a17a4fcca55ca45a3cb264fba4812d, type: 2}
+      value: {fileID: 21300000, guid: 01d388c5cb18b88479ac17a45dde733c, type: 2}
     - time: 0.125
-      value: {fileID: 21300000, guid: 1c04c6e0538b6f74ab17ea9c3cf904ec, type: 2}
+      value: {fileID: 21300000, guid: a3b5f8cc41e8bcf4a8b9d1823ae82ae7, type: 2}
     - time: 0.25
-      value: {fileID: 21300000, guid: e1d89dbe4da458042b5f84a19353f2f8, type: 2}
+      value: {fileID: 21300000, guid: d6f61961373a22942aaddc29962b4eeb, type: 2}
     - time: 0.375
-      value: {fileID: 21300000, guid: cb353f708ea883a46b32278bbfe15b2d, type: 2}
+      value: {fileID: 21300000, guid: 3b9948adab804aa42b7bd88bfc95cc30, type: 2}
     attribute: script_0x7822D856_UsmorHH
     path: TextBox2Body/bg
     classID: 114
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d3a17a4fcca55ca45a3cb264fba4812d, type: 2}
-    - {fileID: 21300000, guid: 1c04c6e0538b6f74ab17ea9c3cf904ec, type: 2}
-    - {fileID: 21300000, guid: e1d89dbe4da458042b5f84a19353f2f8, type: 2}
-    - {fileID: 21300000, guid: cb353f708ea883a46b32278bbfe15b2d, type: 2}
+    - {fileID: 21300000, guid: 01d388c5cb18b88479ac17a45dde733c, type: 2}
+    - {fileID: 21300000, guid: a3b5f8cc41e8bcf4a8b9d1823ae82ae7, type: 2}
+    - {fileID: 21300000, guid: d6f61961373a22942aaddc29962b4eeb, type: 2}
+    - {fileID: 21300000, guid: 3b9948adab804aa42b7bd88bfc95cc30, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

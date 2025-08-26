@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Early GameBoy Atlas Material
-  m_Shader: {fileID: 4800000, guid: a31ce7ba7dce18d4b97294ea07515a54, type: 3}
+  m_Shader: {fileID: 4800000, guid: bff42e10f4f6a284fade95fa6f27331a, type: 3}
   m_ShaderKeywords:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _MainTex:
-        m_Texture: {fileID: 2800000, guid: d2d291681d58cc742b3cbbb932b427fc, type: 3}
+        m_Texture: {fileID: 2800000, guid: f184de9ed2c949942be756237e923bb5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _OutlineTex:

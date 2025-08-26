@@ -16,6 +16,6 @@ MonoBehaviour:
   useIAP: 0
   canBuy: 1
   canUse: 0
-  controller: {fileID: 9100000, guid: 18c8c0e7eb49b464da521456602c2c50, type: 2}
-  sprite: {fileID: 21300000, guid: f6ca31b335df4b3468e32209e0022d56, type: 2}
+  controller: {fileID: 9100000, guid: a6b4123a92f179b42b03b809aac4e3a4, type: 2}
+  sprite: {fileID: 21300000, guid: 4d2c19f9d62933e4c8faf27debbddd0f, type: 2}
   price: 5

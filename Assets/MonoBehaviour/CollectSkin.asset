@@ -15,8 +15,8 @@ MonoBehaviour:
   id: collectSkin
   titleKey: achievement_skin_title_{0}
   descriptionKey: achievement_skin_description_{0}
-  outerReference: {fileID: 11400000, guid: fb844d28c924cb04fa912a5e346c4e67, type: 2}
+  outerReference: {fileID: 11400000, guid: 6bce661e3432e5d45a55f119673a3141, type: 2}
   progresses:
-  - {fileID: 11400000, guid: fecd8b3bbd5be8940a9d107957bc14ad, type: 2}
-  - {fileID: 11400000, guid: 029e682fedc69de4b985a2ef533fda64, type: 2}
-  - {fileID: 11400000, guid: e1d7027be15459241abbdc265da3d194, type: 2}
+  - {fileID: 11400000, guid: 468b005f00de5354da8b444808033003, type: 2}
+  - {fileID: 11400000, guid: 31a64def03398984ca162196c525743c, type: 2}
+  - {fileID: 11400000, guid: 94119ea5e9713e24cb2d1147635c9aaa, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Deepfloor(Level-2)_22
   m_EditorClassIdentifier:
-  m_Sprite: {fileID: 21300000, guid: df6e7ddafe3fa514c926ded148ddff4f, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 87f33dc545a670d499c146f1a504ffb5, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

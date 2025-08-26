@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: font_pixel_vietnamese_version_by_shiningday_d658h5l SDF
   m_EditorClassIdentifier:
   hashCode: -1014735302
-  material: {fileID: 2100000, guid: 857c1cacd36a33c41853c5c406fbccbc, type: 2}
+  material: {fileID: 2100000, guid: 1fec20667a8a9594c911b83689d929d8, type: 2}
   materialHashCode: 1265714138
   m_Version: 1.1.0
   m_SourceFontFileGUID: a60aea5b71121804fa708d073792196f
-  m_SourceFontFile: {fileID: 12800000, guid: bafa0749aadfe5f498698433fac80b82, type: 3}
+  m_SourceFontFile: {fileID: 12800000, guid: db36bb5239e8f2a4f9383c9daf9e1e9c, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
     m_FamilyName: FVF Fernando 08
@@ -3516,7 +3516,7 @@ MonoBehaviour:
     m_GlyphIndex: 88
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 593e6b5279186db42b98a1494d5350a4, type: 3}
+  - {fileID: 2800000, guid: 3eecbf48fb5d55244a1e9969d0771ee2, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

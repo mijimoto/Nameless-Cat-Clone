@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EmojiOne
   m_EditorClassIdentifier:
   hashCode: -1836805472
-  material: {fileID: 2100000, guid: 9e41036817e3d7e41b85ade5f09f1936, type: 2}
+  material: {fileID: 2100000, guid: 5105b4ab36dfb104faa51bb4288c2f47, type: 2}
   materialHashCode: 0
   m_Version: 1.1.0
   m_FaceInfo:
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_StrikethroughOffset: 0
     m_StrikethroughThickness: 0
     m_TabWidth: 0
-  spriteSheet: {fileID: 2800000, guid: 188e50f4161ab0e47a3492f4ee67224d, type: 3}
+  spriteSheet: {fileID: 2800000, guid: 5e062a9ccffcd2944b3b8faa744ccf41, type: 3}
   m_SpriteCharacterTable:
   - m_ElementType: 2
     m_Unicode: 128522

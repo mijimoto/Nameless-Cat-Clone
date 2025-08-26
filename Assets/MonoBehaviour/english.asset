@@ -15,7 +15,7 @@ MonoBehaviour:
   lanKey: en
   lanName: English
   applySystemLanguages: 0a000000
-  font: {fileID: 11400000, guid: 680067a17c776894a852a431782360ee, type: 2}
+  font: {fileID: 11400000, guid: 3d1316beba674ed4c97d6082cd909d3c, type: 2}
   maxFontSize: 0.15
   minFontSize: 0.14
   lineSpacing: -20

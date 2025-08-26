@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: nameless-cat
   m_EditorClassIdentifier:
   hashCode: -825370987
-  material: {fileID: 2100000, guid: 33e85c1d1007fec4496fb8ccbb964436, type: 2}
+  material: {fileID: 2100000, guid: 8471de1fe9410df4f86ae5696c6eff5e, type: 2}
   materialHashCode: 774983445
   m_Version: 1.1.0
   m_SourceFontFileGUID:
@@ -2112,7 +2112,7 @@ MonoBehaviour:
     m_GlyphIndex: 122
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 7c34e7b64957f454ead5f05b5f935410, type: 3}
+  - {fileID: 2800000, guid: c05849cb9b48b40488d1b2029482ceb6, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

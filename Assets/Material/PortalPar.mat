@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PortalPar
-  m_Shader: {fileID: 4800000, guid: e857858c46a2a2c4d8b7a3abfb51d7e0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 73b5cec7162f9eb44ab703e16f51f27e, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -24,19 +24,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _MainTex:
-        m_Texture: {fileID: 2800000, guid: 03eb0260064e0cb4f947ba1700330f01, type: 3}
+        m_Texture: {fileID: 2800000, guid: f73c373779d878946b1c8db8b9ba4638, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Star1:
-        m_Texture: {fileID: 2800000, guid: 36a6ae6bdb713fe459511c2aa8a14bf7, type: 3}
+        m_Texture: {fileID: 2800000, guid: dec021792bf35bf4da7f597aa74e1c5b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Star2:
-        m_Texture: {fileID: 2800000, guid: 5e07a9451ba2ef7428199eb443b16ec5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 00b7f5b429646ec458c24ffe82bcdce4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
       _Star3:
-        m_Texture: {fileID: 2800000, guid: 0f0f3f41c825cc94cb2d6ccd69b62689, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0825b494cae3fbf4e9a546d49035545a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

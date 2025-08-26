@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: moonbackgroundblock_0
   m_EditorClassIdentifier:
-  m_Sprite: {fileID: 21300000, guid: 97724be37579c3b44829e088a0be08a1, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 379d0fda377d1934eb87b089edf5c5ed, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

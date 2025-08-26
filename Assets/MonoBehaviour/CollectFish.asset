@@ -15,8 +15,8 @@ MonoBehaviour:
   id: collectFish
   titleKey: achievement_fish_title_{0}
   descriptionKey: achievement_fish_description_{0}
-  outerReference: {fileID: 11400000, guid: eaa1b81070850bc4ca49ef3925824051, type: 2}
+  outerReference: {fileID: 11400000, guid: c06fa016501b2e045ba7a0bc398f4b3c, type: 2}
   progresses:
-  - {fileID: 11400000, guid: 118ed4c3fcd60f242bcccf8f74a8eaf1, type: 2}
-  - {fileID: 11400000, guid: 7222d6f251634fb40b4ca3ea4afc2b60, type: 2}
-  - {fileID: 11400000, guid: 5930d69b7fe2c7b489ed7bf54cd3f667, type: 2}
+  - {fileID: 11400000, guid: 64c29e2305b195347b53c27bc07de155, type: 2}
+  - {fileID: 11400000, guid: 709a0d1bd5311f84bacb5d57f27a4d55, type: 2}
+  - {fileID: 11400000, guid: ceb1f0eae6796fc40adae51bd5f6da83, type: 2}

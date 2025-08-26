@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: simsun_szh
   m_EditorClassIdentifier:
   hashCode: -2070926687
-  material: {fileID: 2100000, guid: 24e75be2e891ef5498f3c55ef4ce64ee, type: 2}
+  material: {fileID: 2100000, guid: ccc2cf54f6cd3634fbc5e8358b7a16b9, type: 2}
   materialHashCode: 143236577
   m_Version: 1.1.0
   m_SourceFontFileGUID: 990452f2698d3994dac6645ccc8dd283
@@ -17070,7 +17070,7 @@ MonoBehaviour:
     m_GlyphIndex: 731
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: 899d67fd36b276744b1c79bf37746a5b, type: 3}
+  - {fileID: 2800000, guid: c38cc1df0fc3e7f4386290ed935e5b36, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

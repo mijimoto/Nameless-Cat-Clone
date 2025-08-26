@@ -15,7 +15,7 @@ MonoBehaviour:
   lanKey: ru
   lanName: Русский
   applySystemLanguages: 1e000000
-  font: {fileID: 11400000, guid: 5fb5e49b45bf8c54daff9349c78a87c9, type: 2}
+  font: {fileID: 11400000, guid: c26057f765403d04f924365eb7a558af, type: 2}
   maxFontSize: 0.17
   minFontSize: -1
   lineSpacing: 0.5

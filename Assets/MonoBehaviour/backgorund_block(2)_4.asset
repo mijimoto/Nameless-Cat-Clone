@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: backgorund_block(2)_4
   m_EditorClassIdentifier:
-  m_Sprite: {fileID: 21300000, guid: 450224a8deb0e44459ebdf45aaed6edb, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 68171ac4c3147e84daa58865e69b9455, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

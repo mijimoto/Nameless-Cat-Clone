@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Early GameBoy SDF
   m_EditorClassIdentifier:
   hashCode: -172877016
-  material: {fileID: 2100000, guid: 724f1a8c3aa61fa4ab2b090c38de4d2a, type: 2}
+  material: {fileID: 2100000, guid: bdfd55658da91564fa563d345d4f27f2, type: 2}
   materialHashCode: 679181320
   m_Version: 1.1.0
   m_SourceFontFileGUID: ba8523099923eef4aabc811a81f1b10a
-  m_SourceFontFile: {fileID: 12800000, guid: c0b47756934527449b0a1b8ee8083dc3, type: 3}
+  m_SourceFontFile: {fileID: 12800000, guid: 2c1a087316f3f1b4199a9e1fc01b091a, type: 3}
   m_AtlasPopulationMode: 1
   m_FaceInfo:
     m_FamilyName: Early GameBoy
@@ -1464,7 +1464,7 @@ MonoBehaviour:
     m_GlyphIndex: 86
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: d2d291681d58cc742b3cbbb932b427fc, type: 3}
+  - {fileID: 2800000, guid: f184de9ed2c949942be756237e923bb5, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0

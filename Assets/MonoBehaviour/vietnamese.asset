@@ -15,7 +15,7 @@ MonoBehaviour:
   lanKey: vi
   lanName: Tiếng Việt
   applySystemLanguages: 27000000
-  font: {fileID: 11400000, guid: acc29cbbfb853ba47b7991b117c75845, type: 2}
+  font: {fileID: 11400000, guid: 1efd2308464411a46bc36b646632a0c9, type: 2}
   maxFontSize: 0.17
   minFontSize: 0.14
   lineSpacing: -5

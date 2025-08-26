@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LiberationSans SDF
   m_EditorClassIdentifier:
   hashCode: 231247347
-  material: {fileID: 2100000, guid: 1793f4835dc8b4d49b356a0cd37282b7, type: 2}
+  material: {fileID: 2100000, guid: abca214a06bbe5b42ac1b2fc7ef3b6f2, type: 2}
   materialHashCode: 198912371
   m_Version: 1.1.0
   m_SourceFontFileGUID: e3265ab4bf004d28a9537516768c1c75
@@ -4542,7 +4542,7 @@ MonoBehaviour:
     m_GlyphIndex: 2179
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2800000, guid: eee722b600b9e5e49a578e33115ed12d, type: 3}
+  - {fileID: 2800000, guid: 81e14729c63609f49a18a378ae2811ab, type: 3}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0
@@ -7654,7 +7654,7 @@ MonoBehaviour:
       m_FeatureLookupFlags: 0
   fallbackFontAssets: []
   m_FallbackFontAssetTable:
-  - {fileID: 11400000, guid: d47b217fec1b2054cb60d5a3287d8d12, type: 2}
+  - {fileID: 11400000, guid: 2641380707b48b84bbcd7444a701b6de, type: 2}
   m_CreationSettings:
     sourceFontFileName:
     sourceFontFileGUID: e3265ab4bf004d28a9537516768c1c75
