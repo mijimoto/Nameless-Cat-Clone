@@ -5,19 +5,15 @@ public class TextBox : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI msgText;
-    
+
     [SerializeField]
     private Animator animator;
-
-    private TextBoxSetting currentSetting;
 
     public Color TextColor
     {
         get
         {
-            if (msgText != null)
-                return msgText.color;
-            return Color.white;
+            return msgText != null ? msgText.color : Color.white;
         }
         set
         {
@@ -26,24 +22,11 @@ public class TextBox : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        // Ensure msgText is assigned
-        if (msgText == null)
-            msgText = GetComponent<TextMeshProUGUI>();
-            
-        if (animator == null)
-            animator = GetComponent<Animator>();
-    }
-
     public void Init(TextBoxSetting textBoxSetting)
     {
-        currentSetting = textBoxSetting;
-        
         if (textBoxSetting != null && msgText != null)
         {
-            // Apply the text box settings to the TextMeshPro component
-            textBoxSetting.InitTextMeshProUGUI(msgText, true);
+            textBoxSetting.InitTextMeshProUGUI(msgText);
         }
     }
 
@@ -70,16 +53,9 @@ public class TextBox : MonoBehaviour
         }
     }
 
-    // Method to update text with localization key
-    public void UpdateLocalizedText(string key)
-    {
-        string localizedText = TextLoader.getText(key);
-        UpdateText(localizedText);
-    }
-
-    // Method to refresh settings when language changes
     public void RefreshSettings()
     {
+        TextBoxSetting currentSetting = DataLoader.getCurrentTextBoxSetting();
         if (currentSetting != null)
         {
             Init(currentSetting);

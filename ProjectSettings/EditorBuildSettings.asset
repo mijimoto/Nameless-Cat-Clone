@@ -14,6 +14,51 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Common/selectList.unity
     guid: 023a77ce730e0164bbed5b2f378bbb8d
+  - enabled: 1
+    path: Assets/scene/PC/level1-1.unity
+    guid: a036ac4c15626ce4f9966ba6f1da2de0
+  - enabled: 1
+    path: Assets/scene/PC/level1-2.unity
+    guid: ecf4436d8cbf1774baf43103908585f3
+  - enabled: 1
+    path: Assets/scene/PC/level1-3.unity
+    guid: 56c3c7cc4f38159418347a0b163073dc
+  - enabled: 1
+    path: Assets/scene/PC/level1-4.unity
+    guid: 23369c8c80aeccc42a83ac6a4e01f7f6
+  - enabled: 1
+    path: Assets/scene/PC/level1-5.unity
+    guid: d025774bde9e0164b8b6d74d5d4f3caf
+  - enabled: 1
+    path: Assets/scene/PC/level1-6.unity
+    guid: 9b93eac59410a43449381ee4c84f745f
+  - enabled: 1
+    path: Assets/scene/PC/level1-7.unity
+    guid: 05922832d93dee24aa38b567ac922030
+  - enabled: 1
+    path: Assets/scene/PC/level1-8.unity
+    guid: e98a8442a301a6f40b9fc7fdae1c2c23
+  - enabled: 1
+    path: Assets/scene/PC/level1-9.unity
+    guid: 603650df260a6de4bb8a6aeab070da3e
+  - enabled: 1
+    path: Assets/scene/PC/level1-10.unity
+    guid: 7852cd77353a6954395a7309aa7c80f8
+  - enabled: 1
+    path: Assets/scene/PC/level1-11.unity
+    guid: c95e0f24f13141b418fd766b1d09b0ef
+  - enabled: 1
+    path: Assets/scene/PC/level1-12.unity
+    guid: 0b31d006bc6757549816e689e47e969e
+  - enabled: 1
+    path: Assets/scene/PC/level1-13.unity
+    guid: 4ad3a1a221b6da34d86bef09eca666a5
+  - enabled: 1
+    path: Assets/scene/PC/level1-14.unity
+    guid: 660d16484a06e6f4ea13ac8c1f6cc123
+  - enabled: 1
+    path: Assets/scene/PC/level1-15.unity
+    guid: 6b9330823bb97d848aa921defd626c23
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
