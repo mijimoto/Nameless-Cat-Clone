@@ -1,64 +1,67 @@
-Shader "Sprites/Shadow" {
-	Properties {
-		[PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
-		_Color ("Tint", Vector) = (1,1,1,1)
-		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
-		[HideInInspector] _RendererColor ("RendererColor", Vector) = (1,1,1,1)
-		[HideInInspector] _Flip ("Flip", Vector) = (1,1,1,1)
-		[PerRendererData] _AlphaTex ("External Alpha", 2D) = "white" {}
-		[PerRendererData] _EnableExternalAlpha ("Enable External Alpha", Float) = 0
-	}
-	//DummyShaderTextExporter
-	SubShader{
-		Tags { "RenderType"="Opaque" }
-		LOD 200
+Shader "Sprites/Shadow"
+{
+    Properties
+    {
+        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
+        _Color ("Tint", Color) = (1,1,1,1)
+        [MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
+    }
 
-		Pass
-		{
-			HLSLPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
+    SubShader
+    {
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+        LOD 200
 
-			float4x4 unity_ObjectToWorld;
-			float4x4 unity_MatrixVP;
-			float4 _MainTex_ST;
+        Pass
+        {
+            Blend SrcAlpha OneMinusSrcAlpha
+            ZWrite Off
 
-			struct Vertex_Stage_Input
-			{
-				float4 pos : POSITION;
-				float2 uv : TEXCOORD0;
-			};
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
 
-			struct Vertex_Stage_Output
-			{
-				float2 uv : TEXCOORD0;
-				float4 pos : SV_POSITION;
-			};
+            float4x4 unity_ObjectToWorld;
+            float4x4 unity_MatrixVP;
+            float4 _MainTex_ST;
 
-			Vertex_Stage_Output vert(Vertex_Stage_Input input)
-			{
-				Vertex_Stage_Output output;
-				output.uv = (input.uv.xy * _MainTex_ST.xy) + _MainTex_ST.zw;
-				output.pos = mul(unity_MatrixVP, mul(unity_ObjectToWorld, input.pos));
-				return output;
-			}
+            struct VertexInput
+            {
+                float4 pos : POSITION;
+                float2 uv  : TEXCOORD0;
+            };
 
-			Texture2D<float4> _MainTex;
-			SamplerState sampler_MainTex;
-			float4 _Color;
+            struct VertexOutput
+            {
+                float2 uv  : TEXCOORD0;
+                float4 pos : SV_POSITION;
+            };
 
-			struct Fragment_Stage_Input
-			{
-				float2 uv : TEXCOORD0;
-			};
+            VertexOutput vert(VertexInput input)
+            {
+                VertexOutput output;
+                output.uv = (input.uv.xy * _MainTex_ST.xy) + _MainTex_ST.zw;
+                output.pos = mul(unity_MatrixVP, mul(unity_ObjectToWorld, input.pos));
+                return output;
+            }
 
-			float4 frag(Fragment_Stage_Input input) : SV_TARGET
-			{
-				return _MainTex.Sample(sampler_MainTex, input.uv.xy) * _Color;
-			}
+            Texture2D<float4> _MainTex;
+            SamplerState sampler_MainTex;
+            float4 _Color;
 
-			ENDHLSL
-		}
-	}
-	Fallback "Transparent/VertexLit"
+            struct FragmentInput
+            {
+                float2 uv : TEXCOORD0;
+            };
+
+            float4 frag(FragmentInput input) : SV_Target
+            {
+                float4 tex = _MainTex.Sample(sampler_MainTex, input.uv);
+                return float4(tex.rgb * _Color.rgb, tex.a * _Color.a);
+            }
+            ENDHLSL
+        }
+    }
+
+    Fallback "Sprites/Default"
 }
