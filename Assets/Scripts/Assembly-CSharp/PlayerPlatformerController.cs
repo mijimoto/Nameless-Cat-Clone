@@ -319,18 +319,7 @@ public class PlayerPlatformerController : PhysicsObject
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("StoryTrigger"))
-		{
-			storyZone = other.GetComponent<StoryTrigger>();
-		}
-		else if (other.CompareTag("PressurePlate"))
-		{
-			pressZone = other.GetComponent<PressurePlate>();
-		}
-		else if (other.CompareTag("CheckPoint"))
-		{
-			checkPointAd = other.GetComponent<CheckPoint>();
-		}
+		
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)

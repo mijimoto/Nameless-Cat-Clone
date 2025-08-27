@@ -190,10 +190,11 @@ public class LevelManager : MonoBehaviour
 		changeScene("LevelSelect");
 	}
 
-	public static string getLevelName(int chapter, int level)
-	{
-		return $"{chapter + 1}-{level}";
-	}
+public static string getLevelName(int chapter, int level)
+{
+    return $"level{chapter + 1}-{level}";
+}
+
 
 	public static int getChapter(string levelName)
 	{
