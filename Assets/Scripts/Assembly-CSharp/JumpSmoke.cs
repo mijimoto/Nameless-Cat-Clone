@@ -8,15 +8,18 @@ public class JumpSmoke : MonoBehaviour
 	private void Start()
 	{
 		smokes = GetComponentsInChildren<Animator>();
-		spawnPivot = 0;
 	}
 
-	public void spawnSmoke()
-	{
-		if (smokes != null && smokes.Length > 0)
-		{
-			smokes[spawnPivot].SetTrigger("smoke");
-			spawnPivot = (spawnPivot + 1) % smokes.Length;
-		}
-	}
+public void spawnSmoke()
+{
+    if (smokes != null && smokes.Length > 0)
+    {
+        for (int i = 0; i < smokes.Length; i++)
+        {
+            smokes[i].SetTrigger("JumpSmokeP"); // all child animators will try to trigger
+            Debug.Log("Triggering smoke: " + smokes[i].name);
+        }
+    }
+}
+
 }

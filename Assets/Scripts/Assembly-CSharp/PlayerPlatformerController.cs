@@ -139,17 +139,25 @@ public class PlayerPlatformerController : PhysicsObject
 		jumpInput = jumpDown || keyboardJump;
 		downInput = downKeyDown || keyboardDown;
 
-		// Jump detection
-		if (jumpInput && !lastJumpKeyDown && grounded)
-			SetJump();
-		lastJumpKeyDown = jumpInput;
 
-		// Animations
 		if (animator != null)
 		{
 			animator.SetBool("grounded", grounded);
 			animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 		}
+
+
+// Jump detection
+if (jumpInput && !lastJumpKeyDown && grounded)
+    SetJump();
+
+// Landing effect: trigger only on transition from air -> ground
+if (grounded && !lastJumpKeyDown) // lastJumpKeyDown false when player was not jumping
+{
+    spawnJumpSmoke();
+    playDropSound();
+    Debug.Log("Player landed! Smoke triggered.");
+}
 
 		// Death by falling
 		if (transform.position.y < deadHeight)
@@ -319,7 +327,7 @@ public class PlayerPlatformerController : PhysicsObject
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		
+
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
