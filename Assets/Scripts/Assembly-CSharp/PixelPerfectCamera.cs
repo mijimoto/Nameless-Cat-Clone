@@ -116,14 +116,16 @@ public class PixelPerfectCamera : MonoBehaviour
         fovCoverage = this.cameraSize.y * 2f;
 
         // Apply retro snap
-        if (retroSnap && pixelPerfect)
-        {
-            Vector3 pos = transform.position;
-            pos.x = Mathf.Round(pos.x * cameraPixelsPerUnit) / cameraPixelsPerUnit;
-            pos.y = Mathf.Round(pos.y * cameraPixelsPerUnit) / cameraPixelsPerUnit;
-            transform.position = pos;
-        }
-
+if (retroSnap && pixelPerfect && isInitialized)
+{
+    if (!float.IsNaN(cameraPixelsPerUnit) && cameraPixelsPerUnit > 0f)
+    {
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Round(pos.x * cameraPixelsPerUnit) / cameraPixelsPerUnit;
+        pos.y = Mathf.Round(pos.y * cameraPixelsPerUnit) / cameraPixelsPerUnit;
+        transform.position = pos;
+    }
+}
         isInitialized = true;
     }
 
