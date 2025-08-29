@@ -4,25 +4,15 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class PixelPerfectCamera : MonoBehaviour
 {
-    public enum Dimension
-    {
-        Width = 0,
-        Height = 1
-    }
-
-    public enum ConstraintType
-    {
-        None = 0,
-        Horizontal = 1,
-        Vertical = 2
-    }
+    public enum Dimension { Width = 0, Height = 1 }
+    public enum ConstraintType { None = 0, Horizontal = 1, Vertical = 2 }
 
     public static int PIXELS_PER_UNIT = 100;
 
     public bool maxCameraHalfWidthEnabled;
     public bool maxCameraHalfHeightEnabled;
-    public float maxCameraHalfWidth = 10f;
-    public float maxCameraHalfHeight = 5f;
+    public float maxCameraHalfWidth = 10f;   // in world units (half-width)
+    public float maxCameraHalfHeight = 5f;   // in world units (half-height)
     public Dimension targetDimension = Dimension.Width;
     public float targetCameraHalfWidth = 10f;
     public float targetCameraHalfHeight = 5f;
@@ -31,68 +21,72 @@ public class PixelPerfectCamera : MonoBehaviour
     public float assetsPixelsPerUnit = 100f;
     public bool showHUD = false;
 
-    [NonSerialized]
-    public Vector2 cameraSize;
-    [NonSerialized]
-    public ConstraintType contraintUsed;
-    [NonSerialized]
-    public float cameraPixelsPerUnit;
-    [NonSerialized]
-    public float ratio;
-    [NonSerialized]
-    public Vector2 nativeAssetResolution;
-    [NonSerialized]
-    public float fovCoverage;
-    [NonSerialized]
-    public bool isInitialized;
+    [NonSerialized] public Vector2 cameraSize; // x = halfWidth, y = halfHeight
+    [NonSerialized] public ConstraintType contraintUsed;
+    [NonSerialized] public float cameraPixelsPerUnit;
+    [NonSerialized] public float ratio;
+    [NonSerialized] public Vector2 nativeAssetResolution;
+    [NonSerialized] public float fovCoverage;
+    [NonSerialized] public bool isInitialized;
 
     private Resolution res;
     private Camera cam;
 
-    private float calculatePixelPerfectCameraSize(bool pixelPerfect, Resolution res, float assetsPixelsPerUnit, 
-        float maxCameraHalfWidth, float maxCameraHalfHeight, float targetHalfWidth, float targetHalfHeight, 
+    // Returns orthographicSize (half-height)
+    private float calculatePixelPerfectCameraSize(bool pixelPerfect, Resolution res, float assetsPixelsPerUnit,
+        float maxCameraHalfWidth, float maxCameraHalfHeight, float targetHalfWidth, float targetHalfHeight,
         Dimension targetDimension)
     {
+        float screenRatio = (float)res.width / res.height; // width / height
+        float halfHeight;
+
         if (!pixelPerfect)
         {
-            return targetDimension == Dimension.Width ? targetHalfWidth : targetHalfHeight;
-        }
-
-        float targetRatio = targetHalfWidth / targetHalfHeight;
-        float screenRatio = (float)res.width / res.height;
-        
-        float cameraSize;
-        
-        if (targetDimension == Dimension.Width)
-        {
-            cameraSize = targetHalfWidth;
-            if (screenRatio < targetRatio)
-            {
-                cameraSize = targetHalfHeight * screenRatio;
-            }
+            // Return half-height depending on target dimension
+            halfHeight = (targetDimension == Dimension.Width) ? (targetHalfWidth / screenRatio) : targetHalfHeight;
+            // constraints below will still apply
         }
         else
         {
-            cameraSize = targetHalfHeight;
-            if (screenRatio > targetRatio)
+            // For width-target: we want to keep the half-width constant; orthographicSize (half-height) = halfWidth / aspect
+            // For height-target: orthographicSize == targetHalfHeight
+            if (targetDimension == Dimension.Width)
             {
-                cameraSize = targetHalfWidth / screenRatio;
+                halfHeight = targetHalfWidth / screenRatio;
+            }
+            else
+            {
+                halfHeight = targetHalfHeight;
             }
         }
 
-        // Apply max constraints
-        if (maxCameraHalfWidthEnabled && cameraSize > maxCameraHalfWidth)
-            cameraSize = maxCameraHalfWidth;
-        if (maxCameraHalfHeightEnabled && cameraSize > maxCameraHalfHeight)
-            cameraSize = maxCameraHalfHeight;
+        // Compute halfWidth for constraint checks
+        float halfWidth = halfHeight * screenRatio;
 
-        // Make pixel perfect
-        float pixelsPerUnit = assetsPixelsPerUnit;
-        float pixels = cameraSize * pixelsPerUnit;
+        // Apply max constraints (apply to the correct dimension)
+        contraintUsed = ConstraintType.None;
+        if (maxCameraHalfWidthEnabled && halfWidth > maxCameraHalfWidth)
+        {
+            halfWidth = maxCameraHalfWidth;
+            halfHeight = halfWidth / screenRatio;
+            contraintUsed = ConstraintType.Horizontal;
+        }
+
+        if (maxCameraHalfHeightEnabled && halfHeight > maxCameraHalfHeight)
+        {
+            halfHeight = maxCameraHalfHeight;
+            halfWidth = halfHeight * screenRatio;
+            contraintUsed = (contraintUsed == ConstraintType.Horizontal) ? contraintUsed : ConstraintType.Vertical;
+        }
+
+        // Make pixel perfect rounding on half-height (orthographic size) based on assets PPU
+        float ppu = Mathf.Max(1f, assetsPixelsPerUnit);
+        float pixels = halfHeight * ppu;
         int pixelsInt = Mathf.RoundToInt(pixels);
-        cameraSize = pixelsInt / pixelsPerUnit;
+        // avoid division by zero just in case
+        halfHeight = pixelsInt / ppu;
 
-        return cameraSize;
+        return halfHeight;
     }
 
     public void adjustCameraFOV()
@@ -103,30 +97,32 @@ public class PixelPerfectCamera : MonoBehaviour
         res.width = Screen.width;
         res.height = Screen.height;
 
-        float cameraSize = calculatePixelPerfectCameraSize(pixelPerfect, res, assetsPixelsPerUnit, 
+        float cameraHalfHeight = calculatePixelPerfectCameraSize(pixelPerfect, res, assetsPixelsPerUnit,
             maxCameraHalfWidth, maxCameraHalfHeight, targetCameraHalfWidth, targetCameraHalfHeight, targetDimension);
 
-        cam.orthographicSize = cameraSize;
-        
+        cam.orthographicSize = cameraHalfHeight;
+
         // Calculate additional properties
-        this.cameraSize = new Vector2(cameraSize * cam.aspect, cameraSize);
-        cameraPixelsPerUnit = res.height / (2f * cameraSize);
+        float halfWidth = cameraHalfHeight * cam.aspect;
+        this.cameraSize = new Vector2(halfWidth, cameraHalfHeight);
+        cameraPixelsPerUnit = res.height / (2f * cameraHalfHeight); // pixels / unit
         ratio = cameraPixelsPerUnit / assetsPixelsPerUnit;
         nativeAssetResolution = new Vector2(this.cameraSize.x * 2f * assetsPixelsPerUnit, this.cameraSize.y * 2f * assetsPixelsPerUnit);
         fovCoverage = this.cameraSize.y * 2f;
 
-        // Apply retro snap
-if (retroSnap && pixelPerfect && isInitialized)
-{
-    if (!float.IsNaN(cameraPixelsPerUnit) && cameraPixelsPerUnit > 0f)
-    {
-        Vector3 pos = transform.position;
-        pos.x = Mathf.Round(pos.x * cameraPixelsPerUnit) / cameraPixelsPerUnit;
-        pos.y = Mathf.Round(pos.y * cameraPixelsPerUnit) / cameraPixelsPerUnit;
-        transform.position = pos;
-    }
-}
         isInitialized = true;
+
+        // Do initial retro snap (position rounding) once here
+        if (retroSnap && pixelPerfect)
+        {
+            if (!float.IsNaN(cameraPixelsPerUnit) && cameraPixelsPerUnit > 0f)
+            {
+                Vector3 pos = transform.position;
+                pos.x = Mathf.Round(pos.x * cameraPixelsPerUnit) / cameraPixelsPerUnit;
+                pos.y = Mathf.Round(pos.y * cameraPixelsPerUnit) / cameraPixelsPerUnit;
+                transform.position = pos;
+            }
+        }
     }
 
     private void OnEnable()
@@ -137,6 +133,9 @@ if (retroSnap && pixelPerfect && isInitialized)
             cam = gameObject.AddComponent<Camera>();
             cam.orthographic = true;
         }
+        // If camera is not orthographic, force it (pixel perfect only makes sense orthographic)
+        cam.orthographic = true;
+
         adjustCameraFOV();
     }
 
@@ -146,7 +145,8 @@ if (retroSnap && pixelPerfect && isInitialized)
         adjustCameraFOV();
     }
 
-    private void Update()
+    // Use LateUpdate so snapping happens after CameraManager/other systems moved the camera
+    private void LateUpdate()
     {
         if (res.width != Screen.width || res.height != Screen.height)
         {
@@ -155,10 +155,13 @@ if (retroSnap && pixelPerfect && isInitialized)
 
         if (retroSnap && pixelPerfect && isInitialized)
         {
-            Vector3 pos = transform.position;
-            pos.x = Mathf.Round(pos.x * cameraPixelsPerUnit) / cameraPixelsPerUnit;
-            pos.y = Mathf.Round(pos.y * cameraPixelsPerUnit) / cameraPixelsPerUnit;
-            transform.position = pos;
+            if (!float.IsNaN(cameraPixelsPerUnit) && cameraPixelsPerUnit > 0f)
+            {
+                Vector3 pos = transform.position;
+                pos.x = Mathf.Round(pos.x * cameraPixelsPerUnit) / cameraPixelsPerUnit;
+                pos.y = Mathf.Round(pos.y * cameraPixelsPerUnit) / cameraPixelsPerUnit;
+                transform.position = pos;
+            }
         }
     }
 
@@ -168,15 +171,15 @@ if (retroSnap && pixelPerfect && isInitialized)
 
         GUILayout.BeginArea(new Rect(10, 10, 300, 200));
         GUILayout.BeginVertical("box");
-        
+
         GUILayout.Label("Pixel Perfect Camera Debug");
-        GUILayout.Label($"Camera Size: {cameraSize}");
+        GUILayout.Label($"Camera Size (halfWidth,halfHeight): {cameraSize}");
         GUILayout.Label($"Pixels Per Unit: {cameraPixelsPerUnit:F2}");
         GUILayout.Label($"Ratio: {ratio:F2}");
         GUILayout.Label($"Native Resolution: {nativeAssetResolution}");
         GUILayout.Label($"Screen: {res.width}x{res.height}");
         GUILayout.Label($"Constraint: {contraintUsed}");
-        
+
         GUILayout.EndVertical();
         GUILayout.EndArea();
     }
