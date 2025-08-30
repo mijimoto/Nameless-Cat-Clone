@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
@@ -239,6 +240,8 @@ public class StoryManager : MonoBehaviour
 			case "rotatecamera": rotateCamera(); break;
 			case "trailertitleshowafter3seound": trailertitleShowAfter3Seound(); break;
 		}
+
+		yield break;
 	}
 
 private IEnumerator ProcessDialogue(string line)
@@ -249,42 +252,95 @@ private IEnumerator ProcessDialogue(string line)
         string speaker = parts[0].Trim();
         string message = parts[1].Trim().Replace("\\n", "\n");
 
-        // Create textbox if needed
-        if (textBox == null && textPrefab != null && UIManager._instance != null)
-        {
-            textBox = Instantiate(textPrefab, UIManager._instance.mainCanvas);
-            if (DataLoader.getCurrentTextBoxSetting() != null)
-                textBox.Init(DataLoader.getCurrentTextBoxSetting());
-        }
+        // Try to find speaker in scene
+        GameObject speakerObj = GameObject.Find(speaker);
 
-        if (textBox != null)
+        if (speakerObj != null)
         {
-            // Update text (no speaker name)
-            textBox.UpdateText(message);
-
-            // Position near speaker if found
-            GameObject speakerObj = GameObject.Find(speaker);
-            if (speakerObj != null)
+            // If an existing textbox exists but parent is not the speaker, remove it so we can attach to correct speaker
+            if (textBox != null && textBox.transform.parent != speakerObj.transform)
             {
-                Vector3 worldPos = speakerObj.transform.position + new Vector3(0, 2f, 0);
-                Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
-
-                RectTransform rect = textBox.GetComponent<RectTransform>();
-                if (rect != null)
-                {
-                    rect.position = screenPos;
-                    rect.anchorMin = new Vector2(0.5f, 0.5f);
-                    rect.anchorMax = new Vector2(0.5f, 0.5f);
-                }
+                Destroy(textBox.gameObject);
+                textBox = null;
             }
 
-            textBox.playAnimation(false);
+            // Instantiate textBox as child of speaker (world-space)
+            if (textBox == null && textPrefab != null)
+            {
+                textBox = Instantiate(textPrefab, speakerObj.transform);
 
-            waitingForInput = true;
-            yield return new WaitUntil(() => !waitingForInput);
+                if (DataLoader.getCurrentTextBoxSetting() != null)
+                    textBox.Init(DataLoader.getCurrentTextBoxSetting());
 
-            textBox.playAnimation(true);
-            yield return new WaitForSeconds(0.3f);
+                // Force any Canvas in the prefab to WorldSpace so it renders in world coordinates
+                Canvas[] childCanvases = textBox.GetComponentsInChildren<Canvas>(true);
+                foreach (Canvas c in childCanvases)
+                {
+                    c.renderMode = RenderMode.WorldSpace;
+                    c.worldCamera = Camera.main;
+                }
+
+                // Small world-space scale tweak (tweak multiplier to fit your scene)
+                textBox.transform.localScale = Vector3.one * 0.01f;
+
+                // Place above the speaker's head (local space) - lowered slightly
+                textBox.transform.localPosition = new Vector3(-0.75f, 0.9f, 0f);
+                textBox.transform.localRotation = Quaternion.identity;
+            }
+            else if (textBox != null)
+            {
+                // Ensure it's parented and positioned correctly if already exists
+                textBox.transform.SetParent(speakerObj.transform, false);
+                textBox.transform.localPosition = new Vector3(-0.75f, 0.9f, 0f);
+            }
+
+            if (textBox != null)
+            {
+                // Update text (no speaker name)
+                textBox.UpdateText(message);
+
+                textBox.playAnimation(false);
+
+                waitingForInput = true;
+                yield return new WaitUntil(() => !waitingForInput);
+
+                textBox.playAnimation(true);
+                yield return new WaitForSeconds(0.3f);
+            }
+        }
+        else
+        {
+            // Fallback: if speaker not found, use existing behaviour but instantiate without canvas parenting
+            if (textBox == null && textPrefab != null)
+            {
+                textBox = Instantiate(textPrefab);
+                if (DataLoader.getCurrentTextBoxSetting() != null)
+                    textBox.Init(DataLoader.getCurrentTextBoxSetting());
+
+                // Try to set any canvas to WorldSpace so it is visible regardless of UI mode
+                Canvas[] childCanvases = textBox.GetComponentsInChildren<Canvas>(true);
+                foreach (Canvas c in childCanvases)
+                {
+                    c.renderMode = RenderMode.WorldSpace;
+                    c.worldCamera = Camera.main;
+                }
+
+                textBox.transform.position = new Vector3(0f, 1.5f, 0f); // basic fallback position
+                textBox.transform.localScale = Vector3.one * 0.01f;
+            }
+
+            if (textBox != null)
+            {
+                textBox.UpdateText(message);
+
+                textBox.playAnimation(false);
+
+                waitingForInput = true;
+                yield return new WaitUntil(() => !waitingForInput);
+
+                textBox.playAnimation(true);
+                yield return new WaitForSeconds(0.3f);
+            }
         }
     }
 }
