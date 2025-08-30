@@ -175,17 +175,17 @@ public class UIManager : MonoBehaviour
 		return topPanel != null && topPanel.activeInHierarchy;
 	}
 
-	public void showActiveButton(bool b, bool light = false)
+public void showActiveButton(bool b, bool light = false)
+{
+	if (activeButton != null)
 	{
-		if (activeButton != null)
-		{
-			activeButton.SetActive(b);
-		}
-		if (activeButtonLight != null)
-		{
-			activeButtonLight.SetActive(b && light);
-		}
+		activeButton.SetActive(b);
 	}
+	if (activeButtonLight != null)
+	{
+		activeButtonLight.SetActive(b && light);
+	}
+}
 
 	public void toggleMeun()
 	{

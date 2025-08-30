@@ -84,6 +84,22 @@ public class PlayerPlatformerController : PhysicsObject
 	{
 		allowControl = true;
 		createSpawnEffect();
+
+		// Use a coroutine to check and load story after a small delay
+		StartCoroutine(CheckAndLoadStoryAfterStart());
+	}
+
+	private System.Collections.IEnumerator CheckAndLoadStoryAfterStart()
+	{
+		// Wait a frame to ensure everything is initialized
+		yield return null;
+		
+		// Check if story should be loaded at level start
+		if (StoryManager._instance != null && StoryManager._instance.canLoadStory())
+		{
+			allowControl = false;
+			StoryManager._instance.loadStory();
+		}
 	}
 
 	public void SwitchFly()
@@ -125,6 +141,7 @@ public class PlayerPlatformerController : PhysicsObject
 	private bool rightInput;
 	private bool jumpInput;
 	private bool downInput;
+	
 	private void UpdateMove()
 	{
 		// Keyboard input
@@ -139,33 +156,29 @@ public class PlayerPlatformerController : PhysicsObject
 		jumpInput = jumpDown || keyboardJump;
 		downInput = downKeyDown || keyboardDown;
 
-
 		if (animator != null)
 		{
 			animator.SetBool("grounded", grounded);
 			animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 		}
 
+		// Jump detection
+		if (jumpInput && !lastJumpKeyDown && grounded)
+			SetJump();
 
-// Jump detection
-if (jumpInput && !lastJumpKeyDown && grounded)
-    SetJump();
+		// Landing effect: trigger only on transition from air -> ground
+		if (grounded && !lastJumpKeyDown)
+		{
+			spawnJumpSmoke();
+			playDropSound();
+		}
 
-// Landing effect: trigger only on transition from air -> ground
-if (grounded && !lastJumpKeyDown) // lastJumpKeyDown false when player was not jumping
-{
-    spawnJumpSmoke();
-    playDropSound();
-    Debug.Log("Player landed! Smoke triggered.");
-}
+		lastJumpKeyDown = jumpInput;
 
 		// Death by falling
 		if (transform.position.y < deadHeight)
 			die(true, "Fall");
-
-		Debug.Log($"Left: {leftInput}, Right: {rightInput}, Jump: {jumpInput}");
 	}
-
 
 	private void UpdateDie()
 	{
@@ -188,8 +201,14 @@ if (grounded && !lastJumpKeyDown) // lastJumpKeyDown false when player was not j
 
 	private void UpdateBlock()
 	{
-		// Player is blocked from control
+		// Player is blocked from control - gradually stop movement
 		velocity = Vector2.Lerp(velocity, Vector2.zero, Time.deltaTime * 5f);
+		
+		// Reset input states while blocked to prevent stuck buttons
+		isLeftDown = false;
+		isRightDown = false;
+		jumpDown = false;
+		downKeyDown = false;
 	}
 
 	public void deselectArrow()
@@ -286,33 +305,44 @@ if (grounded && !lastJumpKeyDown) // lastJumpKeyDown false when player was not j
 
 	public void Hide(bool b)
 	{
-		spriteRenderer.enabled = !b;
-		objCollider.enabled = !b;
+		if (spriteRenderer != null)
+			spriteRenderer.enabled = !b;
+		if (objCollider != null)
+			objCollider.enabled = !b;
 	}
 
 	public void OnLeftDown(bool down)
 	{
 		Debug.Log("OnLeftDown called: " + down);
-		isLeftDown = down;
+		if (allowControl)
+		{
+			isLeftDown = down;
+		}
 	}
 
 	public void OnRightDown(bool down)
 	{
-		isRightDown = down;
+		if (allowControl)
+		{
+			isRightDown = down;
+		}
 	}
 
 	public void jump(bool down)
 	{
-		jumpDown = down;
-		if (down && grounded)
+		if (allowControl)
 		{
-			SetJump();
+			jumpDown = down;
+			if (down && grounded)
+			{
+				SetJump();
+			}
 		}
 	}
 
 	public void SetJump()
 	{
-		if (grounded)
+		if (grounded && allowControl)
 		{
 			velocity.y = jumpTakeOffSpeed;
 			spawnJumpSmoke();
@@ -322,7 +352,10 @@ if (grounded && !lastJumpKeyDown) // lastJumpKeyDown false when player was not j
 
 	public void down(bool down)
 	{
-		downKeyDown = down;
+		if (allowControl)
+		{
+			downKeyDown = down;
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
@@ -380,7 +413,7 @@ if (grounded && !lastJumpKeyDown) // lastJumpKeyDown false when player was not j
 			jumpSmoke.spawnSmoke();
 		}
 	}
-
+	
 	public void resetKey()
 	{
 		isLeftDown = false;

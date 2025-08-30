@@ -1,32 +1,50 @@
+
 using UnityEngine;
 
 public class StoryTrigger : MonoBehaviour
 {
 	public string[] storyList;
+
 	private int storyIndex;
+
 	public bool playOnceOnly;
+
 	public bool autoPlay;
+
 	public bool blockAutoIfPlayed;
+
 	private bool played;
+
 	public GameObject chatObj;
 
 	private void Start()
 	{
 		storyIndex = 0;
 		played = false;
+
+		if (chatObj != null)
+		{
+			chatObj.SetActive(false);
+		}
+
+		if (autoPlay && (!blockAutoIfPlayed || !played))
+		{
+			callStory();
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Player"))
 		{
+			if (chatObj != null && !played)
+			{
+				chatObj.SetActive(true);
+			}
+
 			if (autoPlay && (!blockAutoIfPlayed || !played))
 			{
 				callStory();
-			}
-			else if (chatObj != null)
-			{
-				chatObj.SetActive(true);
 			}
 		}
 	}
@@ -44,20 +62,19 @@ public class StoryTrigger : MonoBehaviour
 
 	public void callStory()
 	{
-		if (playOnceOnly && played) return;
-		if (storyList == null || storyList.Length == 0) return;
-
-		// Trigger story/dialogue system
-		if (storyIndex < storyList.Length)
+		if (storyList != null && storyList.Length > 0 && StoryManager._instance != null)
 		{
-			string currentStory = storyList[storyIndex];
-			// Show dialogue/story UI
-			Debug.Log("Story: " + currentStory);
-			
-			storyIndex++;
-			if (storyIndex >= storyList.Length)
+			if (playOnceOnly && played)
+				return;
+
+			if (storyIndex < storyList.Length)
 			{
-				storyIndex = 0;
+				if (chatObj != null)
+				{
+					chatObj.SetActive(false);
+				}
+
+				StoryManager._instance.callStory(storyList[storyIndex], gameObject);
 				played = true;
 			}
 		}
@@ -65,10 +82,13 @@ public class StoryTrigger : MonoBehaviour
 
 	public void storyEnd()
 	{
-		played = true;
-		if (chatObj != null)
+		if (!playOnceOnly)
 		{
-			chatObj.SetActive(false);
+			storyIndex++;
+			if (storyIndex >= storyList.Length)
+			{
+				storyIndex = 0;
+			}
 		}
 	}
 }
