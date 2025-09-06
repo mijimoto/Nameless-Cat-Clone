@@ -109,6 +109,7 @@ public class PhysicsObject : MonoBehaviour
 		return velocity;
 	}
 
+	// CRITICAL FIX: Don't interfere with Unity's collision system for Platform Effectors
 	private void Movement(Vector2 move, bool yMovement)
 	{
 		if (!canMove) return;
@@ -119,7 +120,7 @@ public class PhysicsObject : MonoBehaviour
 		{
 			int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
 			hitBufferList.Clear();
-
+			
 			for (int i = 0; i < count; i++)
 			{
 				hitBufferList.Add(hitBuffer[i]);
@@ -128,7 +129,60 @@ public class PhysicsObject : MonoBehaviour
 			for (int i = 0; i < hitBufferList.Count; i++)
 			{
 				Vector2 currentNormal = hitBufferList[i].normal;
+				Collider2D hitCollider = hitBufferList[i].collider;
 				
+				// CRITICAL: Check if this collider has a Platform Effector 2D component
+				PlatformEffector2D platformEffector = hitCollider?.GetComponent<PlatformEffector2D>();
+				
+				if (platformEffector != null)
+				{
+					// FOR PLATFORM EFFECTORS: Let Unity's physics system handle collision completely
+					// We still process for grounding detection based on normal, but don't block movement
+					if (currentNormal.y > minGroundNormalY && yMovement && move.y <= 0)
+					{
+						// Only set grounded if we're moving downward and hit from above
+						grounded = true;
+						groundNormal = currentNormal;
+					}
+					// Don't modify velocity or distance - let Unity's Platform Effector handle it
+					continue;
+				}
+				
+				// Check if this is a custom jumpOver platform (Standable component)
+				Standable standable = hitCollider?.GetComponent<Standable>();
+				if (standable != null && standable.jumpOver)
+				{
+					// For jumpOver platforms without Platform Effector, use custom logic
+					if (yMovement && move.y > 0)
+					{
+						// Player is moving upward (jumping) - allow jump through from below
+						float playerBottom = rb2d.position.y - (GetComponent<Collider2D>()?.bounds.size.y * 0.5f ?? 0.5f);
+						float platformTop = hitCollider.bounds.max.y;
+						
+						if (playerBottom < platformTop - 0.2f) // Coming from below with some tolerance
+						{
+							continue; // Allow jump through
+						}
+					}
+					else if (yMovement && move.y <= 0)
+					{
+						// Player is falling - only collide if player center is above platform
+						if (rb2d.position.y < hitCollider.bounds.max.y + 0.1f)
+						{
+							continue; // Don't collide if player is not properly above
+						}
+					}
+					else if (!yMovement)
+					{
+						// Horizontal movement - only collide if player is above platform
+						if (rb2d.position.y < hitCollider.bounds.max.y + 0.1f)
+						{
+							continue; // Allow horizontal movement through
+						}
+					}
+				}
+				
+				// Standard collision processing for all other cases
 				if (currentNormal.y > minGroundNormalY)
 				{
 					grounded = true;

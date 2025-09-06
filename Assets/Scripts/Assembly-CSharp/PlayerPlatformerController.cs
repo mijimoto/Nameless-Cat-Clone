@@ -287,7 +287,42 @@ public class PlayerPlatformerController : PhysicsObject
 
 	private void OnCollisionStay2D(Collision2D c)
 	{
-		// Handle collision with moving platforms or other objects
+		// Handle collision with moving platforms
+		if (grounded && c.gameObject.CompareTag("platform"))
+		{
+			Standable standable = c.gameObject.GetComponent<Standable>();
+			if (standable != null && standable.moveGoods)
+			{
+				// Check if it's a platform effector or jumpOver platform
+				PlatformEffector2D platformEffector = c.gameObject.GetComponent<PlatformEffector2D>();
+				
+				if (platformEffector != null)
+				{
+					// For platform effector, check if player is actually supported by the platform
+					// Use a small downward raycast to verify ground contact
+					RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.6f, 
+						~(1 << gameObject.layer)); // Exclude player's own layer
+					
+					if (hit.collider == c.collider)
+					{
+						standable.EnterGameObject(gameObject);
+					}
+				}
+				else if (standable.jumpOver)
+				{
+					// For jumpOver platforms, check if player is above
+					if (standable.onAbove(rb2d, objCollider, 0.1f))
+					{
+						standable.EnterGameObject(gameObject);
+					}
+				}
+				else
+				{
+					// Normal platform - just enter
+					standable.EnterGameObject(gameObject);
+				}
+			}
+		}
 	}
 
 	public override void setTargetVelocity(Vector2 v2)
