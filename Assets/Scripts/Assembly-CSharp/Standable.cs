@@ -22,19 +22,19 @@ public class Standable : MonoBehaviour
         myCollider = GetComponent<Collider2D>();
         childList = new List<GameObject>();
         childRigList = new List<Rigidbody2D>();
-        
+
         if (myCollider != null)
         {
             myColliderOffset = myCollider.bounds.center.y - myCollider.bounds.min.y;
             myColliderHeight = myCollider.bounds.size.y;
         }
-        
+
         lastPos = transform.position;
     }
 
     protected virtual void Update()
     {
-        
+        // placeholder for derived classes
     }
 
     protected void FixedUpdate()
@@ -43,7 +43,7 @@ public class Standable : MonoBehaviour
         if (moveGoods && childList.Count > 0)
         {
             Vector2 deltaMovement = (Vector2)transform.position - lastPos;
-            
+
             // Move all attached children with the platform
             for (int i = 0; i < childList.Count; i++)
             {
@@ -54,7 +54,7 @@ public class Standable : MonoBehaviour
                 }
             }
         }
-        
+
         lastPos = transform.position;
     }
 
@@ -66,7 +66,7 @@ public class Standable : MonoBehaviour
         // Check if the target is above this platform
         float platformTop = myCollider.bounds.max.y;
         float targetBottom = collider.bounds.min.y;
-        
+
         // Allow small tolerance for floating point precision
         return targetBottom >= (platformTop - offset - 0.1f);
     }
@@ -77,37 +77,35 @@ public class Standable : MonoBehaviour
 
         Rigidbody2D playerRb = other.rigidbody;
         BoxCollider2D playerCollider = other.collider as BoxCollider2D;
-        
+
         if (playerRb == null || playerCollider == null) return;
 
-        // CRITICAL: Check if this platform has a Platform Effector 2D
+        // Check if this platform has a Platform Effector 2D
         PlatformEffector2D platformEffector = GetComponent<PlatformEffector2D>();
-        
+
         if (platformEffector != null)
         {
-            // Platform Effector is present - Unity handles one-way collision automatically
-            // We only handle moving platform attachment based on actual collision contact points
-            
-            // Check if this is a "real" collision from above by examining contact points
+            // Platform Effector is present - examine contact normals to ensure player is on top
             bool hasValidContact = false;
             ContactPoint2D[] contacts = other.contacts;
-            
+
             for (int i = 0; i < contacts.Length; i++)
             {
-                // Check if contact normal points upward (player is above platform)
-                if (contacts[i].normal.y < -0.7f) // Normal pointing down means player is above
+                // contact normal points from this collider to the other; when player is above platform,
+                // contact.normal.y will be negative (pointing down from player into platform), so check magnitude
+                if (contacts[i].normal.y < -0.7f)
                 {
                     hasValidContact = true;
                     break;
                 }
             }
-            
+
             if (hasValidContact && moveGoods)
             {
                 EnterGameObject(other.gameObject);
             }
-            
-            return; // Let Platform Effector handle the rest
+
+            return; // let PlatformEffector handle collisions itself
         }
 
         // Handle jumpOver platforms WITHOUT Platform Effector
@@ -116,7 +114,7 @@ public class Standable : MonoBehaviour
             // Check player's velocity and position
             bool movingUp = playerRb.linearVelocity.y > 0.1f;
             bool comingFromBelow = playerRb.position.y < myCollider.bounds.center.y;
-            
+
             if (movingUp && comingFromBelow)
             {
                 // Player is jumping from below - temporarily ignore collision
@@ -124,7 +122,7 @@ public class Standable : MonoBehaviour
                 StartCoroutine(ReEnableCollisionAfterDelay(other.collider, 0.3f));
                 return;
             }
-            
+
             // Check if player is landing on platform from above
             if (onAbove(playerRb, playerCollider, 0.2f))
             {
@@ -132,14 +130,14 @@ public class Standable : MonoBehaviour
             }
             else
             {
-                // Player hitting from side or wrong angle - ignore collision
+                // Player hitting from side or wrong angle - ignore collision briefly
                 Physics2D.IgnoreCollision(other.collider, myCollider, true);
                 StartCoroutine(ReEnableCollisionAfterDelay(other.collider, 0.1f));
             }
         }
         else
         {
-            // Normal solid platform - always allow collision
+            // Normal solid platform - always allow collision and attach if needed
             EnterGameObject(other.gameObject);
         }
     }
@@ -150,27 +148,25 @@ public class Standable : MonoBehaviour
 
         Rigidbody2D playerRb = other.rigidbody;
         BoxCollider2D playerCollider = other.collider as BoxCollider2D;
-        
+
         if (playerRb == null || playerCollider == null) return;
 
         PlatformEffector2D platformEffector = GetComponent<PlatformEffector2D>();
-        
+
         if (platformEffector != null)
         {
-            // For Platform Effector, only manage moving platform attachment
-            // Check contact points to ensure player is actually standing on platform
             ContactPoint2D[] contacts = other.contacts;
             bool playerStandingOn = false;
-            
+
             for (int i = 0; i < contacts.Length; i++)
             {
-                if (contacts[i].normal.y < -0.7f) // Player above platform
+                if (contacts[i].normal.y < -0.7f) // player above platform
                 {
                     playerStandingOn = true;
                     break;
                 }
             }
-            
+
             if (playerStandingOn && moveGoods && !childList.Contains(other.gameObject))
             {
                 EnterGameObject(other.gameObject);
@@ -179,13 +175,12 @@ public class Standable : MonoBehaviour
             {
                 ExitGameObject(other.gameObject);
             }
-            
+
             return;
         }
 
         if (jumpOver)
         {
-            // For jumpOver platforms, maintain collision only if player is properly above
             if (onAbove(playerRb, playerCollider, 0.2f))
             {
                 if (!childList.Contains(other.gameObject))
@@ -195,7 +190,6 @@ public class Standable : MonoBehaviour
             }
             else
             {
-                // Player not properly positioned - remove from platform and ignore collision
                 ExitGameObject(other.gameObject);
                 Physics2D.IgnoreCollision(other.collider, myCollider, true);
                 StartCoroutine(ReEnableCollisionAfterDelay(other.collider, 0.1f));
@@ -203,7 +197,6 @@ public class Standable : MonoBehaviour
         }
         else
         {
-            // Normal platform
             if (!childList.Contains(other.gameObject))
             {
                 EnterGameObject(other.gameObject);
@@ -214,7 +207,7 @@ public class Standable : MonoBehaviour
     private System.Collections.IEnumerator ReEnableCollisionAfterDelay(Collider2D otherCollider, float delay)
     {
         yield return new WaitForSeconds(delay);
-        
+
         if (otherCollider != null && myCollider != null)
         {
             Physics2D.IgnoreCollision(otherCollider, myCollider, false);

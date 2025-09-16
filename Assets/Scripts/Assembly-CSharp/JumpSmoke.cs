@@ -17,7 +17,7 @@ public void spawnSmoke()
         for (int i = 0; i < smokes.Length; i++)
         {
             smokes[i].SetTrigger("JumpSmokeP"); // all child animators will try to trigger
-            Debug.Log("Triggering smoke: " + smokes[i].name);
+           
         }
     }
 }

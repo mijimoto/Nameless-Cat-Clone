@@ -25,14 +25,14 @@ public class DataLoader : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            
+
             // Initialize language from PlayerPrefs or use default
             usingFileLan = PlayerPrefs.GetString("SelectedLanguage", DEFAULT_LANGUAGE_KEY);
-            
+
             // Setup data structures
             textBoxSetup();
             achievementDataSetup();
-            
+
             // Setup language panel callback
             if (languagePanel != null)
             {
@@ -81,7 +81,7 @@ public class DataLoader : MonoBehaviour
         {
             // Reload text data for new language
             TextLoader.ReloadText();
-            
+
             // Update all localized text components
             LocalizationText[] allTexts = FindObjectsOfType<LocalizationText>();
             foreach (var text in allTexts)
@@ -91,9 +91,33 @@ public class DataLoader : MonoBehaviour
 
             // Update all text boxes
             TextBox[] allTextBoxes = FindObjectsOfType<TextBox>();
+            TextBoxSetting currentSetting = getCurrentTextBoxSetting();
+
             foreach (var textBox in allTextBoxes)
             {
-                textBox.RefreshSettings();
+                if (textBox == null) continue;
+
+                // Try to find the TextMeshProUGUI component beneath the TextBox GameObject
+                var tmp = textBox.GetComponentInChildren<TMPro.TextMeshProUGUI>(true);
+                if (tmp != null)
+                {
+                    // Apply font/spacing/etc for the current language
+                    currentSetting?.InitTextMeshProUGUI(tmp, true);
+                }
+                else
+                {
+                    // Fallback: call the public Init(TextBoxSetting) on TextBox if it exists and you want
+                    // the TextBox to handle other initialization details (this does not require new functions).
+                    try
+                    {
+                        textBox.Init(currentSetting);
+                    }
+                    catch
+                    {
+                        // If Init is not appropriate, just skip silently to avoid crashes.
+                        Debug.LogWarning("[DataLoader] TextBox has no TMP child and Init failed. Skipping.");
+                    }
+                }
             }
 
             // Update achievement localizations
@@ -104,7 +128,7 @@ public class DataLoader : MonoBehaviour
     private void textBoxSetup()
     {
         textBoxSettings = new Dictionary<string, TextBoxSetting>();
-        
+
         if (textBoxObjSettings != null)
         {
             foreach (var setting in textBoxObjSettings)
@@ -123,20 +147,20 @@ public class DataLoader : MonoBehaviour
         {
             return textBoxSettings[usingFileLan];
         }
-        
+
         // Fallback to default language
         if (textBoxSettings != null && textBoxSettings.ContainsKey(DEFAULT_LANGUAGE_KEY))
         {
             return textBoxSettings[DEFAULT_LANGUAGE_KEY];
         }
-        
+
         return null;
     }
 
     private void achievementDataSetup()
     {
         achievementDataDictionary = new Dictionary<string, AchievementData>();
-        
+
         if (achievementDatas != null)
         {
             foreach (var achievement in achievementDatas)
@@ -155,7 +179,7 @@ public class DataLoader : MonoBehaviour
         {
             return achievementDataDictionary[id];
         }
-        
+
         return null;
     }
 

@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 481}
   m_Layer: 0
   m_Name: playerShadow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3328,7 +3328,7 @@ Transform:
   m_GameObject: {fileID: 38}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.008697, y: 0.44239134, z: -10}
+  m_LocalPosition: {x: -13.008493, y: 0.43205947, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49673,6 +49673,7 @@ MonoBehaviour:
   shipMode: 0
   continuedMovement: {x: 0, y: 0}
   gamePaused: 0
+  attached: 0
 --- !u!114 &486
 MonoBehaviour:
   m_ObjectHideFlags: 0
