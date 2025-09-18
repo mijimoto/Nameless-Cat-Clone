@@ -16,6 +16,7 @@ public class DataLoader : MonoBehaviour
 
     public static IReadOnlyList<TextBoxSetting> TextBoxSettings => instance?.textBoxObjSettings;
     public static Dictionary<string, AchievementData> AchievementDataDictionary => achievementDataDictionary;
+    public static IReadOnlyList<AchievementData> AchievementDatas => instance?.achievementDatas;
 
     private static DataLoader instance;
 
@@ -168,6 +169,7 @@ public class DataLoader : MonoBehaviour
                 if (achievement != null && !string.IsNullOrEmpty(achievement.Id))
                 {
                     achievementDataDictionary[achievement.Id] = achievement;
+                    achievement.Init();
                 }
             }
         }
@@ -179,32 +181,24 @@ public class DataLoader : MonoBehaviour
         {
             return achievementDataDictionary[id];
         }
-
         return null;
     }
 
     public static void updateAchievemenLocaliztion()
     {
-        // Update all achievement UI elements with current language
         if (achievementDataDictionary != null)
         {
             foreach (var achievement in achievementDataDictionary.Values)
             {
-                if (achievement != null)
-                {
-                    achievement.UpdateLocaliztion();
-                }
+                achievement.UpdateLocaliztion();
             }
         }
 
-        // Update achievement controllers
-        AchievementController[] controllers = FindObjectsOfType<AchievementController>();
-        foreach (var controller in controllers)
+        // Update all achievement item controllers in scene
+        AchievementItemController[] achievementItems = FindObjectsOfType<AchievementItemController>();
+        foreach (var item in achievementItems)
         {
-            if (controller != null)
-            {
-                controller.OnLanguageChanged();
-            }
+            item.UpdateTextSetting();
         }
     }
 }

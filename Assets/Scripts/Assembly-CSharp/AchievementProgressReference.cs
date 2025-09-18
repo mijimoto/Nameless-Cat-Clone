@@ -2,5 +2,5 @@ using UnityEngine;
 
 public abstract class AchievementProgressReference : ScriptableObject
 {
-	public abstract float LoadProgress();
+    public abstract float LoadProgress();
 }

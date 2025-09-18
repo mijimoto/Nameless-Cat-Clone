@@ -1,15 +1,12 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Achievement Progress", menuName = "Achievements/Achievement Progress")]
+[CreateAssetMenu]
+[System.Serializable]
 public class AchievementProgress : ScriptableObject
 {
-    [SerializeField]
-    private Sprite icon;
-
-    [SerializeField]
-    private float targetProgress;
-
+    [SerializeField] private Sprite icon;
+    [SerializeField] private float targetProgress;
     protected float progress;
     protected DateTime completeDate;
     protected bool completed;
@@ -44,17 +41,22 @@ public class AchievementProgress : ScriptableObject
 
     public void UpdateLocalization()
     {
-        // Get localized text using TextLoader
-        title = TextLoader.getText(titleKey);
-        description = TextLoader.getText(descriptionKey);
+        if (!string.IsNullOrEmpty(titleKey))
+        {
+            title = TextLoader.getText(titleKey);
+        }
+        
+        if (!string.IsNullOrEmpty(descriptionKey))
+        {
+            description = TextLoader.getText(descriptionKey);
+        }
     }
 
     public virtual void LoadProgress()
     {
-        // Load progress from PlayerPrefs
         string progressKey = $"Achievement_{id}_Progress";
         string completedKey = $"Achievement_{id}_Completed";
-        string dateKey = $"Achievement_{id}_CompleteDate";
+        string dateKey = $"Achievement_{id}_Date";
 
         progress = PlayerPrefs.GetFloat(progressKey, 0f);
         completed = PlayerPrefs.GetInt(completedKey, 0) == 1;
@@ -62,9 +64,12 @@ public class AchievementProgress : ScriptableObject
         if (completed)
         {
             string dateString = PlayerPrefs.GetString(dateKey, "");
-            if (!string.IsNullOrEmpty(dateString) && DateTime.TryParse(dateString, out DateTime savedDate))
+            if (!string.IsNullOrEmpty(dateString))
             {
-                completeDate = savedDate;
+                if (DateTime.TryParse(dateString, out DateTime parsedDate))
+                {
+                    completeDate = parsedDate;
+                }
             }
         }
 
@@ -81,7 +86,6 @@ public class AchievementProgress : ScriptableObject
 
     public virtual void SaveProgress()
     {
-        // Save progress to PlayerPrefs
         string progressKey = $"Achievement_{id}_Progress";
         string completedKey = $"Achievement_{id}_Completed";
 
@@ -98,15 +102,12 @@ public class AchievementProgress : ScriptableObject
 
     protected void saveDate()
     {
-        string dateKey = $"Achievement_{id}_CompleteDate";
+        string dateKey = $"Achievement_{id}_Date";
         PlayerPrefs.SetString(dateKey, completeDate.ToString());
     }
 
     public virtual void SetProgress(float amount)
     {
-        if (completed)
-            return;
-
         progress = Mathf.Clamp(amount, 0f, targetProgress);
         UpdateCompleted();
         SaveProgress();
@@ -114,9 +115,6 @@ public class AchievementProgress : ScriptableObject
 
     public virtual void AddProgress(float amount)
     {
-        if (completed)
-            return;
-
         SetProgress(progress + amount);
     }
 
@@ -126,11 +124,6 @@ public class AchievementProgress : ScriptableObject
         {
             completed = true;
             completeDate = DateTime.Now;
-            
-            // Notify achievement system
-            Debug.Log($"Achievement Completed: {title}");
-            
-            // You can add achievement notification/popup logic here
         }
     }
 }
