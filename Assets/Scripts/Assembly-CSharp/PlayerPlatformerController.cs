@@ -475,10 +475,9 @@ public void activeAttach()
             spriteRenderer.enabled = !hideVisuals;
     }
 
-    /// <summary>
+
     /// Detach the player from a totem. Optionally apply a jump impulse.
     /// If clearInputs==true we clear input flags (used for non-key forced detaches).
-    /// </summary>
     public void Detach(bool applyJump, bool clearInputs = false)
     {
         Rigidbody2D prb = GetComponent<Rigidbody2D>();
@@ -586,6 +585,20 @@ public void activeAttach()
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Handle death from Trap tag
+        if (other.CompareTag("Trap") && !Invincible)
+        {
+            die(true, "Trap");
+            return;
+        }
+
+        // Handle death from bullet tag
+        if (other.CompareTag("bullet") && !Invincible)
+        {
+            die(true, "Bullet");
+            return;
+        }
+
         if (other.CompareTag("object"))
         {
             AttachBlock attachBlock = other.GetComponent<AttachBlock>();
@@ -601,9 +614,25 @@ public void activeAttach()
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        // Handle death from Enemy tag
         if (other.gameObject.CompareTag("Enemy") && !Invincible)
         {
             die(true, "Enemy");
+            return;
+        }
+
+        // Handle death from Trap tag (collision-based traps)
+        if (other.gameObject.CompareTag("Trap") && !Invincible)
+        {
+            die(true, "Trap");
+            return;
+        }
+
+        // Handle death from bullet tag (collision-based bullets)
+        if (other.gameObject.CompareTag("bullet") && !Invincible)
+        {
+            die(true, "Bullet");
+            return;
         }
     }
 
@@ -624,6 +653,10 @@ public void activeAttach()
             }
 
             Debug.Log("Player died by: " + killer);
+        }
+        if (GameManager._instance != null)
+        {
+            GameManager._instance.resetLevel();
         }
     }
 

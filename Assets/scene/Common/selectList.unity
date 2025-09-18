@@ -5811,7 +5811,7 @@ Camera:
   far clip plane: 250
   field of view: 60
   orthographic: 1
-  orthographic size: 1.25
+  orthographic size: 2.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11327,13 +11327,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 802}
-  - {fileID: 796}
-  - {fileID: 801}
   - {fileID: 797}
   - {fileID: 800}
   - {fileID: 799}
   - {fileID: 798}
+  - {fileID: 801}
+  - {fileID: 796}
+  - {fileID: 802}
   m_Father: {fileID: 635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -15164,7 +15164,7 @@ RectTransform:
   m_GameObject: {fileID: 234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 803}
@@ -15206,7 +15206,7 @@ RectTransform:
   m_GameObject: {fileID: 235}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 805}
@@ -15227,7 +15227,7 @@ RectTransform:
   m_GameObject: {fileID: 238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 808}
@@ -15248,7 +15248,7 @@ RectTransform:
   m_GameObject: {fileID: 239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 809}
@@ -15269,7 +15269,7 @@ RectTransform:
   m_GameObject: {fileID: 237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 806}
@@ -17580,13 +17580,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 868a1db30a49c77dbd58b7ff159df72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snapForce: 0.5
+  snapSpeed: 10
   holder: {fileID: 84}
+  skinsHolder: {fileID: 605}
   useButton: {fileID: 0}
   buyButton: {fileID: 991}
   buyButtonText: {fileID: 871}
   buyRealButton: {fileID: 948}
   buyRealButtonText: {fileID: 861}
-  skinsHolder: {fileID: 605}
+  nextButton: {fileID: 0}
+  prevButton: {fileID: 0}
   loadingObj: {fileID: 178}
 --- !u!114 &925
 MonoBehaviour:
@@ -21623,7 +21627,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1178}
   m_HandleRect: {fileID: 771}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -25261,7 +25265,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a1096819cc859c84cb81706dea3946f9, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

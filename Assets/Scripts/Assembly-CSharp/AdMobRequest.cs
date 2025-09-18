@@ -1,5 +1,6 @@
 using System;
 using GoogleMobileAds.Api;
+using GoogleMobileAds.Common;
 using UnityEngine;
 
 public class AdMobRequest : MonoBehaviour
@@ -60,10 +61,9 @@ public class AdMobRequest : MonoBehaviour
 	{
 	}
 
-	public void HandleOnAdFailedToLoad_Interstitial(object sender, AdFailedToLoadEventArgs args)
+	public void HandleOnAdFailedToLoad_Interstitial(object sender, LoadAdError error)
 	{
 	}
-
 	public void HandleOnAdOpened_Interstitial(object sender, EventArgs args)
 	{
 	}

@@ -81,13 +81,6 @@ public class Block : MonoBehaviour
         if (conditionCheck())
         {
             selectObject(true);
-
-            // If this is an AttachBlock, try to activate it
-            AttachBlock attachBlock = this as AttachBlock;
-            if (attachBlock != null)
-            {
-                attachBlock.activeBlock(true);
-            }
         }
     }
 
@@ -147,42 +140,36 @@ public class Block : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+   private void FixedUpdate()
+{
+    GameObject player = PlayerPlatformerController._instance != null ? PlayerPlatformerController._instance.gameObject : null;
+    float dist = float.MaxValue;
+    float range = 2f; // fallback
+
+    if (PlayerPlatformerController._instance != null)
+        range = PlayerPlatformerController._instance.attachRange;
+
+    if (player != null)
+        dist = Vector2.Distance(transform.position, player.transform.position);
+
+    // ✅ Only mark as target and show button, do not auto-attach
+    if ((dist <= range && conditionCheck()) || selectedObject == this)
     {
-        // Handle platform attachment physics
-        if (attachedPlatform != null && rb2d != null)
+        target = this;
+        AttachBlock attachBlock = this as AttachBlock;
+        if (attachBlock != null && UIManager._instance != null)
         {
-            Vector2 platformVelocity = attachedPlatform.GetComponent<Rigidbody2D>()?.linearVelocity ?? Vector2.zero;
-            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x + platformVelocity.x, rb2d.linearVelocity.y);
+            UIManager._instance.showActiveButton(true, true);
         }
-
-        // Use player distance (attachRange from PlayerPlatformerController) OR explicit selection
-        GameObject player = PlayerPlatformerController._instance != null ? PlayerPlatformerController._instance.gameObject : null;
-        float dist = float.MaxValue;
-        float range = 2f; // fallback
-
-        if (PlayerPlatformerController._instance != null)
-            range = PlayerPlatformerController._instance.attachRange;
-
-        if (player != null)
-            dist = Vector2.Distance(transform.position, player.transform.position);
-
-        if ((dist <= range && conditionCheck()) || selectedObject == this)
+    }
+    else if (target == this)
+    {
+        target = null;
+        if (UIManager._instance != null)
         {
-            target = this;
-            AttachBlock attachBlock = this as AttachBlock;
-            if (attachBlock != null && UIManager._instance != null)
-            {
-                UIManager._instance.showActiveButton(true, true);
-            }
-        }
-        else if (target == this)
-        {
-            target = null;
-            if (UIManager._instance != null)
-            {
-                UIManager._instance.showActiveButton(false);
-            }
+            UIManager._instance.showActiveButton(false);
         }
     }
 }
+}
+

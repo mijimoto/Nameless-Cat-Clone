@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public class Purchaser : MonoBehaviour, IStoreListener
+public class Purchaser : MonoBehaviour
 {
 	private const string LOG_KEY = "IAP";
 
