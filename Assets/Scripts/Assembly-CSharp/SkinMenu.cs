@@ -15,7 +15,7 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private const float offset = 200f; // Distance between skin items
     public float snapForce = 0.5f;
     public float snapSpeed = 10f;
-    
+
     [Header("UI References")]
     public GameObject holder; // SkinMeunContent - the outer container
     public Transform skinsHolder; // The 'skins' container that holds individual skin objects
@@ -24,17 +24,17 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public TextMeshProUGUI buyButtonText;
     public Button buyRealButton;
     public TextMeshProUGUI buyRealButtonText;
-    
+
     [Header("Navigation Buttons (Optional)")]
     public Button nextButton;
     public Button prevButton;
-    
+
     private int currentSkinBox;
     private int maxSkinBox;
     private SkinBlock[] skinBoxs;
     public GameObject loadingObj;
     private bool loading;
-    
+
     // Scrolling variables
     private bool isDragging = false;
     private Vector2 startDragPosition;
@@ -46,11 +46,16 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         loading = false;
         skinsRectTransform = skinsHolder != null ? skinsHolder.GetComponent<RectTransform>() : null;
-        
+
+        // Subscribe to Purchaser events
+        Purchaser.OnPurchaseSuccess += OnPurchaseSuccess;
+        Purchaser.OnPurchaseFail += OnPurchaseFail;
+        Purchaser.OnInitializationComplete += OnIAPInitialized;
+
         initSkin();
         setupButtons();
         updateAllSkinUI();
-        
+
         // Set initial position (center the saved index)
         currentSkinBox = PlayerPrefs.GetInt("CurrentSkinIndex", 0);
         currentSkinBox = Mathf.Clamp(currentSkinBox, 0, maxSkinBox - 1);
@@ -65,6 +70,33 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 rt.anchoredPosition = new Vector2((i - currentSkinBox) * offset, rt.anchoredPosition.y);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from events
+        Purchaser.OnPurchaseSuccess -= OnPurchaseSuccess;
+        Purchaser.OnPurchaseFail -= OnPurchaseFail;
+        Purchaser.OnInitializationComplete -= OnIAPInitialized;
+    }
+
+    private void OnIAPInitialized()
+    {
+        Debug.Log("IAP Initialized, updating skin UI with real prices");
+        updateAllSkinUI();
+    }
+
+    private void OnPurchaseSuccess(string productId)
+    {
+        Debug.Log("Purchase successful: " + productId);
+        LoadAndLock(false);
+        updateAllSkinUI();
+    }
+
+    private void OnPurchaseFail(string productId)
+    {
+        Debug.Log("Purchase failed: " + productId);
+        LoadAndLock(false);
     }
 
     private void setupButtons()
@@ -123,10 +155,20 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
             Skin s = ScriptableObject.CreateInstance<Skin>();
             s.id = skinIndex;
-            s.useIAP = (skinIndex % 3 == 0 && skinIndex > 0); // Example: every 3rd skin is IAP
+            s.useIAP = (skinIndex % 3 == 0 && skinIndex > 0); // Every 3rd skin is IAP
             s.canBuy = true;
-            s.canUse = PlayerPrefs.GetInt($"SkinOwned_{s.id}", skinIndex == 0 ? 1 : 0) == 1; // First skin owned by default
-            s.price = skinIndex * 5 + 5; // Progressive pricing
+
+            // Check ownership - use Purchaser for IAP skins, PlayerPrefs for regular skins
+            if (s.useIAP && Purchaser._instance != null)
+            {
+                s.canUse = Purchaser._instance.HasSkin(s.id);
+            }
+            else
+            {
+                s.canUse = PlayerPrefs.GetInt($"SkinOwned_{s.id}", skinIndex == 0 ? 1 : 0) == 1; // First skin owned by default
+            }
+
+            s.price = skinIndex * 5 + 5; // Progressive pricing for non-IAP skins
 
             sb.LoadSkin(s);
 
@@ -150,7 +192,7 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnDrag(PointerEventData eventData)
     {
         if (!isDragging || skinBoxs == null || skinBoxs.Length == 0) return;
-        
+
         Vector2 dragDelta = eventData.position - startDragPosition;
         // move each child's anchoredPosition by delta.x (damped to maintain feel)
         float damp = 0.6f;
@@ -160,7 +202,7 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (rt == null) continue;
             rt.anchoredPosition = new Vector2(rt.anchoredPosition.x + dragDelta.x * damp, rt.anchoredPosition.y);
         }
-        
+
         startDragPosition = eventData.position;
     }
 
@@ -168,7 +210,7 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         if (!isDragging) return;
         isDragging = false;
-        
+
         // Find closest skin and snap to it (based on child's proximity to center x=0)
         int closestSkin = GetClosestSkinIndex();
         snapToSkin(closestSkin, true);
@@ -177,7 +219,7 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private int GetClosestSkinIndex()
     {
         if (skinBoxs == null || skinBoxs.Length == 0) return currentSkinBox;
-        
+
         // find which child RectTransform is closest to x == 0 (center)
         int bestIdx = 0;
         float bestDist = Mathf.Abs(GetRectX(skinBoxs[0]));
@@ -224,11 +266,11 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private void snapToSkin(int skinIndex, bool animated = true)
     {
         if (skinBoxs == null || skinBoxs.Length == 0) return;
-        
+
         skinIndex = Mathf.Clamp(skinIndex, 0, maxSkinBox - 1);
         currentSkinBox = skinIndex;
         targetPosition = -currentSkinBox * offset; // kept for compatibility though parent isn't moved now
-        
+
         // compute desired target x for each child: (i - skinIndex) * offset
         Vector2[] targets = new Vector2[skinBoxs.Length];
         for (int i = 0; i < skinBoxs.Length; i++)
@@ -319,6 +361,9 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             }
             // shiftIndex: 0 means centered, negative -> left of center, positive -> right of center
             updateSkinUI(i, -shiftIndex); // invert so shiftIndex==0 => center
+
+            // Refresh the price display for each skin
+            skinBoxs[i].RefreshSkinDisplay();
         }
     }
 
@@ -330,9 +375,9 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         // Visual emphasis: scale center element
         float scale = (shiftIndex == 0) ? 1.2f : 0.8f;
         float alpha = (shiftIndex == 0) ? 1f : 0.6f;
-        
+
         block.transform.localScale = Vector3.one * scale;
-        
+
         // Update alpha if possible
         CanvasGroup cg = block.GetComponent<CanvasGroup>();
         if (cg == null) cg = block.gameObject.AddComponent<CanvasGroup>();
@@ -349,8 +394,29 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             if (buyButton != null) buyButton.gameObject.SetActive(!owned && purchasable && !s.useIAP);
             if (buyRealButton != null) buyRealButton.gameObject.SetActive(!owned && purchasable && s.useIAP);
 
-            if (buyButtonText != null) buyButtonText.text = s != null ? $"Buy ({s.price})" : "Buy";
-            if (buyRealButtonText != null) buyRealButtonText.text = s != null ? (s.useIAP ? "Buy (IAP)" : $"Buy ({s.price})") : "Buy";
+            // Update button texts with proper pricing
+            if (buyButtonText != null)
+            {
+                buyButtonText.text = s != null ? $"Buy ({s.price})" : "Buy";
+            }
+
+            if (buyRealButtonText != null)
+            {
+                if (s != null && s.useIAP)
+                {
+                    // Get real price from Google Play
+                    string realPrice = "$0.99"; // fallback
+                    if (Purchaser._instance != null && Purchaser._instance.IsInitialized())
+                    {
+                        realPrice = Purchaser._instance.getProductPrice(s.id);
+                    }
+                    buyRealButtonText.text = realPrice;
+                }
+                else
+                {
+                    buyRealButtonText.text = "Buy";
+                }
+            }
         }
     }
 
@@ -364,19 +430,20 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         if (s.useIAP)
         {
-            LoadAndLock(true);
-            // Simulate IAP process
-            Invoke(nameof(SimulateIAPSuccess), 1f);
+            if (Purchaser._instance != null)
+            {
+                LoadAndLock(true);
+                Purchaser._instance.BuyNonConsumableSkin(s.id);
+            }
+            else
+            {
+                Debug.LogError("Purchaser instance not found!");
+            }
         }
         else
         {
             buySkin();
         }
-    }
-
-    private void SimulateIAPSuccess()
-    {
-        finishBuy(true);
     }
 
     public void buySkin()
@@ -454,12 +521,21 @@ public class SkinMenu : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         string goName = block.gameObject.name;
         var m = Regex.Match(goName, @"\d+");
         if (m.Success) int.TryParse(m.Value, out skinIndex);
-        
+
         Skin s = ScriptableObject.CreateInstance<Skin>();
         s.id = skinIndex;
-        s.canUse = PlayerPrefs.GetInt($"SkinOwned_{s.id}", skinIndex == 0 ? 1 : 0) == 1;
+
+        // Check ownership properly based on skin type
+        if (s.useIAP = (skinIndex % 3 == 0 && skinIndex > 0)) // IAP skin
+        {
+            s.canUse = Purchaser._instance != null ? Purchaser._instance.HasSkin(s.id) : PlayerPrefs.GetInt($"SkinOwned_{s.id}", 0) == 1;
+        }
+        else // Regular skin
+        {
+            s.canUse = PlayerPrefs.GetInt($"SkinOwned_{s.id}", skinIndex == 0 ? 1 : 0) == 1;
+        }
+
         s.canBuy = true;
-        s.useIAP = (skinIndex % 3 == 0 && skinIndex > 0);
         s.price = skinIndex * 5 + 5;
         return s;
     }

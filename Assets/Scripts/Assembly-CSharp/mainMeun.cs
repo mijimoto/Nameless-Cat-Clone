@@ -31,6 +31,9 @@ public class mainMeun : MonoBehaviour
         if (!started && Input.anyKeyDown)
         {
             startGame();
+            Social.ReportProgress(GPGSIds.achievement_who_am_i, 100.0f, success => {
+    Debug.Log("Achievement unlocked: " + success);
+});
         }
 
         // Optional blinking effect for "Press to Start"

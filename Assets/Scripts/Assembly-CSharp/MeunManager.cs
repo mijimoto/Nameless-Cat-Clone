@@ -301,7 +301,7 @@ private void Awake()
         // Debug when movement occurs
         if (!Mathf.Approximately(targetAnchY, newTargetAnchY))
         {
-            Debug.Log($"[MeunManager] moveRows -> window:{windowType} delta:{delta:F1} targetBefore:{targetAnchY:F1} targetAfter:{newTargetAnchY:F1}");
+            //Debug.Log($"[MeunManager] moveRows -> window:{windowType} delta:{delta:F1} targetBefore:{targetAnchY:F1} targetAfter:{newTargetAnchY:F1}");
         }
     }
 

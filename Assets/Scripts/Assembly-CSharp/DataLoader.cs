@@ -122,7 +122,7 @@ public class DataLoader : MonoBehaviour
             }
 
             // Update achievement localizations
-            updateAchievemenLocaliztion();
+            updateAchievementLocalization();
         }
     }
 
@@ -184,13 +184,13 @@ public class DataLoader : MonoBehaviour
         return null;
     }
 
-    public static void updateAchievemenLocaliztion()
+    public static void updateAchievementLocalization()
     {
         if (achievementDataDictionary != null)
         {
             foreach (var achievement in achievementDataDictionary.Values)
             {
-                achievement.UpdateLocaliztion();
+                achievement.UpdateLocalization();
             }
         }
 

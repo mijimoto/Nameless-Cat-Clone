@@ -11,6 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f43a76779f4e2c2d7694b3f33160579d, type: 3}
   m_Name: CollectionFishProgress1
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   icon: {fileID: 0}
   targetProgress: 15
+  googlePlayAchievementId: 
+  isIncremental: 0
